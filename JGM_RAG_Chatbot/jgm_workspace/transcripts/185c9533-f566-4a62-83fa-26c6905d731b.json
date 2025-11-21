@@ -1,0 +1,44 @@
+[
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **What-If Simulator** - Predict policy impacts!\n\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/investor)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • 🔮 'simulate menu' - See What-If scenarios\n  • Ask any question about the data!",
+    "ts": "2025-11-17T22:36:48.210929Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "India Education Data",
+    "ts": "2025-11-17T22:37:04.755001Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-17T22:37:04.756553Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-17T22:37:11.271468Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, er! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-17T22:37:11.273217Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "India Education Data",
+    "ts": "2025-11-17T22:37:18.443421Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-17T22:37:18.453023Z",
+    "attachments": []
+  }
+]

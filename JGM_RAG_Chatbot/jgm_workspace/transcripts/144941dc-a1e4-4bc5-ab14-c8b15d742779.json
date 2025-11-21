@@ -1,0 +1,1886 @@
+[
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary school dropout rates by location\n  • Secondary school dropout rates by location\n  • Interactive maps and charts\n\nTo get started, click 'Set Profile' or ask me a question!\n\n💡 Try asking:\n  • 'What's the average secondary dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Chart dropout rates by department'",
+    "ts": "2025-11-11T17:13:12.795252Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary school dropout rates by location\n  • Secondary school dropout rates by location\n  • Interactive maps and charts\n\nTo get started, click 'Set Profile' or ask me a question!\n\n💡 Try asking:\n  • 'What's the average secondary dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Chart dropout rates by department'",
+    "ts": "2025-11-11T17:13:18.402995Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "dropout rate by region for 2025",
+    "ts": "2025-11-11T17:13:41.567704Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • UCAYALI: 4.92\n  • TUMBES: 4.12\n  • CALLAO: 3.70\n  • LA LIBERTAD: 3.47\n  • LORETO: 3.44\n  • LAMBAYEQUE: 3.13\n  • PIURA: 3.12\n  • CAJAMARCA: 2.92\n  • MADRE DE DIOS: 2.92\n  • SAN MARTIN: 2.69.",
+    "ts": "2025-11-11T17:13:41.928863Z",
+    "attachments": [
+      "/files/chart_20251111_121341.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "dropout rate for 2024",
+    "ts": "2025-11-11T17:14:04.581074Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "⚠️ I only have data for 2025. Please search within 2025 data only. Years mentioned: 2024 are not available.",
+    "ts": "2025-11-11T17:14:04.582074Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Program enrollenment rate 2025 undergraduate",
+    "ts": "2025-11-11T17:14:26.835800Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Program:\n\n  • HUMAN MEDICINE: 281\n  • INFIRMARY: 186\n  • RIGHT: 149\n  • CIVIL ENGINEERING: 138\n  • SYSTEM ENGINEERING: 75\n  • ACCOUNTING: 69\n  • OBSTETRICS: 68\n  • PRIMARY EDUCATION: 51\n  • MINING ENGINEERING: 50\n  • ECONOMY: 48.",
+    "ts": "2025-11-11T17:14:27.028872Z",
+    "attachments": [
+      "/files/chart_20251111_121426.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "What's the average secondary school dropout rate in 2025?",
+    "ts": "2025-11-11T19:07:09.432535Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-11T19:07:09.434748Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many undergraduate applicants are there in total?",
+    "ts": "2025-11-11T19:07:15.639306Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Total count: 1,500.",
+    "ts": "2025-11-11T19:07:15.640312Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me the primary school dropout rates by department",
+    "ts": "2025-11-11T19:07:21.193313Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • LORETO: 3.63\n  • UCAYALI: 3.45\n  • CALLAO: 3.23\n  • TUMBES: 2.72\n  • MADRE DE DIOS: 1.54\n  • LA LIBERTAD: 1.53\n  • LIMA: 1.40\n  • LAMBAYEQUE: 1.21\n  • ICA: 1.19\n  • SAN MARTIN: 1.15.",
+    "ts": "2025-11-11T19:07:21.498555Z",
+    "attachments": [
+      "/files/chart_20251111_140721.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Which regions have the highest dropout rates?",
+    "ts": "2025-11-11T19:07:39.975711Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • UCAYALI: 4.92\n  • TUMBES: 4.12\n  • CALLAO: 3.70\n  • LA LIBERTAD: 3.47\n  • LORETO: 3.44\n  • LAMBAYEQUE: 3.13\n  • PIURA: 3.12\n  • CAJAMARCA: 2.92\n  • MADRE DE DIOS: 2.92\n  • SAN MARTIN: 2.69.",
+    "ts": "2025-11-11T19:07:40.164903Z",
+    "attachments": [
+      "/files/chart_20251111_140739.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Compare dropout rates between Lima and Cusco",
+    "ts": "2025-11-11T19:07:50.011628Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-11T19:07:50.014630Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the enrollment by province in 2025?",
+    "ts": "2025-11-11T19:08:01.612768Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Province:\n\n  • CAJAMARCA: 772\n  • HUALGAYOC: 140\n  • CHOTA: 112\n  • CELENDIN: 86\n  • JAEN: 60\n  • SAN MARCOS: 42\n  • CAJABAMBA: 36\n  • SAN MIGUEL: 33\n  • SAN IGNACIO: 32\n  • CHICLAYO: 27.",
+    "ts": "2025-11-11T19:08:01.872351Z",
+    "attachments": [
+      "/files/chart_20251111_140801.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "How many applicants by faculty in 2025?",
+    "ts": "2025-11-11T19:08:17.225322Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Faculty:\n\n  • ENGINEERING: 307\n  • HEALTH SCIENCES: 281\n  • HUMAN MEDICINE: 281\n  • ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES: 165\n  • EDUCACION: 158\n  • LAW AND POLITICAL SCIENCE: 149\n  • AGRICULTURAL SCIENCES: 83\n  • CIENCIAS SOCIALES: 37\n  • CIENCIAS VETERINARIAS: 28\n  • ZOOTECNIA: 11.",
+    "ts": "2025-11-11T19:08:17.427731Z",
+    "attachments": [
+      "/files/chart_20251111_140817.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show me applicant distribution by program",
+    "ts": "2025-11-11T19:08:37.828714Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Program:\n\n  • HUMAN MEDICINE: 281\n  • INFIRMARY: 186\n  • RIGHT: 149\n  • CIVIL ENGINEERING: 138\n  • SYSTEM ENGINEERING: 75\n  • ACCOUNTING: 69\n  • OBSTETRICS: 68\n  • PRIMARY EDUCATION: 51\n  • MINING ENGINEERING: 50\n  • ECONOMY: 48.",
+    "ts": "2025-11-11T19:08:38.019176Z",
+    "attachments": [
+      "/files/chart_20251111_140837.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Chart the top 10 faculties by number of applicants",
+    "ts": "2025-11-11T19:08:44.771365Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Total count: 1,500.",
+    "ts": "2025-11-11T19:08:44.773777Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-11T19:08:57.620917Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map! Click below to explore.",
+    "ts": "2025-11-11T19:08:58.342693Z",
+    "attachments": [
+      "/files/map_20251111_140857.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show trends from 2015 to 2024",
+    "ts": "2025-11-11T19:09:17.318491Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "⚠️ I only have data for 2025. Please search within 2025 data only. Years mentioned: 2015, 2024 are not available.",
+    "ts": "2025-11-11T19:09:17.318491Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare 2023 vs 2024 data",
+    "ts": "2025-11-11T19:09:22.698701Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "⚠️ I only have data for 2025. Please search within 2025 data only. Years mentioned: 2023, 2024 are not available.",
+    "ts": "2025-11-11T19:09:22.700124Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was dropout rate in 2020",
+    "ts": "2025-11-11T19:09:27.392788Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "⚠️ I only have data for 2025. Please search within 2025 data only. Years mentioned: 2020 are not available.",
+    "ts": "2025-11-11T19:09:27.395015Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Summary",
+    "ts": "2025-11-11T19:33:22.485260Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Total count: 1,500.",
+    "ts": "2025-11-11T19:33:22.486287Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Give me summary",
+    "ts": "2025-11-11T19:33:28.436722Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Total count: 1,500.",
+    "ts": "2025-11-11T19:33:28.438184Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me the primary school dropout rates by department",
+    "ts": "2025-11-11T19:47:10.094958Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • LORETO: 3.63\n  • UCAYALI: 3.45\n  • CALLAO: 3.23\n  • TUMBES: 2.72\n  • MADRE DE DIOS: 1.54\n  • LA LIBERTAD: 1.53\n  • LIMA: 1.40\n  • LAMBAYEQUE: 1.21\n  • ICA: 1.19\n  • SAN MARTIN: 1.15.",
+    "ts": "2025-11-11T19:47:10.291039Z",
+    "attachments": [
+      "/files/chart_20251111_144710.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Chart the top 10 faculties by number of applicants",
+    "ts": "2025-11-11T19:47:17.764622Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Total count: 1,500.",
+    "ts": "2025-11-11T19:47:17.765640Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me applicant distribution by program",
+    "ts": "2025-11-11T19:47:22.831806Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Program:\n\n  • HUMAN MEDICINE: 281\n  • INFIRMARY: 186\n  • RIGHT: 149\n  • CIVIL ENGINEERING: 138\n  • SYSTEM ENGINEERING: 75\n  • ACCOUNTING: 69\n  • OBSTETRICS: 68\n  • PRIMARY EDUCATION: 51\n  • MINING ENGINEERING: 50\n  • ECONOMY: 48.",
+    "ts": "2025-11-11T19:47:23.014542Z",
+    "attachments": [
+      "/files/chart_20251111_144722.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "How many applicants by faculty in 2025?",
+    "ts": "2025-11-11T19:47:28.126321Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Faculty:\n\n  • ENGINEERING: 307\n  • HEALTH SCIENCES: 281\n  • HUMAN MEDICINE: 281\n  • ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES: 165\n  • EDUCACION: 158\n  • LAW AND POLITICAL SCIENCE: 149\n  • AGRICULTURAL SCIENCES: 83\n  • CIENCIAS SOCIALES: 37\n  • CIENCIAS VETERINARIAS: 28\n  • ZOOTECNIA: 11.",
+    "ts": "2025-11-11T19:47:28.329493Z",
+    "attachments": [
+      "/files/chart_20251111_144728.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "What's the enrollment by province in 2025?",
+    "ts": "2025-11-11T19:47:38.896123Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Province:\n\n  • CAJAMARCA: 772\n  • HUALGAYOC: 140\n  • CHOTA: 112\n  • CELENDIN: 86\n  • JAEN: 60\n  • SAN MARCOS: 42\n  • CAJABAMBA: 36\n  • SAN MIGUEL: 33\n  • SAN IGNACIO: 32\n  • CHICLAYO: 27.",
+    "ts": "2025-11-11T19:47:39.092256Z",
+    "attachments": [
+      "/files/chart_20251111_144738.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Compare dropout rates between Lima and Cusco",
+    "ts": "2025-11-11T19:47:43.558945Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-11T19:47:43.562849Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/business)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'map' - Generate geographic visualization\n  • Ask any question about the data!",
+    "ts": "2025-11-11T20:03:37.188806Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-11T20:03:49.461054Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, there! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'.",
+    "ts": "2025-11-11T20:03:49.462559Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-11T20:03:52.346232Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-11T20:03:52.350513Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/business)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'map' - Generate geographic visualization\n  • Ask any question about the data!",
+    "ts": "2025-11-11T20:05:57.552982Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-11T20:06:01.119310Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-11T20:06:01.122410Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "summary",
+    "ts": "2025-11-11T20:06:51.313924Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "============================================================\n📊 CONVERSATION SUMMARY\n============================================================\n\n📈 Statistics:\n  • Total exchanges: 3 questions, 5 responses\n  • Session started: 2025-11-11T15:03:37\n\n💬 Full Conversation:\n\n1. [15:03:37] ASSISTANT:\n   👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/st...\n\n2. [15:03:49] ASSISTANT:\n   Thanks, there! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'.\n\n3. [15:03:52] YOU:\n   Hello\n\n4. [15:03:52] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n5. [15:05:57] ASSISTANT:\n   👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/st...\n\n6. [15:06:01] YOU:\n   Hello\n\n7. [15:06:01] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n8. [15:06:51] YOU:\n   summary\n\n============================================================.",
+    "ts": "2025-11-11T20:06:51.315413Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/business)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • Ask any question about the data!",
+    "ts": "2025-11-11T20:12:05.413325Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-11T20:12:08.083593Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps.",
+    "ts": "2025-11-11T20:12:08.084593Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How are you",
+    "ts": "2025-11-11T20:15:08.127898Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I'm doing great, thank you for asking! 🤖\n\nI'm ready to help you analyze Peru's 2025 education data.\n\nWhat would you like to explore today?",
+    "ts": "2025-11-11T20:15:08.128508Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What can you do",
+    "ts": "2025-11-11T20:15:17.600141Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🤖 **Here's what I can do for you:**\n\n**Data Analysis (2025):**\n  • Dropout rates (primary & secondary schools)\n  • Undergraduate applicant statistics\n  • Regional/provincial breakdowns\n  • Faculty and program analysis\n\n**Visualizations:**\n  • Interactive charts (just ask for 'chart' or 'graph')\n  • Geographic maps (type 'map' or 'show map')\n  • Comparative analysis\n\n**Commands:**\n  • 'summary' - Get full conversation recap\n  • 'Compare [X] and [Y]' - Compare regions\n  • Profile setup - Click '👤 Profile' button\n\n**Example questions:**\n  • What's the average dropout rate?\n  • Show applicants by faculty\n  • Compare Lima and Cusco dropout rates\n  • Create a map of dropout rates\n\nWhat would you like to explore?",
+    "ts": "2025-11-11T20:15:17.601232Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the dropout rate?",
+    "ts": "2025-11-11T20:15:33.032952Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-11T20:15:33.033969Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-11T20:15:57.906443Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajesh! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'.",
+    "ts": "2025-11-11T20:15:57.908370Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average dropout rate",
+    "ts": "2025-11-11T20:16:06.340374Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-11T20:16:06.346892Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare Lima and Cusco",
+    "ts": "2025-11-11T20:16:12.350025Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Comparison for 2025:\n\n  • **LIMA**: 24 records\n  • **CUSCO**: 1 records\n  • **LIMA**: 23 records\n  • **LIMA**: 4 records.",
+    "ts": "2025-11-11T20:16:12.359304Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Thanks",
+    "ts": "2025-11-11T20:16:23.392037Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "You're very welcome! 😊\n\nI'm happy to help. Feel free to ask me anything else about the education data!",
+    "ts": "2025-11-11T20:16:23.393863Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average secondary school dropout rate in 2025",
+    "ts": "2025-11-11T20:17:10.637798Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-11T20:17:10.642815Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many undergraduate applicants are there in total?",
+    "ts": "2025-11-11T20:17:22.628815Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total undergraduate applicants in 2025: **1,500**.",
+    "ts": "2025-11-11T20:17:22.632760Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me the primary school dropout rates by department",
+    "ts": "2025-11-11T20:17:27.978773Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **LORETO**: 3.63\n  • **UCAYALI**: 3.45\n  • **CALLAO**: 3.23\n  • **TUMBES**: 2.72\n  • **MADRE DE DIOS**: 1.54\n  • **LA LIBERTAD**: 1.53\n  • **LIMA**: 1.40\n  • **LAMBAYEQUE**: 1.21\n  • **ICA**: 1.19\n  • **SAN MARTIN**: 1.15.",
+    "ts": "2025-11-11T20:17:28.337183Z",
+    "attachments": [
+      "/files/chart_20251111_151727.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Which regions have the highest dropout rates?",
+    "ts": "2025-11-11T20:17:57.778025Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.",
+    "ts": "2025-11-11T20:17:58.012061Z",
+    "attachments": [
+      "/files/chart_20251111_151757.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Compare dropout rates between Lima and Cusco",
+    "ts": "2025-11-11T20:18:10.986883Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Comparison for 2025:\n\n  • **CUSCO**: 1.53% average dropout rate\n  • **LIMA**: 2.19% average dropout rate\n  • **CUSCO**: 1.03% average dropout rate\n  • **LIMA**: 2.98% average dropout rate\n  • **CUSCO**: 0.84% average dropout rate\n  • **LIMA**: 3.57% average dropout rate\n  • **ATE**: 2.58% average dropout rate.",
+    "ts": "2025-11-11T20:18:11.002891Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the enrollment by province in 2025?",
+    "ts": "2025-11-11T20:18:24.949536Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Provinces by schools (2025):\n\n  • **CAJAMARCA**: 772\n  • **HUALGAYOC**: 140\n  • **CHOTA**: 112\n  • **CELENDIN**: 86\n  • **JAEN**: 60\n  • **SAN MARCOS**: 42\n  • **CAJABAMBA**: 36\n  • **SAN MIGUEL**: 33\n  • **SAN IGNACIO**: 32\n  • **CHICLAYO**: 27.",
+    "ts": "2025-11-11T20:18:25.156700Z",
+    "attachments": [
+      "/files/chart_20251111_151824.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "How many applicants by faculty in 2025?",
+    "ts": "2025-11-11T20:18:37.862949Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • **CIENCIAS SOCIALES**: 37\n  • **CIENCIAS VETERINARIAS**: 28\n  • **ZOOTECNIA**: 11.",
+    "ts": "2025-11-11T20:18:38.069122Z",
+    "attachments": [
+      "/files/chart_20251111_151837.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show me applicant distribution by program",
+    "ts": "2025-11-11T20:19:00.841168Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **ECONOMY**: 48.",
+    "ts": "2025-11-11T20:19:01.037303Z",
+    "attachments": [
+      "/files/chart_20251111_151900.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Chart the top 10 faculties by number of applicants",
+    "ts": "2025-11-11T20:19:07.626568Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total undergraduate applicants in 2025: **1,500**.",
+    "ts": "2025-11-11T20:19:07.629737Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-11T20:19:27.084761Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't create a map. The dataset needs latitude/longitude columns with valid Peru coordinates.",
+    "ts": "2025-11-11T20:19:27.399101Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "You: Create a map showing geographic distribution of schools Assistant: I couldn't create a map. The dataset needs latitude/longitude columns with valid Peru coordinates.",
+    "ts": "2025-11-11T21:05:34.620104Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't create a map. The dataset needs latitude/longitude columns with valid Peru coordinates.",
+    "ts": "2025-11-11T21:05:34.621743Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/business)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • Ask any question about the data!",
+    "ts": "2025-11-11T21:21:55.370799Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-11T21:22:15.721802Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-11T21:22:15.723805Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-11T21:22:19.121553Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-11T21:22:19.122666Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-11T21:22:29.325594Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-11T21:22:29.327593Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-11T21:22:36.549670Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, there! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'.",
+    "ts": "2025-11-11T21:22:36.551610Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-11T21:22:39.286527Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-11T21:22:39.510651Z",
+    "attachments": [
+      "/files/map_20251111_162239.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show me a map of dropout rates",
+    "ts": "2025-11-11T21:22:59.839814Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-11T21:22:59.874650Z",
+    "attachments": [
+      "/files/map_20251111_162259.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Geographic distribution",
+    "ts": "2025-11-11T21:23:09.936204Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-11T21:23:09.939713Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **NEW: What-If Simulator** - Predict policy impacts!\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/investor)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • 🔮 'simulate menu' - See What-If scenarios\n  • Ask any question about the data!",
+    "ts": "2025-11-13T17:11:55.436215Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-13T17:12:00.965559Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu').",
+    "ts": "2025-11-13T17:12:00.966634Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How are you",
+    "ts": "2025-11-13T17:12:06.785221Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I'm doing great, thank you for asking! 🤖\n\nI'm ready to help you analyze Peru's 2025 education data.\n\nWhat would you like to explore today?",
+    "ts": "2025-11-13T17:12:06.786721Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "simulate menu",
+    "ts": "2025-11-13T17:18:54.175166Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Intensive Teacher Training Program**\n   3-month professional development for all teachers\n   Expected impact: 18% reduction\n   Cost: $85/student/year\n\n3. **Universal School Meal Program**\n   Free breakfast and lunch for all students\n   Expected impact: 32% reduction\n   Cost: $180/student/year\n\n4. **School Infrastructure Improvement**\n   Renovate facilities, add technology, improve safety\n   Expected impact: 22% reduction\n   Cost: $250/student/year\n\n5. **Need-Based Scholarship Program**\n   Financial aid for low-income families\n   Expected impact: 38% reduction\n   Cost: $200/student/year\n\n6. **Student Mentorship Program**\n   Pair at-risk students with mentors\n   Expected impact: 28% reduction\n   Cost: $95/student/year\n\n📝 **How to use:**\n  • 'Simulate meal program'\n  • 'What if we reduce class sizes?'\n  • 'Show impact of scholarships'\n  • 'Predict teacher training outcomes'\n\n💡 Simulations show:\n  • Predicted dropout rate changes\n  • Number of students helped\n  • Cost-benefit analysis\n  • ROI for investors\n  • Impact metrics for NGOs.",
+    "ts": "2025-11-13T17:18:54.177189Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "SCENARIO: Universal School Meal Program Description: Free breakfast and lunch for all students Scope: National Average",
+    "ts": "2025-11-13T17:19:07.897495Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Intensive Teacher Training Program\n**Description:** 3-month professional development for all teachers\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.05%\n  • Predicted rate: 1.68% \n  • Expected reduction: 0.37% (18.00% improvement)\n\n👥 **HUMAN IMPACT:**\n  • Students currently at risk: ~18,881\n  • Students who would stay in school: ~3,398\n  • Lives positively impacted: ~13,592 (including families)\n\n💰 **FINANCIAL ANALYSIS:**\n\n**Investment Required:**\n  • Cost per student: $85/year\n  • Total annual investment: $78.45M\n  • 5-year commitment: $392.27M\n\n**Economic Returns:**\n  • Economic value per retained student: $35,000 (lifetime)\n  • Total economic value generated: $118.93M\n  • **Return on Investment (ROI): 1.52x**\n  • Break-even timeline: ~6.60 years\n\n📈 **FOR INVESTORS:**\n  • Social Impact: 3,398 students\n  • Financial Return: 51.59% over 10 years\n  • Risk Level: Medium (education interventions)\n  • Alignment: UN SDG 4 (Quality Education)\n\n🎯 **FOR NGOs:**\n  • Impact per $1,000: 0.04 students helped\n  • Scalability: High (can expand to all regions)\n  • Community benefit: Reduced poverty, increased literacy\n  • Monitoring: Monthly dropout tracking available\n\n👨‍👩‍👧 **FOR FAMILIES:**\n  • Your child's success rate increases by 18.00%\n  • Better educational outcomes lead to higher income potential\n  • Access to additional support services included\n  • Community improvement benefits everyone\n\n⚠️ **CONFIDENCE & EVIDENCE:**\n  • Prediction confidence: 72%\n  • Evidence base: Based on Peru's 2019-2022 pilot programs\n  • Recommended pilot: Start with 2-3 high-risk regions\n\n============================================================\n\n💡 **Want to explore more scenarios?**\nType 'simulate menu' to see all options!",
+    "ts": "2025-11-13T17:19:07.906341Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **NEW: What-If Simulator** - Predict policy impacts!\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/investor)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • 🔮 'simulate menu' - See What-If scenarios\n  • Ask any question about the data!",
+    "ts": "2025-11-13T17:20:21.640647Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "simulate menu",
+    "ts": "2025-11-13T17:30:58.855692Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Intensive Teacher Training Program**\n   3-month professional development for all teachers\n   Expected impact: 18% reduction\n   Cost: $85/student/year\n\n3. **Universal School Meal Program**\n   Free breakfast and lunch for all students\n   Expected impact: 32% reduction\n   Cost: $180/student/year\n\n4. **School Infrastructure Improvement**\n   Renovate facilities, add technology, improve safety\n   Expected impact: 22% reduction\n   Cost: $250/student/year\n\n5. **Need-Based Scholarship Program**\n   Financial aid for low-income families\n   Expected impact: 38% reduction\n   Cost: $200/student/year\n\n6. **Student Mentorship Program**\n   Pair at-risk students with mentors\n   Expected impact: 28% reduction\n   Cost: $95/student/year\n\n📝 **How to use:**\n  • 'Simulate meal program'\n  • 'What if we reduce class sizes?'\n  • 'Show impact of scholarships'\n  • 'Predict teacher training outcomes'\n\n💡 Simulations show:\n  • Predicted dropout rate changes\n  • Number of students helped\n  • Cost-benefit analysis\n  • ROI for investors\n  • Impact metrics for NGOs.",
+    "ts": "2025-11-13T17:30:58.857700Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Scenario: Universal School Meal Program.  Description: Free Breakfast and Lunch for all students. Scope: National Average",
+    "ts": "2025-11-13T17:31:44.450286Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Intensive Teacher Training Program\n**Description:** 3-month professional development for all teachers\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.05%\n  • Predicted rate: 1.68% \n  • Expected reduction: 0.37% (18.00% improvement)\n\n👥 **HUMAN IMPACT:**\n  • Students currently at risk: ~18,881\n  • Students who would stay in school: ~3,398\n  • Lives positively impacted: ~13,592 (including families)\n\n💰 **FINANCIAL ANALYSIS:**\n\n**Investment Required:**\n  • Cost per student: $85/year\n  • Total annual investment: $78.45M\n  • 5-year commitment: $392.27M\n\n**Economic Returns:**\n  • Economic value per retained student: $35,000 (lifetime)\n  • Total economic value generated: $118.93M\n  • **Return on Investment (ROI): 1.52x**\n  • Break-even timeline: ~6.60 years\n\n📈 **FOR INVESTORS:**\n  • Social Impact: 3,398 students\n  • Financial Return: 51.59% over 10 years\n  • Risk Level: Medium (education interventions)\n  • Alignment: UN SDG 4 (Quality Education)\n\n🎯 **FOR NGOs:**\n  • Impact per $1,000: 0.04 students helped\n  • Scalability: High (can expand to all regions)\n  • Community benefit: Reduced poverty, increased literacy\n  • Monitoring: Monthly dropout tracking available\n\n👨‍👩‍👧 **FOR FAMILIES:**\n  • Your child's success rate increases by 18.00%\n  • Better educational outcomes lead to higher income potential\n  • Access to additional support services included\n  • Community improvement benefits everyone\n\n⚠️ **CONFIDENCE & EVIDENCE:**\n  • Prediction confidence: 72%\n  • Evidence base: Based on Peru's 2019-2022 pilot programs\n  • Recommended pilot: Start with 2-3 high-risk regions\n\n============================================================\n\n💡 **Want to explore more scenarios?**\nType 'simulate menu' to see all options!",
+    "ts": "2025-11-13T17:31:44.455218Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **NEW: What-If Simulator** - Predict policy impacts!\n\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/investor)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • 🔮 'simulate menu' - See What-If scenarios\n  • Ask any question about the data!",
+    "ts": "2025-11-14T01:39:32.904685Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average dropout rate?",
+    "ts": "2025-11-14T01:39:48.929721Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-14T01:39:48.932211Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-14T01:40:06.169833Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajesh! 🎉 Profile saved.\n\n💡 Want to see how interventions could help? Try 'simulate menu'!\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-14T01:40:06.173211Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average dropout rate?",
+    "ts": "2025-11-14T01:40:09.552738Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-14T01:40:09.559918Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Why do you think dropout rates vary by region? What patterns do you see?",
+    "ts": "2025-11-14T01:40:16.487587Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.",
+    "ts": "2025-11-14T01:40:16.981812Z",
+    "attachments": [
+      "/files/chart_20251113_204016.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Hey",
+    "ts": "2025-11-14T01:41:36.308201Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello Vrajesh! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **NEW: What-If Simulations** (try 'simulate menu')\n  • Or type 'summary' to review our conversation.",
+    "ts": "2025-11-14T01:41:36.310201Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Whatsup",
+    "ts": "2025-11-14T01:41:41.948035Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T01:41:41.952122Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What'sup",
+    "ts": "2025-11-14T01:41:45.979893Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T01:41:45.983223Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-14T01:41:47.693709Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello Vrajesh! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **NEW: What-If Simulations** (try 'simulate menu')\n  • Or type 'summary' to review our conversation.",
+    "ts": "2025-11-14T01:41:47.693709Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Good Morning",
+    "ts": "2025-11-14T01:41:53.754629Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello Vrajesh! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **NEW: What-If Simulations** (try 'simulate menu')\n  • Or type 'summary' to review our conversation.",
+    "ts": "2025-11-14T01:41:53.756638Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me your capabilities",
+    "ts": "2025-11-14T01:42:11.457711Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🤖 **JGM Insights Assistant** (📊 Data Analysis)\n\n**Data Analysis (2025):**\n  • Dropout rates (primary & secondary schools)\n  • Undergraduate applicant statistics\n  • Regional/provincial breakdowns\n  • Faculty and program analysis\n\n**Visualizations:**\n  • Interactive charts (just ask for 'chart' or 'graph')\n  • Geographic maps (type 'map' or 'show map')\n  • Comparative analysis\n\n**🔮 What-If Simulator (NEW!):**\n  • Predict policy impact\n  • ROI calculations for investors\n  • Cost-benefit analysis for NGOs\n  • Try: 'simulate menu' to see options\n\n**Commands:**\n  • 'summary' - Get full conversation recap\n  • 'Compare [X] and [Y]' - Compare regions\n  • 'simulate [scenario]' - Run What-If analysis\n  • Profile setup - Click '👤 Profile' button\n\n**Example questions:**\n  • What's the average dropout rate?\n  • Show applicants by faculty\n  • Compare Lima and Cusco dropout rates\n  • What if we implement meal programs?\n  • Simulate scholarship impact\n\nWhat would you like to explore?",
+    "ts": "2025-11-14T01:42:11.459710Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Which region has the highest dropout rate?",
+    "ts": "2025-11-14T01:42:34.406837Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.",
+    "ts": "2025-11-14T01:42:34.654072Z",
+    "attachments": [
+      "/files/chart_20251113_204234.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Tell me about secondary school dropout rates",
+    "ts": "2025-11-14T02:01:20.800644Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-14T02:01:20.807150Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show applicants by faculty",
+    "ts": "2025-11-14T02:01:39.919759Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • **CIENCIAS SOCIALES**: 37\n  • **CIENCIAS VETERINARIAS**: 28\n  • **ZOOTECNIA**: 11.",
+    "ts": "2025-11-14T02:01:40.199838Z",
+    "attachments": [
+      "/files/chart_20251113_210139.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "What are the top 5 programs by number of applicants?",
+    "ts": "2025-11-14T02:01:53.087864Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **ECONOMY**: 48.",
+    "ts": "2025-11-14T02:01:53.423093Z",
+    "attachments": [
+      "/files/chart_20251113_210153.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show me applicants by program",
+    "ts": "2025-11-14T02:02:01.335779Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **ECONOMY**: 48.",
+    "ts": "2025-11-14T02:02:01.567396Z",
+    "attachments": [
+      "/files/chart_20251113_210201.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "How many applicants in Engineering?",
+    "ts": "2025-11-14T02:02:47.656853Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total undergraduate applicants in 2025: **1,500**.",
+    "ts": "2025-11-14T02:02:47.665450Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me education data for Cusco",
+    "ts": "2025-11-14T02:02:54.347605Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T02:02:54.349475Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare Lima and Cusco",
+    "ts": "2025-11-14T02:02:58.774608Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Comparison for 2025:\n\n  • **LIMA**: 24 records\n  • **CUSCO**: 1 records\n  • **LIMA**: 23 records\n  • **LIMA**: 4 records.",
+    "ts": "2025-11-14T02:02:58.783157Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Which departments have the lowest dropout rates?",
+    "ts": "2025-11-14T02:03:09.228497Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.",
+    "ts": "2025-11-14T02:03:09.464527Z",
+    "attachments": [
+      "/files/chart_20251113_210309.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show me rural vs urban statistics",
+    "ts": "2025-11-14T02:03:16.108115Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T02:03:16.111726Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What factors might contribute to high dropout rates?",
+    "ts": "2025-11-14T02:03:37.054591Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-14T02:03:37.059589Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Where should we focus our resources?",
+    "ts": "2025-11-14T02:03:41.639757Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T02:03:41.644163Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What does this data tell us about Peru's education system?",
+    "ts": "2025-11-14T02:03:46.383741Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T02:03:46.389179Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How do urban and rural schools differ?",
+    "ts": "2025-11-14T02:04:14.685384Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T02:04:14.690505Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "simulate menu",
+    "ts": "2025-11-14T02:04:20.469680Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Intensive Teacher Training Program**\n   3-month professional development for all teachers\n   Expected impact: 18% reduction\n   Cost: $85/student/year\n\n3. **Universal School Meal Program**\n   Free breakfast and lunch for all students\n   Expected impact: 32% reduction\n   Cost: $180/student/year\n\n4. **School Infrastructure Improvement**\n   Renovate facilities, add technology, improve safety\n   Expected impact: 22% reduction\n   Cost: $250/student/year\n\n5. **Need-Based Scholarship Program**\n   Financial aid for low-income families\n   Expected impact: 38% reduction\n   Cost: $200/student/year\n\n6. **Student Mentorship Program**\n   Pair at-risk students with mentors\n   Expected impact: 28% reduction\n   Cost: $95/student/year\n\n📝 **How to use:**\n  • 'Simulate meal program'\n  • 'What if we reduce class sizes?'\n  • 'Show impact of scholarships'\n  • 'Predict teacher training outcomes'\n\n💡 Simulations show:\n  • Predicted dropout rate changes\n  • Number of students helped\n  • Cost-benefit analysis\n  • ROI for investors\n  • Impact metrics for NGOs.",
+    "ts": "2025-11-14T02:04:20.469680Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "simulate menu",
+    "ts": "2025-11-14T02:04:22.483043Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Intensive Teacher Training Program**\n   3-month professional development for all teachers\n   Expected impact: 18% reduction\n   Cost: $85/student/year\n\n3. **Universal School Meal Program**\n   Free breakfast and lunch for all students\n   Expected impact: 32% reduction\n   Cost: $180/student/year\n\n4. **School Infrastructure Improvement**\n   Renovate facilities, add technology, improve safety\n   Expected impact: 22% reduction\n   Cost: $250/student/year\n\n5. **Need-Based Scholarship Program**\n   Financial aid for low-income families\n   Expected impact: 38% reduction\n   Cost: $200/student/year\n\n6. **Student Mentorship Program**\n   Pair at-risk students with mentors\n   Expected impact: 28% reduction\n   Cost: $95/student/year\n\n📝 **How to use:**\n  • 'Simulate meal program'\n  • 'What if we reduce class sizes?'\n  • 'Show impact of scholarships'\n  • 'Predict teacher training outcomes'\n\n💡 Simulations show:\n  • Predicted dropout rate changes\n  • Number of students helped\n  • Cost-benefit analysis\n  • ROI for investors\n  • Impact metrics for NGOs.",
+    "ts": "2025-11-14T02:04:22.488678Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What if we implement meal programs?",
+    "ts": "2025-11-14T02:04:28.008045Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Intensive Teacher Training Program\n**Description:** 3-month professional development for all teachers\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.05%\n  • Predicted rate: 1.68% \n  • Expected reduction: 0.37% (18.00% improvement)\n\n👥 **HUMAN IMPACT:**\n  • Students currently at risk: ~18,881\n  • Students who would stay in school: ~3,398\n  • Lives positively impacted: ~13,592 (including families)\n\n💰 **FINANCIAL ANALYSIS:**\n\n**Investment Required:**\n  • Cost per student: $85/year\n  • Total annual investment: $78.45M\n  • 5-year commitment: $392.27M\n\n**Economic Returns:**\n  • Economic value per retained student: $35,000 (lifetime)\n  • Total economic value generated: $118.93M\n  • **Return on Investment (ROI): 1.52x**\n  • Break-even timeline: ~6.60 years\n\n📈 **FOR INVESTORS:**\n  • Social Impact: 3,398 students\n  • Financial Return: 51.59% over 10 years\n  • Risk Level: Medium (education interventions)\n  • Alignment: UN SDG 4 (Quality Education)\n\n🎯 **FOR NGOs:**\n  • Impact per $1,000: 0.04 students helped\n  • Scalability: High (can expand to all regions)\n  • Community benefit: Reduced poverty, increased literacy\n  • Monitoring: Monthly dropout tracking available\n\n👨‍👩‍👧 **FOR FAMILIES:**\n  • Your child's success rate increases by 18.00%\n  • Better educational outcomes lead to higher income potential\n  • Access to additional support services included\n  • Community improvement benefits everyone\n\n⚠️ **CONFIDENCE & EVIDENCE:**\n  • Prediction confidence: 72%\n  • Evidence base: Based on Peru's 2019-2022 pilot programs\n  • Recommended pilot: Start with 2-3 high-risk regions\n\n============================================================\n\n💡 **Want to explore more scenarios?**\nType 'simulate menu' to see all options!",
+    "ts": "2025-11-14T02:04:28.012831Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Student Mentorship Program**    Pair at-risk students with mentors    Expected impact: 28% reduction    Cost: $95/student/year",
+    "ts": "2025-11-14T02:04:39.052533Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **ECONOMY**: 48.",
+    "ts": "2025-11-14T02:04:39.287415Z",
+    "attachments": [
+      "/files/chart_20251113_210439.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "simulate menu",
+    "ts": "2025-11-14T02:04:44.319757Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Intensive Teacher Training Program**\n   3-month professional development for all teachers\n   Expected impact: 18% reduction\n   Cost: $85/student/year\n\n3. **Universal School Meal Program**\n   Free breakfast and lunch for all students\n   Expected impact: 32% reduction\n   Cost: $180/student/year\n\n4. **School Infrastructure Improvement**\n   Renovate facilities, add technology, improve safety\n   Expected impact: 22% reduction\n   Cost: $250/student/year\n\n5. **Need-Based Scholarship Program**\n   Financial aid for low-income families\n   Expected impact: 38% reduction\n   Cost: $200/student/year\n\n6. **Student Mentorship Program**\n   Pair at-risk students with mentors\n   Expected impact: 28% reduction\n   Cost: $95/student/year\n\n📝 **How to use:**\n  • 'Simulate meal program'\n  • 'What if we reduce class sizes?'\n  • 'Show impact of scholarships'\n  • 'Predict teacher training outcomes'\n\n💡 Simulations show:\n  • Predicted dropout rate changes\n  • Number of students helped\n  • Cost-benefit analysis\n  • ROI for investors\n  • Impact metrics for NGOs.",
+    "ts": "2025-11-14T02:04:44.319757Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show cost-benefit analysis for scholarships",
+    "ts": "2025-11-14T02:04:50.070031Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T02:04:50.074029Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "simulate menu",
+    "ts": "2025-11-14T02:04:56.099232Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Intensive Teacher Training Program**\n   3-month professional development for all teachers\n   Expected impact: 18% reduction\n   Cost: $85/student/year\n\n3. **Universal School Meal Program**\n   Free breakfast and lunch for all students\n   Expected impact: 32% reduction\n   Cost: $180/student/year\n\n4. **School Infrastructure Improvement**\n   Renovate facilities, add technology, improve safety\n   Expected impact: 22% reduction\n   Cost: $250/student/year\n\n5. **Need-Based Scholarship Program**\n   Financial aid for low-income families\n   Expected impact: 38% reduction\n   Cost: $200/student/year\n\n6. **Student Mentorship Program**\n   Pair at-risk students with mentors\n   Expected impact: 28% reduction\n   Cost: $95/student/year\n\n📝 **How to use:**\n  • 'Simulate meal program'\n  • 'What if we reduce class sizes?'\n  • 'Show impact of scholarships'\n  • 'Predict teacher training outcomes'\n\n💡 Simulations show:\n  • Predicted dropout rate changes\n  • Number of students helped\n  • Cost-benefit analysis\n  • ROI for investors\n  • Impact metrics for NGOs.",
+    "ts": "2025-11-14T02:04:56.102331Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What if we add mentorship programs?",
+    "ts": "2025-11-14T02:04:58.844763Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Intensive Teacher Training Program\n**Description:** 3-month professional development for all teachers\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.05%\n  • Predicted rate: 1.68% \n  • Expected reduction: 0.37% (18.00% improvement)\n\n👥 **HUMAN IMPACT:**\n  • Students currently at risk: ~18,881\n  • Students who would stay in school: ~3,398\n  • Lives positively impacted: ~13,592 (including families)\n\n💰 **FINANCIAL ANALYSIS:**\n\n**Investment Required:**\n  • Cost per student: $85/year\n  • Total annual investment: $78.45M\n  • 5-year commitment: $392.27M\n\n**Economic Returns:**\n  • Economic value per retained student: $35,000 (lifetime)\n  • Total economic value generated: $118.93M\n  • **Return on Investment (ROI): 1.52x**\n  • Break-even timeline: ~6.60 years\n\n📈 **FOR INVESTORS:**\n  • Social Impact: 3,398 students\n  • Financial Return: 51.59% over 10 years\n  • Risk Level: Medium (education interventions)\n  • Alignment: UN SDG 4 (Quality Education)\n\n🎯 **FOR NGOs:**\n  • Impact per $1,000: 0.04 students helped\n  • Scalability: High (can expand to all regions)\n  • Community benefit: Reduced poverty, increased literacy\n  • Monitoring: Monthly dropout tracking available\n\n👨‍👩‍👧 **FOR FAMILIES:**\n  • Your child's success rate increases by 18.00%\n  • Better educational outcomes lead to higher income potential\n  • Access to additional support services included\n  • Community improvement benefits everyone\n\n⚠️ **CONFIDENCE & EVIDENCE:**\n  • Prediction confidence: 72%\n  • Evidence base: Based on Peru's 2019-2022 pilot programs\n  • Recommended pilot: Start with 2-3 high-risk regions\n\n============================================================\n\n💡 **Want to explore more scenarios?**\nType 'simulate menu' to see all options!",
+    "ts": "2025-11-14T02:04:58.850272Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Make a chart showing regional differences",
+    "ts": "2025-11-14T02:05:36.700371Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Regions by schools (2025):\n\n  • **CAJAMARCA**: 1,366\n  • **LA LIBERTAD**: 38\n  • **LAMBAYEQUE**: 28\n  • **LIMA**: 24\n  • **AMAZONAS**: 17\n  • **ANCASH**: 7\n  • **LORETO**: 4\n  • **SAN MARTIN**: 3\n  • **PIURA**: 3\n  • **JUNIN**: 2.",
+    "ts": "2025-11-14T02:05:36.954546Z",
+    "attachments": [
+      "/files/chart_20251113_210536.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Make a chart showing regional differences of school",
+    "ts": "2025-11-14T02:05:50.238938Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Regions by schools (2025):\n\n  • **CAJAMARCA**: 1,366\n  • **LA LIBERTAD**: 38\n  • **LAMBAYEQUE**: 28\n  • **LIMA**: 24\n  • **AMAZONAS**: 17\n  • **ANCASH**: 7\n  • **LORETO**: 4\n  • **SAN MARTIN**: 3\n  • **PIURA**: 3\n  • **JUNIN**: 2.",
+    "ts": "2025-11-14T02:05:50.516110Z",
+    "attachments": [
+      "/files/chart_20251113_210550.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Visualize applicants by faculty",
+    "ts": "2025-11-14T02:06:09.303465Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • **CIENCIAS SOCIALES**: 37\n  • **CIENCIAS VETERINARIAS**: 28\n  • **ZOOTECNIA**: 11.",
+    "ts": "2025-11-14T02:06:09.657827Z",
+    "attachments": [
+      "/files/chart_20251113_210609.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Map dropout rates across Peru",
+    "ts": "2025-11-14T02:06:23.688684Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-14T02:06:23.933582Z",
+    "attachments": [
+      "/files/map_20251113_210623.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Generate an interactive map",
+    "ts": "2025-11-14T02:06:26.626204Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-14T02:06:26.656633Z",
+    "attachments": [
+      "/files/map_20251113_210626.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Display regional data on a map",
+    "ts": "2025-11-14T02:06:29.399724Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-14T02:06:29.418216Z",
+    "attachments": [
+      "/files/map_20251113_210629.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show me where dropout rates are highest",
+    "ts": "2025-11-14T02:07:02.918972Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-14T02:07:02.918972Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Summary",
+    "ts": "2025-11-14T02:07:19.371726Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "============================================================\n📊 CONVERSATION SUMMARY\n============================================================\n\n📈 Statistics:\n  • Total exchanges: 39 questions, 40 responses\n  • Session started: 2025-11-13T20:39:32\n\n💬 Full Conversation:\n\n1. [20:39:32] ASSISTANT:\n   👋 Hello! I'm the JGM Insights Assistant\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **NEW: What-If Simulator** - Predict policy impacts!\n\n\nBefore we start, please click '...\n\n2. [20:39:48] YOU:\n   What's the average dropout rate?\n\n3. [20:39:48] ASSISTANT:\n   👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!\n\n4. [20:40:06] ASSISTANT:\n   Thanks, Vrajesh! 🎉 Profile saved.\n\n💡 Want to see how interventions could help? Try 'simulate menu'!\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n ...\n\n5. [20:40:09] YOU:\n   What's the average dropout rate?\n\n6. [20:40:09] ASSISTANT:\n   📊 Average secondary school dropout rate in 2025: **2.05%**.\n\n7. [20:40:16] YOU:\n   Why do you think dropout rates vary by region? What patterns do you see?\n\n8. [20:40:16] ASSISTANT:\n   📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.\n\n9. [20:41:36] YOU:\n   Hey\n\n10. [20:41:36] ASSISTANT:\n   Hello Vrajesh! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **NEW: What-If Simulations** (try 'simulate menu')\n  • Or type 'summary'...\n\n11. [20:41:41] YOU:\n   Whatsup\n\n12. [20:41:41] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n13. [20:41:45] YOU:\n   What'sup\n\n14. [20:41:45] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n15. [20:41:47] YOU:\n   Hello\n\n16. [20:41:47] ASSISTANT:\n   Hello Vrajesh! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **NEW: What-If Simulations** (try 'simulate menu')\n  • Or type 'summary'...\n\n17. [20:41:53] YOU:\n   Good Morning\n\n18. [20:41:53] ASSISTANT:\n   Hello Vrajesh! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **NEW: What-If Simulations** (try 'simulate menu')\n  • Or type 'summary'...\n\n19. [20:42:11] YOU:\n   Show me your capabilities\n\n20. [20:42:11] ASSISTANT:\n   🤖 **JGM Insights Assistant** (📊 Data Analysis)\n\n**Data Analysis (2025):**\n  • Dropout rates (primary & secondary schools)\n  • Undergraduate applicant statistics\n  • Regional/provincial breakdowns\n  • Faculty and program analysis\n\n**Visualizations:**\n  • Interactive charts (just ask for 'chart' or 'g...\n\n21. [20:42:34] YOU:\n   Which region has the highest dropout rate?\n\n22. [20:42:34] ASSISTANT:\n   📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.\n\n23. [21:01:20] YOU:\n   Tell me about secondary school dropout rates\n\n24. [21:01:20] ASSISTANT:\n   📊 Average secondary school dropout rate in 2025: **2.05%**.\n\n25. [21:01:39] YOU:\n   Show applicants by faculty\n\n26. [21:01:40] ASSISTANT:\n   📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • *...\n\n27. [21:01:53] YOU:\n   What are the top 5 programs by number of applicants?\n\n28. [21:01:53] ASSISTANT:\n   📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **...\n\n29. [21:02:01] YOU:\n   Show me applicants by program\n\n30. [21:02:01] ASSISTANT:\n   📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **...\n\n31. [21:02:47] YOU:\n   How many applicants in Engineering?\n\n32. [21:02:47] ASSISTANT:\n   📊 Total undergraduate applicants in 2025: **1,500**.\n\n33. [21:02:54] YOU:\n   Show me education data for Cusco\n\n34. [21:02:54] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n35. [21:02:58] YOU:\n   Compare Lima and Cusco\n\n36. [21:02:58] ASSISTANT:\n   📊 Comparison for 2025:\n\n  • **LIMA**: 24 records\n  • **CUSCO**: 1 records\n  • **LIMA**: 23 records\n  • **LIMA**: 4 records.\n\n37. [21:03:09] YOU:\n   Which departments have the lowest dropout rates?\n\n38. [21:03:09] ASSISTANT:\n   📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.\n\n39. [21:03:16] YOU:\n   Show me rural vs urban statistics\n\n40. [21:03:16] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n41. [21:03:37] YOU:\n   What factors might contribute to high dropout rates?\n\n42. [21:03:37] ASSISTANT:\n   📊 Average secondary school dropout rate in 2025: **2.05%**.\n\n43. [21:03:41] YOU:\n   Where should we focus our resources?\n\n44. [21:03:41] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n45. [21:03:46] YOU:\n   What does this data tell us about Peru's education system?\n\n46. [21:03:46] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n47. [21:04:14] YOU:\n   How do urban and rural schools differ?\n\n48. [21:04:14] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n49. [21:04:20] YOU:\n   simulate menu\n\n50. [21:04:20] ASSISTANT:\n   🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Inte...\n\n51. [21:04:22] YOU:\n   simulate menu\n\n52. [21:04:22] ASSISTANT:\n   🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Inte...\n\n53. [21:04:28] YOU:\n   What if we implement meal programs?\n\n54. [21:04:28] ASSISTANT:\n   🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Intensive Teacher Training Program\n**Description:** 3-month professional development for all teachers\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Cu...\n\n55. [21:04:39] YOU:\n   Student Mentorship Program**    Pair at-risk students with mentors    Expected impact: 28% reduction    Cost: $95/student/year\n\n56. [21:04:39] ASSISTANT:\n   📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **...\n\n57. [21:04:44] YOU:\n   simulate menu\n\n58. [21:04:44] ASSISTANT:\n   🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Inte...\n\n59. [21:04:50] YOU:\n   Show cost-benefit analysis for scholarships\n\n60. [21:04:50] ASSISTANT:\n   📊 Total school records in 2025: **1,500**.\n\n61. [21:04:56] YOU:\n   simulate menu\n\n62. [21:04:56] ASSISTANT:\n   🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Inte...\n\n63. [21:04:58] YOU:\n   What if we add mentorship programs?\n\n64. [21:04:58] ASSISTANT:\n   🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Intensive Teacher Training Program\n**Description:** 3-month professional development for all teachers\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Cu...\n\n65. [21:05:36] YOU:\n   Make a chart showing regional differences\n\n66. [21:05:36] ASSISTANT:\n   📊 Top 10 Regions by schools (2025):\n\n  • **CAJAMARCA**: 1,366\n  • **LA LIBERTAD**: 38\n  • **LAMBAYEQUE**: 28\n  • **LIMA**: 24\n  • **AMAZONAS**: 17\n  • **ANCASH**: 7\n  • **LORETO**: 4\n  • **SAN MARTIN**: 3\n  • **PIURA**: 3\n  • **JUNIN**: 2.\n\n67. [21:05:50] YOU:\n   Make a chart showing regional differences of school\n\n68. [21:05:50] ASSISTANT:\n   📊 Top 10 Regions by schools (2025):\n\n  • **CAJAMARCA**: 1,366\n  • **LA LIBERTAD**: 38\n  • **LAMBAYEQUE**: 28\n  • **LIMA**: 24\n  • **AMAZONAS**: 17\n  • **ANCASH**: 7\n  • **LORETO**: 4\n  • **SAN MARTIN**: 3\n  • **PIURA**: 3\n  • **JUNIN**: 2.\n\n69. [21:06:09] YOU:\n   Visualize applicants by faculty\n\n70. [21:06:09] ASSISTANT:\n   📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • *...\n\n71. [21:06:23] YOU:\n   Map dropout rates across Peru\n\n72. [21:06:23] ASSISTANT:\n   🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.\n\n73. [21:06:26] YOU:\n   Generate an interactive map\n\n74. [21:06:26] ASSISTANT:\n   🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.\n\n75. [21:06:29] YOU:\n   Display regional data on a map\n\n76. [21:06:29] ASSISTANT:\n   🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.\n\n77. [21:07:02] YOU:\n   Show me where dropout rates are highest\n\n78. [21:07:02] ASSISTANT:\n   📊 Average secondary school dropout rate in 2025: **2.05%**.\n\n79. [21:07:19] YOU:\n   Summary\n\n============================================================.",
+    "ts": "2025-11-14T02:07:19.371726Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Update my information",
+    "ts": "2025-11-14T02:07:40.423099Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T02:07:40.426690Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **What-If Simulator** - Predict policy impacts!\n\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/investor)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • 🔮 'simulate menu' - See What-If scenarios\n  • Ask any question about the data!",
+    "ts": "2025-11-14T15:22:08.052169Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-14T15:22:17.542029Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu').",
+    "ts": "2025-11-14T15:22:17.545577Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-14T15:22:40.440380Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, LDX! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-14T15:22:40.447190Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me education data for Lima",
+    "ts": "2025-11-14T15:22:59.583233Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "simulate menu",
+    "ts": "2025-11-14T15:23:09.235488Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Intensive Teacher Training Program**\n   3-month professional development for all teachers\n   Expected impact: 18% reduction\n   Cost: $85/student/year\n\n3. **Universal School Meal Program**\n   Free breakfast and lunch for all students\n   Expected impact: 32% reduction\n   Cost: $180/student/year\n\n4. **School Infrastructure Improvement**\n   Renovate facilities, add technology, improve safety\n   Expected impact: 22% reduction\n   Cost: $250/student/year\n\n5. **Need-Based Scholarship Program**\n   Financial aid for low-income families\n   Expected impact: 38% reduction\n   Cost: $200/student/year\n\n6. **Student Mentorship Program**\n   Pair at-risk students with mentors\n   Expected impact: 28% reduction\n   Cost: $95/student/year\n\n📝 **How to use:**\n  • 'Simulate meal program'\n  • 'What if we reduce class sizes?'\n  • 'Show impact of scholarships'\n  • 'Predict teacher training outcomes'\n\n💡 Simulations show:\n  • Predicted dropout rate changes\n  • Number of students helped\n  • Cost-benefit analysis\n  • ROI for investors\n  • Impact metrics for NGOs.",
+    "ts": "2025-11-14T15:23:09.237646Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What if we add mentorship programs",
+    "ts": "2025-11-14T15:23:10.628495Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Student Mentorship Program\n**Description:** Pair at-risk students with mentors\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.05%\n  • Predicted rate: 1.47% \n  • Expected reduction: 0.57% (28.00% improvement)\n\n👥 **HUMAN IMPACT:**\n  • Students currently at risk: ~18,881\n  • Students who would stay in school: ~5,286\n  • Lives positively impacted: ~21,144 (including families)\n\n💰 **FINANCIAL ANALYSIS:**\n\n**Investment Required:**\n  • Cost per student: $95/year\n  • Total annual investment: $87.69M\n  • 5-year commitment: $438.43M\n\n**Economic Returns:**\n  • Economic value per retained student: $35,000 (lifetime)\n  • Total economic value generated: $185.01M\n  • **Return on Investment (ROI): 2.11x**\n  • Break-even timeline: ~4.74 years\n\n📈 **FOR INVESTORS:**\n  • Social Impact: 5,286 students\n  • Financial Return: 110.99% over 10 years\n  • Risk Level: Medium (education interventions)\n  • Alignment: UN SDG 4 (Quality Education)\n\n🎯 **FOR NGOs:**\n  • Impact per $1,000: 0.06 students helped\n  • Scalability: High (can expand to all regions)\n  • Community benefit: Reduced poverty, increased literacy\n  • Monitoring: Monthly dropout tracking available\n\n👨‍👩‍👧 **FOR FAMILIES:**\n  • Your child's success rate increases by 28.00%\n  • Better educational outcomes lead to higher income potential\n  • Access to additional support services included\n  • Community improvement benefits everyone\n\n⚠️ **CONFIDENCE & EVIDENCE:**\n  • Prediction confidence: 75%\n  • Evidence base: Based on NGO mentorship programs in Andean regions\n  • Recommended pilot: Start with 2-3 high-risk regions\n\n============================================================\n\n💡 **Want to explore more scenarios?**\nType 'simulate menu' to see all options!",
+    "ts": "2025-11-14T15:23:10.630931Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What factors contribute to high dropout rates",
+    "ts": "2025-11-14T15:23:32.241470Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me",
+    "ts": "2025-11-14T15:23:40.894350Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average secondary school dropout rate in 2025?",
+    "ts": "2025-11-14T15:24:15.361774Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many undergraduate applicants are there in total?",
+    "ts": "2025-11-14T15:24:20.229007Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me the primary school dropout rates by department",
+    "ts": "2025-11-14T15:24:26.479147Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Which regions have the highest dropout rates?",
+    "ts": "2025-11-14T15:24:30.145330Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare dropout rates between Lima and Cusco",
+    "ts": "2025-11-14T15:24:37.405772Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the enrollment by province in 2025?",
+    "ts": "2025-11-14T15:24:44.034052Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **NEW: What-If Simulator** - Predict policy impacts!\n\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/investor)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • 🔮 'simulate menu' - See What-If scenarios\n  • Ask any question about the data!",
+    "ts": "2025-11-14T15:25:47.402055Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-14T15:26:02.420972Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu').",
+    "ts": "2025-11-14T15:26:02.422966Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average secondary school dropout rate in 2025?",
+    "ts": "2025-11-14T15:26:11.719957Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-14T15:26:11.722966Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-14T15:26:23.244099Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajesh! 🎉 Profile saved.\n\n💡 Want to see how interventions could help? Try 'simulate menu'!\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-14T15:26:23.250934Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average secondary school dropout rate in 2025?",
+    "ts": "2025-11-14T15:26:26.833592Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-14T15:26:26.839343Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many undergraduate applicants are there in total?",
+    "ts": "2025-11-14T15:26:34.585517Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total undergraduate applicants in 2025: **1,500**.",
+    "ts": "2025-11-14T15:26:34.589516Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me the primary school dropout rates by departmen",
+    "ts": "2025-11-14T15:26:38.919081Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average primary school dropout rate in 2025: **0.93%**.",
+    "ts": "2025-11-14T15:26:38.932023Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Which regions have the highest dropout rates?",
+    "ts": "2025-11-14T15:26:45.104054Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.",
+    "ts": "2025-11-14T15:26:45.998147Z",
+    "attachments": [
+      "/files/chart_20251114_102645.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Compare dropout rates between Lima and Cusco",
+    "ts": "2025-11-14T15:26:53.293675Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Comparison for 2025:\n\n  • **CUSCO**: 1.53% average dropout rate\n  • **LIMA**: 2.19% average dropout rate\n  • **CUSCO**: 1.03% average dropout rate\n  • **LIMA**: 2.98% average dropout rate\n  • **CUSCO**: 0.84% average dropout rate\n  • **LIMA**: 3.57% average dropout rate\n  • **ATE**: 2.58% average dropout rate.",
+    "ts": "2025-11-14T15:26:53.306015Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the enrollment by province in 2025?",
+    "ts": "2025-11-14T15:27:05.410216Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Provinces by schools (2025):\n\n  • **CAJAMARCA**: 772\n  • **HUALGAYOC**: 140\n  • **CHOTA**: 112\n  • **CELENDIN**: 86\n  • **JAEN**: 60\n  • **SAN MARCOS**: 42\n  • **CAJABAMBA**: 36\n  • **SAN MIGUEL**: 33\n  • **SAN IGNACIO**: 32\n  • **CHICLAYO**: 27.",
+    "ts": "2025-11-14T15:27:05.655743Z",
+    "attachments": [
+      "/files/chart_20251114_102705.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "How many applicants by faculty in 2025?",
+    "ts": "2025-11-14T15:27:11.212593Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • **CIENCIAS SOCIALES**: 37\n  • **CIENCIAS VETERINARIAS**: 28\n  • **ZOOTECNIA**: 11.",
+    "ts": "2025-11-14T15:27:11.453921Z",
+    "attachments": [
+      "/files/chart_20251114_102711.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show me applicant distribution by program",
+    "ts": "2025-11-14T15:27:16.285637Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **ECONOMY**: 48.",
+    "ts": "2025-11-14T15:27:16.619974Z",
+    "attachments": [
+      "/files/chart_20251114_102716.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Chart the top 10 faculties by number of applicant",
+    "ts": "2025-11-14T15:27:21.200941Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total undergraduate applicants in 2025: **1,500**.",
+    "ts": "2025-11-14T15:27:21.205805Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-14T15:27:28.604375Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-14T15:27:28.844118Z",
+    "attachments": [
+      "/files/map_20251114_102728.html"
+    ]
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **What-If Simulator** - Predict policy impacts!\n\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/investor)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • 🔮 'simulate menu' - See What-If scenarios\n  • Ask any question about the data!",
+    "ts": "2025-11-14T16:03:55.588448Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-14T16:04:07.856670Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, LDX! 🎉 Profile saved.\n\n💡 Want to see how interventions could help? Try 'simulate menu'!\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-14T16:04:07.860694Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average secondary school dropout rate in 2025?",
+    "ts": "2025-11-14T16:04:27.772921Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-14T16:04:27.786712Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many undergraduate applicants are there in total?",
+    "ts": "2025-11-14T16:04:32.868609Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total undergraduate applicants in 2025: **1,500**.",
+    "ts": "2025-11-14T16:04:32.869971Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me the primary school dropout rates by department",
+    "ts": "2025-11-14T16:04:45.567815Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **LORETO**: 3.63\n  • **UCAYALI**: 3.45\n  • **CALLAO**: 3.23\n  • **TUMBES**: 2.72\n  • **MADRE DE DIOS**: 1.54\n  • **LA LIBERTAD**: 1.53\n  • **LIMA**: 1.40\n  • **LAMBAYEQUE**: 1.21\n  • **ICA**: 1.19\n  • **SAN MARTIN**: 1.15.",
+    "ts": "2025-11-14T16:04:45.918401Z",
+    "attachments": [
+      "/files/chart_20251114_110445.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Which regions have the highest dropout rates?",
+    "ts": "2025-11-14T16:05:01.580460Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.",
+    "ts": "2025-11-14T16:05:01.857046Z",
+    "attachments": [
+      "/files/chart_20251114_110501.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Compare dropout rates between Lima and Cusco",
+    "ts": "2025-11-14T16:05:20.122794Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Comparison for 2025:\n\n  • **CUSCO**: 1.53% average dropout rate\n  • **LIMA**: 2.19% average dropout rate\n  • **CUSCO**: 1.03% average dropout rate\n  • **LIMA**: 2.98% average dropout rate\n  • **CUSCO**: 0.84% average dropout rate\n  • **LIMA**: 3.57% average dropout rate\n  • **ATE**: 2.58% average dropout rate.",
+    "ts": "2025-11-14T16:05:20.136887Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the enrollment by province in 2025?",
+    "ts": "2025-11-14T16:05:58.839496Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Provinces by schools (2025):\n\n  • **CAJAMARCA**: 772\n  • **HUALGAYOC**: 140\n  • **CHOTA**: 112\n  • **CELENDIN**: 86\n  • **JAEN**: 60\n  • **SAN MARCOS**: 42\n  • **CAJABAMBA**: 36\n  • **SAN MIGUEL**: 33\n  • **SAN IGNACIO**: 32\n  • **CHICLAYO**: 27.",
+    "ts": "2025-11-14T16:05:59.200499Z",
+    "attachments": [
+      "/files/chart_20251114_110558.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "How many applicants by faculty in 2025?",
+    "ts": "2025-11-14T16:06:21.492531Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • **CIENCIAS SOCIALES**: 37\n  • **CIENCIAS VETERINARIAS**: 28\n  • **ZOOTECNIA**: 11.",
+    "ts": "2025-11-14T16:06:21.962465Z",
+    "attachments": [
+      "/files/chart_20251114_110621.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Show me applicant distribution by program",
+    "ts": "2025-11-14T16:06:34.600851Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **ECONOMY**: 48.",
+    "ts": "2025-11-14T16:06:34.901601Z",
+    "attachments": [
+      "/files/chart_20251114_110634.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Chart the top 10 faculties by number of applicants",
+    "ts": "2025-11-14T16:06:46.447055Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total undergraduate applicants in 2025: **1,500**.",
+    "ts": "2025-11-14T16:06:46.452740Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-14T16:06:56.194483Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-14T16:06:56.377482Z",
+    "attachments": [
+      "/files/map_20251114_110656.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "simulate menu",
+    "ts": "2025-11-14T16:07:04.819992Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Intensive Teacher Training Program**\n   3-month professional development for all teachers\n   Expected impact: 18% reduction\n   Cost: $85/student/year\n\n3. **Universal School Meal Program**\n   Free breakfast and lunch for all students\n   Expected impact: 32% reduction\n   Cost: $180/student/year\n\n4. **School Infrastructure Improvement**\n   Renovate facilities, add technology, improve safety\n   Expected impact: 22% reduction\n   Cost: $250/student/year\n\n5. **Need-Based Scholarship Program**\n   Financial aid for low-income families\n   Expected impact: 38% reduction\n   Cost: $200/student/year\n\n6. **Student Mentorship Program**\n   Pair at-risk students with mentors\n   Expected impact: 28% reduction\n   Cost: $95/student/year\n\n📝 **How to use:**\n  • 'Simulate meal program'\n  • 'What if we reduce class sizes?'\n  • 'Show impact of scholarships'\n  • 'Predict teacher training outcomes'\n\n💡 Simulations show:\n  • Predicted dropout rate changes\n  • Number of students helped\n  • Cost-benefit analysis\n  • ROI for investors\n  • Impact metrics for NGOs.",
+    "ts": "2025-11-14T16:07:04.824867Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What if we add mentorship programs?",
+    "ts": "2025-11-14T16:07:26.900990Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Student Mentorship Program\n**Description:** Pair at-risk students with mentors\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.05%\n  • Predicted rate: 1.47% \n  • Expected reduction: 0.57% (28.00% improvement)\n\n👥 **HUMAN IMPACT:**\n  • Students currently at risk: ~18,881\n  • Students who would stay in school: ~5,286\n  • Lives positively impacted: ~21,144 (including families)\n\n💰 **FINANCIAL ANALYSIS:**\n\n**Investment Required:**\n  • Cost per student: $95/year\n  • Total annual investment: $87.69M\n  • 5-year commitment: $438.43M\n\n**Economic Returns:**\n  • Economic value per retained student: $35,000 (lifetime)\n  • Total economic value generated: $185.01M\n  • **Return on Investment (ROI): 2.11x**\n  • Break-even timeline: ~4.74 years\n\n📈 **FOR INVESTORS:**\n  • Social Impact: 5,286 students\n  • Financial Return: 110.99% over 10 years\n  • Risk Level: Medium (education interventions)\n  • Alignment: UN SDG 4 (Quality Education)\n\n🎯 **FOR NGOs:**\n  • Impact per $1,000: 0.06 students helped\n  • Scalability: High (can expand to all regions)\n  • Community benefit: Reduced poverty, increased literacy\n  • Monitoring: Monthly dropout tracking available\n\n👨‍👩‍👧 **FOR FAMILIES:**\n  • Your child's success rate increases by 28.00%\n  • Better educational outcomes lead to higher income potential\n  • Access to additional support services included\n  • Community improvement benefits everyone\n\n⚠️ **CONFIDENCE & EVIDENCE:**\n  • Prediction confidence: 75%\n  • Evidence base: Based on NGO mentorship programs in Andean regions\n  • Recommended pilot: Start with 2-3 high-risk regions\n\n============================================================\n\n💡 **Want to explore more scenarios?**\nType 'simulate menu' to see all options!",
+    "ts": "2025-11-14T16:07:26.905763Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Intensive Teacher Training Program",
+    "ts": "2025-11-14T16:07:54.395397Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **ECONOMY**: 48.",
+    "ts": "2025-11-14T16:07:54.677690Z",
+    "attachments": [
+      "/files/chart_20251114_110754.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "What is we add Intensive Teacher Training Program?",
+    "ts": "2025-11-14T16:08:03.405415Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **ECONOMY**: 48.",
+    "ts": "2025-11-14T16:08:03.672726Z",
+    "attachments": [
+      "/files/chart_20251114_110803.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Choose a scenario to simulate:  1. **Reduce Class Sizes by 20%**    Hire additional teachers to reduce student-teacher ratio    Expected impact: 25% reduction    Cost: $120/student/year",
+    "ts": "2025-11-14T16:08:19.829030Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Reduce Class Sizes by 20%\n**Description:** Hire additional teachers to reduce student-teacher ratio\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.05%\n  • Predicted rate: 1.53% \n  • Expected reduction: 0.51% (25.00% improvement)\n\n👥 **HUMAN IMPACT:**\n  • Students currently at risk: ~18,881\n  • Students who would stay in school: ~4,720\n  • Lives positively impacted: ~18,880 (including families)\n\n💰 **FINANCIAL ANALYSIS:**\n\n**Investment Required:**\n  • Cost per student: $120/year\n  • Total annual investment: $110.76M\n  • 5-year commitment: $553.80M\n\n**Economic Returns:**\n  • Economic value per retained student: $35,000 (lifetime)\n  • Total economic value generated: $165.20M\n  • **Return on Investment (ROI): 1.49x**\n  • Break-even timeline: ~6.70 years\n\n📈 **FOR INVESTORS:**\n  • Social Impact: 4,720 students\n  • Financial Return: 49.15% over 10 years\n  • Risk Level: Medium (education interventions)\n  • Alignment: UN SDG 4 (Quality Education)\n\n🎯 **FOR NGOs:**\n  • Impact per $1,000: 0.04 students helped\n  • Scalability: High (can expand to all regions)\n  • Community benefit: Reduced poverty, increased literacy\n  • Monitoring: Monthly dropout tracking available\n\n👨‍👩‍👧 **FOR FAMILIES:**\n  • Your child's success rate increases by 25.00%\n  • Better educational outcomes lead to higher income potential\n  • Access to additional support services included\n  • Community improvement benefits everyone\n\n⚠️ **CONFIDENCE & EVIDENCE:**\n  • Prediction confidence: 78%\n  • Evidence base: Based on 23 similar interventions in Latin America\n  • Recommended pilot: Start with 2-3 high-risk regions\n\n============================================================\n\n💡 **Want to explore more scenarios?**\nType 'simulate menu' to see all options!",
+    "ts": "2025-11-14T16:08:19.837512Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Summary",
+    "ts": "2025-11-14T16:09:11.164305Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "============================================================\n📊 CONVERSATION SUMMARY\n============================================================\n\n📈 Statistics:\n  • Total exchanges: 16 questions, 17 responses\n  • Session started: 2025-11-14T11:03:55\n\n💬 Full Conversation:\n\n1. [11:03:55] ASSISTANT:\n   👋 Hello! I'm the JGM Insights Assistant\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **What-If Simulator** - Predict policy impacts!\n\n\nBefore we start, please click '👤 Pro...\n\n2. [11:04:07] ASSISTANT:\n   Thanks, LDX! 🎉 Profile saved.\n\n💡 Want to see how interventions could help? Try 'simulate menu'!\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮...\n\n3. [11:04:27] YOU:\n   What's the average secondary school dropout rate in 2025?\n\n4. [11:04:27] ASSISTANT:\n   📊 Average secondary school dropout rate in 2025: **2.05%**.\n\n5. [11:04:32] YOU:\n   How many undergraduate applicants are there in total?\n\n6. [11:04:32] ASSISTANT:\n   📊 Total undergraduate applicants in 2025: **1,500**.\n\n7. [11:04:45] YOU:\n   Show me the primary school dropout rates by department\n\n8. [11:04:45] ASSISTANT:\n   📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **LORETO**: 3.63\n  • **UCAYALI**: 3.45\n  • **CALLAO**: 3.23\n  • **TUMBES**: 2.72\n  • **MADRE DE DIOS**: 1.54\n  • **LA LIBERTAD**: 1.53\n  • **LIMA**: 1.40\n  • **LAMBAYEQUE**: 1.21\n  • **ICA**: 1.19\n  • **SAN MARTIN**: 1.15.\n\n9. [11:05:01] YOU:\n   Which regions have the highest dropout rates?\n\n10. [11:05:01] ASSISTANT:\n   📊 Top 10 Departamentos by dropout rate (2025):\n\n  • **UCAYALI**: 4.92\n  • **TUMBES**: 4.12\n  • **CALLAO**: 3.70\n  • **LA LIBERTAD**: 3.47\n  • **LORETO**: 3.44\n  • **LAMBAYEQUE**: 3.13\n  • **PIURA**: 3.12\n  • **CAJAMARCA**: 2.92\n  • **MADRE DE DIOS**: 2.92\n  • **SAN MARTIN**: 2.69.\n\n11. [11:05:20] YOU:\n   Compare dropout rates between Lima and Cusco\n\n12. [11:05:20] ASSISTANT:\n   📊 Comparison for 2025:\n\n  • **CUSCO**: 1.53% average dropout rate\n  • **LIMA**: 2.19% average dropout rate\n  • **CUSCO**: 1.03% average dropout rate\n  • **LIMA**: 2.98% average dropout rate\n  • **CUSCO**: 0.84% average dropout rate\n  • **LIMA**: 3.57% average dropout rate\n  • **ATE**: 2.58% average ...\n\n13. [11:05:58] YOU:\n   What's the enrollment by province in 2025?\n\n14. [11:05:59] ASSISTANT:\n   📊 Top 10 Provinces by schools (2025):\n\n  • **CAJAMARCA**: 772\n  • **HUALGAYOC**: 140\n  • **CHOTA**: 112\n  • **CELENDIN**: 86\n  • **JAEN**: 60\n  • **SAN MARCOS**: 42\n  • **CAJABAMBA**: 36\n  • **SAN MIGUEL**: 33\n  • **SAN IGNACIO**: 32\n  • **CHICLAYO**: 27.\n\n15. [11:06:21] YOU:\n   How many applicants by faculty in 2025?\n\n16. [11:06:21] ASSISTANT:\n   📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • *...\n\n17. [11:06:34] YOU:\n   Show me applicant distribution by program\n\n18. [11:06:34] ASSISTANT:\n   📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **...\n\n19. [11:06:46] YOU:\n   Chart the top 10 faculties by number of applicants\n\n20. [11:06:46] ASSISTANT:\n   📊 Total undergraduate applicants in 2025: **1,500**.\n\n21. [11:06:56] YOU:\n   Create a map showing geographic distribution of schools\n\n22. [11:06:56] ASSISTANT:\n   🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.\n\n23. [11:07:04] YOU:\n   simulate menu\n\n24. [11:07:04] ASSISTANT:\n   🔮 WHAT-IF SIMULATOR - Available Scenarios\n============================================================\n\nChoose a scenario to simulate:\n\n1. **Reduce Class Sizes by 20%**\n   Hire additional teachers to reduce student-teacher ratio\n   Expected impact: 25% reduction\n   Cost: $120/student/year\n\n2. **Inte...\n\n25. [11:07:26] YOU:\n   What if we add mentorship programs?\n\n26. [11:07:26] ASSISTANT:\n   🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Student Mentorship Program\n**Description:** Pair at-risk students with mentors\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.0...\n\n27. [11:07:54] YOU:\n   Intensive Teacher Training Program\n\n28. [11:07:54] ASSISTANT:\n   📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **...\n\n29. [11:08:03] YOU:\n   What is we add Intensive Teacher Training Program?\n\n30. [11:08:03] ASSISTANT:\n   📊 Top 10 Programs by undergraduate applicants (2025):\n\n  • **HUMAN MEDICINE**: 281\n  • **INFIRMARY**: 186\n  • **RIGHT**: 149\n  • **CIVIL ENGINEERING**: 138\n  • **SYSTEM ENGINEERING**: 75\n  • **ACCOUNTING**: 69\n  • **OBSTETRICS**: 68\n  • **PRIMARY EDUCATION**: 51\n  • **MINING ENGINEERING**: 50\n  • **...\n\n31. [11:08:19] YOU:\n   Choose a scenario to simulate:  1. **Reduce Class Sizes by 20%**    Hire additional teachers to reduce student-teacher ratio    Expected impact: 25% reduction    Cost: $120/student/year\n\n32. [11:08:19] ASSISTANT:\n   🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Reduce Class Sizes by 20%\n**Description:** Hire additional teachers to reduce student-teacher ratio\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Curr...\n\n33. [11:09:11] YOU:\n   Summary\n\n============================================================.",
+    "ts": "2025-11-14T16:09:11.171715Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Good Morning",
+    "ts": "2025-11-14T16:09:46.407042Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello LDX! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **What-If Simulations** (try 'simulate menu')\n  • Or type 'summary' to review our conversation.",
+    "ts": "2025-11-14T16:09:46.407042Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Analyze the give file",
+    "ts": "2025-11-14T16:09:59.021906Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T16:09:59.030502Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Bye bye",
+    "ts": "2025-11-14T16:10:14.564583Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-14T16:10:14.573793Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What can you do",
+    "ts": "2025-11-14T16:10:26.794274Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🤖 **JGM Insights Assistant** (📊 Data Analysis)\n\n**Data Analysis (2025):**\n  • Dropout rates (primary & secondary schools)\n  • Undergraduate applicant statistics\n  • Regional/provincial breakdowns\n  • Faculty and program analysis\n\n**Visualizations:**\n  • Interactive charts (just ask for 'chart' or 'graph')\n  • Geographic maps (type 'map' or 'show map')\n  • Comparative analysis\n\n**🔮 What-If Simulator:**\n  • Predict policy impact\n  • ROI calculations for investors\n  • Cost-benefit analysis for NGOs\n  • Try: 'simulate menu' to see options\n\n**Commands:**\n  • 'summary' - Get full conversation recap\n  • 'Compare [X] and [Y]' - Compare regions\n  • 'simulate [scenario]' - Run What-If analysis\n  • Profile setup - Click '👤 Profile' button\n\n**Example questions:**\n  • What's the average dropout rate?\n  • Show applicants by faculty\n  • Compare Lima and Cusco dropout rates\n  • What if we implement meal programs?\n  • Simulate scholarship impact\n\nWhat would you like to explore?",
+    "ts": "2025-11-14T16:10:26.794274Z",
+    "attachments": []
+  }
+]

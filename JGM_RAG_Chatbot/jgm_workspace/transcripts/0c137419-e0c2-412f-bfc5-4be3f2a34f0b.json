@@ -1,0 +1,98 @@
+[
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data:\n  • Undergraduate applicant statistics (2025)\n  • Primary school dropout rates by location\n  • Secondary school dropout rates by location\n  • Interactive maps and charts\n\nTo get started, click 'Set Profile' or ask me a question!\n\n💡 Try asking:\n  • 'What's the average secondary dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Chart dropout rates by department'",
+    "ts": "2025-11-07T21:25:17.671963Z",
+    "attachments": []
+  },
+  {
+    "role": "system",
+    "text": "Reindexed workspace.",
+    "ts": "2025-11-07T21:27:19.818207Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data:\n  • Undergraduate applicant statistics (2025)\n  • Primary school dropout rates by location\n  • Secondary school dropout rates by location\n  • Interactive maps and charts\n\nTo get started, click 'Set Profile' or ask me a question!\n\n💡 Try asking:\n  • 'What's the average secondary dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Chart dropout rates by department'",
+    "ts": "2025-11-07T21:27:26.004992Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile) {'first_name': 'Vrajesh', 'last_name': 'Shah', 'role': 'Student', 'contact': '1234567890'}",
+    "ts": "2025-11-07T21:28:09.275130Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajesh! 🎉 Profile saved. Ask me anything about the education data!",
+    "ts": "2025-11-07T21:28:09.276126Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the dropout rate in 2025?",
+    "ts": "2025-11-07T21:28:59.082878Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-07T21:28:59.088246Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Plot the applicants vs enrollment by department",
+    "ts": "2025-11-07T21:29:45.713446Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Region:\n\n  • CAJAMARCA: 1,366\n  • LA LIBERTAD: 38\n  • LAMBAYEQUE: 28\n  • LIMA: 24\n  • AMAZONAS: 17\n  • ANCASH: 7\n  • LORETO: 4\n  • SAN MARTIN: 3\n  • PIURA: 3\n  • JUNIN: 2.",
+    "ts": "2025-11-07T21:29:46.080509Z",
+    "attachments": [
+      "/files/chart_20251107_162945.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Create a map of region color-coded by average dropout rate",
+    "ts": "2025-11-07T21:30:34.865033Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map! Click below to explore.",
+    "ts": "2025-11-07T21:30:35.760420Z",
+    "attachments": [
+      "/files/map_20251107_163035.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Average dropout rate by region in 2015",
+    "ts": "2025-11-07T21:31:30.441189Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • UCAYALI: 4.92\n  • TUMBES: 4.12\n  • CALLAO: 3.70\n  • LA LIBERTAD: 3.47\n  • LORETO: 3.44\n  • LAMBAYEQUE: 3.13\n  • PIURA: 3.12\n  • CAJAMARCA: 2.92\n  • MADRE DE DIOS: 2.92\n  • SAN MARTIN: 2.69.",
+    "ts": "2025-11-07T21:31:30.887440Z",
+    "attachments": [
+      "/files/chart_20251107_163130.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Give me a summary of this whole conversation.",
+    "ts": "2025-11-07T21:40:26.065992Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Total count: 1,500.",
+    "ts": "2025-11-07T21:40:26.068448Z",
+    "attachments": []
+  }
+]

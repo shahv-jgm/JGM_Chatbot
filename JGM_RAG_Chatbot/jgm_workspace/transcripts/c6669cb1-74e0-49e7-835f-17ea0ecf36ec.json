@@ -1,0 +1,446 @@
+[
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu')",
+    "ts": "2025-11-21T14:56:28.317894Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-21T14:56:33.930062Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu').",
+    "ts": "2025-11-21T14:56:34.042448Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "India",
+    "ts": "2025-11-21T14:56:35.331193Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I'm specifically designed to help with **Peru 2025 education data**. 📚\n\nI can answer questions about:\n  • Dropout rates (primary & secondary schools)\n  • Undergraduate applicant statistics\n  • Regional/provincial comparisons\n  • Faculty and program analysis\n  • What-If policy simulations\n  • Interactive maps and charts\n\n💡 **Try asking:**\n  • 'What's the dropout rate in Lima?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'What if we implement meal programs?'\n  • 'Create a map'\n\nPlease ask a question related to Peru's education data! 😊.",
+    "ts": "2025-11-21T14:56:35.409709Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Regional/provincial comparisons",
+    "ts": "2025-11-21T14:56:46.218056Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-21T14:56:46.328107Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-21T14:56:54.801831Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajesh! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-21T14:56:54.802842Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Regional/provincial comparisons",
+    "ts": "2025-11-21T14:56:56.841845Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Regions by schools (2025):\n\n  • **CAJAMARCA**: 1,366\n  • **LA LIBERTAD**: 38\n  • **LAMBAYEQUE**: 28\n  • **LIMA**: 24\n  • **AMAZONAS**: 17\n  • **ANCASH**: 7\n  • **LORETO**: 4\n  • **SAN MARTIN**: 3\n  • **PIURA**: 3\n  • **JUNIN**: 2.",
+    "ts": "2025-11-21T14:56:57.298633Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Indai Regional/provincial comparisons",
+    "ts": "2025-11-21T14:57:01.368035Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Regions by schools (2025):\n\n  • **CAJAMARCA**: 1,366\n  • **LA LIBERTAD**: 38\n  • **LAMBAYEQUE**: 28\n  • **LIMA**: 24\n  • **AMAZONAS**: 17\n  • **ANCASH**: 7\n  • **LORETO**: 4\n  • **SAN MARTIN**: 3\n  • **PIURA**: 3\n  • **JUNIN**: 2.",
+    "ts": "2025-11-21T14:57:01.660548Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "hola",
+    "ts": "2025-11-21T14:57:08.605644Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello Vrajesh! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **What-If Simulations** (try 'simulate menu')\n  • Or type 'summary' to review our conversation.",
+    "ts": "2025-11-21T14:57:08.719832Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "amigos",
+    "ts": "2025-11-21T14:57:11.136487Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I'm specifically designed to help with **Peru 2025 education data**. 📚\n\nI can answer questions about:\n  • Dropout rates (primary & secondary schools)\n  • Undergraduate applicant statistics\n  • Regional/provincial comparisons\n  • Faculty and program analysis\n  • What-If policy simulations\n  • Interactive maps and charts\n\n💡 **Try asking:**\n  • 'What's the dropout rate in Lima?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'What if we implement meal programs?'\n  • 'Create a map'\n\nPlease ask a question related to Peru's education data! 😊.",
+    "ts": "2025-11-21T14:57:11.217911Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "map of peru",
+    "ts": "2025-11-21T14:57:22.173034Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T14:57:22.559750Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Give me the map of school",
+    "ts": "2025-11-21T14:57:32.880027Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T14:57:33.003858Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu')",
+    "ts": "2025-11-21T15:58:48.055363Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-21T15:58:50.771237Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu').",
+    "ts": "2025-11-21T15:58:50.859237Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Give me the map of peru",
+    "ts": "2025-11-21T15:58:59.120772Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-21T15:58:59.230584Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-21T15:59:06.825513Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajesh! 🎉 Profile saved.\n\n💡 Want to see how interventions could help? Try 'simulate menu'!\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-21T15:59:06.827511Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Map of peru",
+    "ts": "2025-11-21T15:59:13.079823Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T15:59:13.475503Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu')",
+    "ts": "2025-11-21T16:00:00.835503Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-21T16:00:50.528812Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, f! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-21T16:00:50.530980Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Give me the map of peru",
+    "ts": "2025-11-21T16:00:56.774451Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T16:00:57.055619Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hola",
+    "ts": "2025-11-21T16:01:00.960708Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello f! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **What-If Simulations** (try 'simulate menu')\n  • Or type 'summary' to review our conversation.",
+    "ts": "2025-11-21T16:01:01.043880Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-21T16:01:37.778543Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T16:01:37.912333Z",
+    "attachments": []
+  },
+  {
+    "role": "system",
+    "text": "Reindexed workspace",
+    "ts": "2025-11-21T16:01:51.546515Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-21T16:01:53.517093Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T16:01:53.663747Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu')",
+    "ts": "2025-11-21T16:05:55.275046Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "python test_map.py",
+    "ts": "2025-11-21T16:05:59.677454Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-21T16:05:59.759353Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-21T16:06:08.452160Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, dfj! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-21T16:06:08.453158Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "python test_map.py",
+    "ts": "2025-11-21T16:06:10.661147Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T16:06:10.976471Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu')",
+    "ts": "2025-11-21T16:08:45.052148Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-21T16:08:50.657387Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-21T16:08:50.763338Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-21T16:08:59.373126Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, dgkdhg! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-21T16:08:59.375126Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-21T16:09:01.591451Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T16:09:01.859658Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu')",
+    "ts": "2025-11-21T16:13:16.332100Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-21T16:13:22.765594Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu').",
+    "ts": "2025-11-21T16:13:22.886371Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-21T16:13:33.694908Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 I'd love to help with that!\n\nQuick question first: Would you like to set up your profile? It helps me personalize responses for you.\n\nClick '👤 Profile' button, or just ask your question again to skip!",
+    "ts": "2025-11-21T16:13:33.795586Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-21T16:13:38.548082Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, dgf! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-21T16:13:38.550610Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-21T16:13:40.678531Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T16:13:40.974612Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-21T16:14:00.179650Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T16:14:00.477363Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu')",
+    "ts": "2025-11-21T16:27:23.116188Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-21T16:27:28.581269Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, fg! 🎉 Profile saved.\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-21T16:27:28.582914Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map showing geographic distribution of schools",
+    "ts": "2025-11-21T16:27:35.503624Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-11-21T16:27:35.880185Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "India",
+    "ts": "2025-11-21T16:28:02.844823Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I'm specifically designed to help with **Peru 2025 education data**. 📚\n\nI can answer questions about:\n  • Dropout rates (primary & secondary schools)\n  • Undergraduate applicant statistics\n  • Regional/provincial comparisons\n  • Faculty and program analysis\n  • What-If policy simulations\n  • Interactive maps and charts\n\n💡 **Try asking:**\n  • 'What's the dropout rate in Lima?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'What if we implement meal programs?'\n  • 'Create a map'\n\nPlease ask a question related to Peru's education data! 😊.",
+    "ts": "2025-11-21T16:28:02.967895Z",
+    "attachments": []
+  }
+]

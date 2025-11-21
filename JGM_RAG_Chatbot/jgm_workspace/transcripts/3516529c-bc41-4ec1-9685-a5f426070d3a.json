@@ -1,0 +1,140 @@
+[
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu')",
+    "ts": "2025-11-19T14:00:47.249713Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-19T14:00:53.888485Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu').",
+    "ts": "2025-11-19T14:00:54.016825Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-11-19T14:01:09.297192Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajesh! 🎉 Profile saved.\n\n💡 Want to see how interventions could help? Try 'simulate menu'!\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-11-19T14:01:09.299190Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average dropout rate",
+    "ts": "2025-11-19T14:01:19.917589Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Average secondary school dropout rate in 2025: **2.05%**.",
+    "ts": "2025-11-19T14:01:20.116751Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Good Morning",
+    "ts": "2025-11-19T14:01:30.043124Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello Vrajesh! 👋 Great to see you again!\n\nHow can I help you with Peru's 2025 education data today?\n\n💡 You can ask me about:\n  • Dropout rates by region\n  • Undergraduate applicant statistics\n  • Geographic visualizations\n  • 🔮 **What-If Simulations** (try 'simulate menu')\n  • Or type 'summary' to review our conversation.",
+    "ts": "2025-11-19T14:01:30.187057Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What can you do?",
+    "ts": "2025-11-19T14:01:37.871625Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🤖 **JGM Insights Assistant** (📊 Data Analysis)\n\n**Data Analysis (2025):**\n  • Dropout rates (primary & secondary schools)\n  • Undergraduate applicant statistics\n  • Regional/provincial breakdowns\n  • Faculty and program analysis\n\n**Visualizations:**\n  • Interactive charts (just ask for 'chart' or 'graph')\n  • Geographic maps (type 'map' or 'show map')\n  • Comparative analysis\n\n**🔮 What-If Simulator:**\n  • Predict policy impact\n  • ROI calculations for investors\n  • Cost-benefit analysis for NGOs\n  • Try: 'simulate menu' to see options\n\n**Commands:**\n  • 'summary' - Get full conversation recap\n  • 'Compare [X] and [Y]' - Compare regions\n  • 'simulate [scenario]' - Run What-If analysis\n  • Profile setup - Click '👤 Profile' button\n\n**Example questions:**\n  • What's the average dropout rate?\n  • Show applicants by faculty\n  • Compare Lima and Cusco dropout rates\n  • What if we implement meal programs?\n  • Simulate scholarship impact\n\nWhat would you like to explore?",
+    "ts": "2025-11-19T14:01:38.015858Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show applicants by faculty",
+    "ts": "2025-11-19T14:01:43.131179Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Top 10 Facultys by undergraduate applicants (2025):\n\n  • **ENGINEERING**: 307\n  • **HEALTH SCIENCES**: 281\n  • **HUMAN MEDICINE**: 281\n  • **ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES**: 165\n  • **EDUCACION**: 158\n  • **LAW AND POLITICAL SCIENCE**: 149\n  • **AGRICULTURAL SCIENCES**: 83\n  • **CIENCIAS SOCIALES**: 37\n  • **CIENCIAS VETERINARIAS**: 28\n  • **ZOOTECNIA**: 11.",
+    "ts": "2025-11-19T14:01:43.966320Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What if we implement meal programs",
+    "ts": "2025-11-19T14:01:49.983189Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🔮 WHAT-IF SIMULATION RESULTS\n============================================================\n\n**SCENARIO:** Universal School Meal Program\n**Description:** Free breakfast and lunch for all students\n**Scope:** National Average\n\n📊 **PREDICTED OUTCOMES:**\n\n**Immediate Impact (Year 1):**\n  • Current dropout rate: 2.05%\n  • Predicted rate: 1.39% \n  • Expected reduction: 0.65% (32.00% improvement)\n\n👥 **HUMAN IMPACT:**\n  • Students currently at risk: ~18,881\n  • Students who would stay in school: ~6,041\n  • Lives positively impacted: ~24,164 (including families)\n\n💰 **FINANCIAL ANALYSIS:**\n\n**Investment Required:**\n  • Cost per student: $180/year\n  • Total annual investment: $166.14M\n  • 5-year commitment: $830.70M\n\n**Economic Returns:**\n  • Economic value per retained student: $35,000 (lifetime)\n  • Total economic value generated: $211.44M\n  • **Return on Investment (ROI): 1.27x**\n  • Break-even timeline: ~7.86 years\n\n📈 **FOR INVESTORS:**\n  • Social Impact: 6,041 students\n  • Financial Return: 27.26% over 10 years\n  • Risk Level: Medium (education interventions)\n  • Alignment: UN SDG 4 (Quality Education)\n\n🎯 **FOR NGOs:**\n  • Impact per $1,000: 0.04 students helped\n  • Scalability: High (can expand to all regions)\n  • Community benefit: Reduced poverty, increased literacy\n  • Monitoring: Monthly dropout tracking available\n\n👨‍👩‍👧 **FOR FAMILIES:**\n  • Your child's success rate increases by 32.00%\n  • Better educational outcomes lead to higher income potential\n  • Access to additional support services included\n  • Community improvement benefits everyone\n\n⚠️ **CONFIDENCE & EVIDENCE:**\n  • Prediction confidence: 85%\n  • Evidence base: Based on 41 meal program studies globally\n  • Recommended pilot: Start with 2-3 high-risk regions\n\n============================================================\n\n💡 **Want to explore more scenarios?**\nType 'simulate menu' to see all options!",
+    "ts": "2025-11-19T14:01:50.111690Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Summary",
+    "ts": "2025-11-19T14:02:52.149500Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "No conversation history yet. Start asking questions!",
+    "ts": "2025-11-19T14:02:52.276391Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Summary",
+    "ts": "2025-11-19T14:02:55.944000Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "No conversation history yet. Start asking questions!",
+    "ts": "2025-11-19T14:02:56.028419Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Which AI model are you using",
+    "ts": "2025-11-19T14:04:34.664380Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Which AI model are you using?",
+    "ts": "2025-11-19T14:04:45.526514Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-19T14:04:59.083982Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Total school records in 2025: **1,500**.",
+    "ts": "2025-11-19T14:05:01.275050Z",
+    "attachments": []
+  }
+]

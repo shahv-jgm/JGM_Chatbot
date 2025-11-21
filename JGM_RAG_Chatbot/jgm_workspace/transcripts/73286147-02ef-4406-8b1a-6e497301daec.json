@@ -1,0 +1,916 @@
+[
+  {
+    "role": "bot",
+    "text": "👋 Hello! I’m the JGM Insights Assistant.\nI can answer with real numbers, generate accurate charts, and show a live (offline) map.\nPlease share your first name, last name, your role (parent/student/teacher/NGO/donor/business), and an email or phone.",
+    "ts": "2025-11-07T18:29:47.216944Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I’m the JGM Insights Assistant.\nI can answer with real numbers, generate accurate charts, and show a live (offline) map.\nPlease share your first name, last name, your role (parent/student/teacher/NGO/donor/business), and an email or phone.",
+    "ts": "2025-11-07T18:29:51.620185Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "average dropout rate by region in 2010",
+    "ts": "2025-11-07T18:30:00.224345Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "before 2012",
+    "ts": "2025-11-07T18:30:10.792499Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare the average dropout rate in urban vs rural areas",
+    "ts": "2025-11-07T18:30:29.321979Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the maximum dropout rate recorded in Peru in 2020",
+    "ts": "2025-11-07T18:30:35.669254Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I’m the JGM Insights Assistant.\nI can answer with real numbers, generate accurate charts, and show a live (offline) map.\nPlease share your first name, last name, your role (parent/student/teacher/NGO/donor/business), and an email or phone.",
+    "ts": "2025-11-07T18:35:16.489850Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I’m the JGM Insights Assistant.\nI can answer with real numbers, generate accurate charts, and show a live (offline) map.\nPlease share your first name, last name, your role (parent/student/teacher/NGO/donor/business), and an email or phone.",
+    "ts": "2025-11-07T18:35:20.189263Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare the average dropout rate in urban vs rural areas",
+    "ts": "2025-11-07T18:35:32.206990Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the maximum dropout rate recorded in Peru in 2020",
+    "ts": "2025-11-07T18:35:40.056432Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Plot the applicants vs enrollment by department",
+    "ts": "2025-11-07T18:35:44.622096Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "For the region with the highest dropout rate, display its trend over the last five years",
+    "ts": "2025-11-07T18:35:58.085014Z",
+    "attachments": []
+  },
+  {
+    "role": "system",
+    "text": "Reindexed workspace.",
+    "ts": "2025-11-07T18:35:59.328166Z",
+    "attachments": []
+  },
+  {
+    "role": "system",
+    "text": "Reindexed workspace.",
+    "ts": "2025-11-07T18:36:01.199107Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "For the region with the highest dropout rate, display its trend over the last five years",
+    "ts": "2025-11-07T18:36:04.878020Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I’m the JGM Insights Assistant.\nI can answer with real numbers, generate accurate charts, and show a live (offline) map.\nPlease share your first name, last name, your role (parent/student/teacher/NGO/donor/business), and an email or phone.",
+    "ts": "2025-11-07T18:36:06.646321Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Vrajesh, Shah, Parent",
+    "ts": "2025-11-07T18:36:24.162520Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare the average dropout rate in urban vs rural areas",
+    "ts": "2025-11-07T18:36:42.022363Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore education and health data from Peru with:\n  • Real-time data analysis and statistics\n  • Interactive charts and visualizations\n  • Geographic maps\n\nTo personalize your experience, please click 'Set Profile' and share:\n  • Your first and last name\n  • Your role (parent/student/teacher/NGO/donor/business)\n  • Contact method (email or phone)\n\nFeel free to ask me anything about the data! 📊",
+    "ts": "2025-11-07T19:45:18.418637Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "average dropout rate by region in 2015",
+    "ts": "2025-11-07T19:45:43.794995Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2015 in this dataset.",
+    "ts": "2025-11-07T19:45:43.816825Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "enrollment from 2010 to 2020",
+    "ts": "2025-11-07T19:45:52.522714Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find year data in this dataset. The available columns are: Date, AnioProceso, Name Process, UUID, Anius Birth, Age, Sex, Country, Region, Province, District, Faculty, Program, Subsiduary, Modality.",
+    "ts": "2025-11-07T19:45:52.528497Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare the average dropout rate in urban vs rural areas",
+    "ts": "2025-11-07T19:46:14.794716Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T19:46:14.797938Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the maximum dropout rate recorded in Peru in 2020",
+    "ts": "2025-11-07T19:46:27.887959Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2020 in this dataset.",
+    "ts": "2025-11-07T19:46:27.892851Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Plot the applicants vs enrollment by department",
+    "ts": "2025-11-07T19:46:43.693290Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T19:46:43.699073Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "For the region with the highest dropout rate, display its trend over the last five years",
+    "ts": "2025-11-07T19:46:58.073556Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T19:46:58.078766Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map of regions color-coded by average dropout rate",
+    "ts": "2025-11-07T19:47:04.508708Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map for you! Click the link below to explore it.\n\nThe map shows geographic data points from the dataset. You can zoom and pan to explore different regions.",
+    "ts": "2025-11-07T19:47:05.260414Z",
+    "attachments": [
+      "/files/jgm_map_20251107_144704.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "chart enrollment trends",
+    "ts": "2025-11-07T19:47:26.575874Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T19:47:26.583896Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile) {'first_name': 'Vraesh', 'last_name': 'sihf', 'role': 'sdfd', 'contact': 'dsfd'}",
+    "ts": "2025-11-07T19:50:50.914357Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vraesh! 🎉 I've saved your information.\n\nNow you can ask me questions like:\n  • 'What was the average dropout rate in 2015?'\n  • 'Show me a chart of enrollment trends from 2010 to 2020'\n  • 'Create a map of schools by region'\n\nI'm ready to help! What would you like to know? 🚀.",
+    "ts": "2025-11-07T19:50:50.916475Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the average dropout rate in 2015",
+    "ts": "2025-11-07T19:50:58.479753Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2015 in this dataset.",
+    "ts": "2025-11-07T19:50:58.486166Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me a chart of enrollment trends from 2010 to 2020",
+    "ts": "2025-11-07T19:51:03.429001Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find year data in this dataset. The available columns are: Date, AnioProceso, Name Process, UUID, Anius Birth, Age, Sex, Country, Region, Province, District, Faculty, Program, Subsiduary, Modality.",
+    "ts": "2025-11-07T19:51:03.435540Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map of schools by region",
+    "ts": "2025-11-07T19:51:08.318053Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map for you! Click the link below to explore it.\n\nThe map shows geographic data points from the dataset. You can zoom and pan to explore different regions.",
+    "ts": "2025-11-07T19:51:08.632147Z",
+    "attachments": [
+      "/files/jgm_map_20251107_145108.html"
+    ]
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore education and health data from Peru with:\n  • Real-time data analysis and statistics\n  • Interactive charts and visualizations\n  • Geographic maps\n\nTo personalize your experience, please click 'Set Profile' and share:\n  • Your first and last name\n  • Your role (parent/student/teacher/NGO/donor/business)\n  • Contact method (email or phone)\n\nFeel free to ask me anything about the data! 📊",
+    "ts": "2025-11-07T19:52:53.213785Z",
+    "attachments": []
+  },
+  {
+    "role": "system",
+    "text": "Reindexed workspace.",
+    "ts": "2025-11-07T19:52:55.653992Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore education and health data from Peru with:\n  • Real-time data analysis and statistics\n  • Interactive charts and visualizations\n  • Geographic maps\n\nTo personalize your experience, please click 'Set Profile' and share:\n  • Your first and last name\n  • Your role (parent/student/teacher/NGO/donor/business)\n  • Contact method (email or phone)\n\nFeel free to ask me anything about the data! 📊",
+    "ts": "2025-11-07T19:53:10.948684Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What data do you have",
+    "ts": "2025-11-07T19:53:13.465664Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T19:53:13.468231Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile) {'first_name': 'Vrajes', 'last_name': 'Shah', 'role': 'Student', 'contact': '1234567890'}",
+    "ts": "2025-11-07T19:53:31.298590Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajes! 🎉 I've saved your information.\n\nNow you can ask me questions like:\n  • 'What was the average dropout rate in 2015?'\n  • 'Show me a chart of enrollment trends from 2010 to 2020'\n  • 'Create a map of schools by region'\n\nI'm ready to help! What would you like to know? 🚀.",
+    "ts": "2025-11-07T19:53:31.299968Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show me a chart of enrollment trends from 2010 to 2020",
+    "ts": "2025-11-07T19:53:38.667319Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find year data in this dataset. The available columns are: Date, AnioProceso, Name Process, UUID, Anius Birth, Age, Sex, Country, Region, Province, District, Faculty, Program, Subsiduary, Modality.",
+    "ts": "2025-11-07T19:53:38.673020Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the average dropout rate in 2015?",
+    "ts": "2025-11-07T19:53:43.534341Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2015 in this dataset.",
+    "ts": "2025-11-07T19:53:43.541195Z",
+    "attachments": []
+  },
+  {
+    "role": "system",
+    "text": "Reindexed workspace.",
+    "ts": "2025-11-07T19:58:54.233929Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-11-07T19:58:57.120682Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "The average inei_ccpp is 1,070,996,977.55.",
+    "ts": "2025-11-07T19:58:57.131793Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "\"Show me enrollment trends from 2010 to 2020\"",
+    "ts": "2025-11-07T19:59:06.735143Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find year data in this dataset. The available columns are: Date, AnioProceso, Name Process, UUID, Anius Birth, Age, Sex, Country, Region, Province, District, Faculty, Program, Subsiduary, Modality.",
+    "ts": "2025-11-07T19:59:06.740944Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "\"What was enrollment in 2015?\"",
+    "ts": "2025-11-07T19:59:12.114618Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2015 in this dataset.",
+    "ts": "2025-11-07T19:59:12.119500Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "\"Chart enrollment by region\"",
+    "ts": "2025-11-07T19:59:18.370906Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T19:59:18.376157Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many applicants were there?",
+    "ts": "2025-11-07T19:59:27.666534Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T19:59:27.673035Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the dropout rate in 2015?",
+    "ts": "2025-11-07T19:59:55.436960Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2015 in this dataset.",
+    "ts": "2025-11-07T19:59:55.441526Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map of regions color-coded by average dropout rate",
+    "ts": "2025-11-07T20:00:04.126163Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map for you! Click the link below to explore it.\n\nThe map shows geographic data points from the dataset. You can zoom and pan to explore different regions.",
+    "ts": "2025-11-07T20:00:04.872207Z",
+    "attachments": [
+      "/files/jgm_map_20251107_150004.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "For the region with the highest dropout rate, display its trend over the last five years",
+    "ts": "2025-11-07T20:00:19.256142Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:00:19.262242Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Plot the applicants vs enrollment by department",
+    "ts": "2025-11-07T20:00:25.670743Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:00:25.675814Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the maximum dropout rate recorded in Peru in 2020",
+    "ts": "2025-11-07T20:00:33.198082Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2020 in this dataset.",
+    "ts": "2025-11-07T20:00:33.205857Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare the average dropout rate in urban vs rural areas",
+    "ts": "2025-11-07T20:00:38.804011Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:00:38.805899Z",
+    "attachments": []
+  },
+  {
+    "role": "system",
+    "text": "Reindexed workspace.",
+    "ts": "2025-11-07T20:06:58.627071Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average secondary dropout rate",
+    "ts": "2025-11-07T20:07:08.922156Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "The average ubigeo is 107,668.64.",
+    "ts": "2025-11-07T20:07:08.924192Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Chart secondary dropout rates by department",
+    "ts": "2025-11-07T20:07:22.759773Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here are the top regions by avg ubigeo:\n\n  • UCAYALI: 250,214.05\n  • TUMBES: 240,187.46\n  • TACNA: 230,220.72\n  • SAN MARTIN: 220,607.50\n  • PUNO: 210,614.52\n  • PIURA: 200,415.94\n  • PASCO: 190,188.38\n  • MOQUEGUA: 180,179.90\n  • MADRE DE DIOS: 170,193.27\n  • LORETO: 160,417.91.",
+    "ts": "2025-11-07T20:07:23.126249Z",
+    "attachments": [
+      "/files/accurate_chart_20251107_150722.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "How many applicants in 2025",
+    "ts": "2025-11-07T20:07:44.132485Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2025 in this dataset.",
+    "ts": "2025-11-07T20:07:44.137649Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many applicants in 2025?",
+    "ts": "2025-11-07T20:07:52.359168Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2025 in this dataset.",
+    "ts": "2025-11-07T20:07:52.365355Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show applicants by faculty",
+    "ts": "2025-11-07T20:07:59.384694Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:07:59.391389Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show applicants by program",
+    "ts": "2025-11-07T20:08:05.409571Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:08:05.414276Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many applicants in 2025?",
+    "ts": "2025-11-07T20:08:15.746518Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2025 in this dataset.",
+    "ts": "2025-11-07T20:08:15.752718Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show applicants by region",
+    "ts": "2025-11-07T20:08:25.792509Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:08:25.798021Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Chart applicants by faculty",
+    "ts": "2025-11-07T20:08:31.092297Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:08:31.098964Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the distribution by program?",
+    "ts": "2025-11-07T20:08:36.693651Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "The average ubigeo is 106,801.36.",
+    "ts": "2025-11-07T20:08:36.694679Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare applicants across provinces",
+    "ts": "2025-11-07T20:08:44.437371Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:08:44.443695Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the maximum dropout rate recorded in Peru in 2020",
+    "ts": "2025-11-07T20:09:33.393779Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2020 in this dataset.",
+    "ts": "2025-11-07T20:09:33.393779Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Plot the applicants vs enrollment by department",
+    "ts": "2025-11-07T20:09:38.334039Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:09:38.339792Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore education and health data from Peru with:\n  • Real-time data analysis and statistics\n  • Interactive charts and visualizations\n  • Geographic maps\n\nTo personalize your experience, please click 'Set Profile' and share:\n  • Your first and last name\n  • Your role (parent/student/teacher/NGO/donor/business)\n  • Contact method (email or phone)\n\nFeel free to ask me anything about the data! 📊",
+    "ts": "2025-11-07T20:13:34.698163Z",
+    "attachments": []
+  },
+  {
+    "role": "system",
+    "text": "Reindexed workspace.",
+    "ts": "2025-11-07T20:13:40.122965Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What's the average secondary dropout rate?",
+    "ts": "2025-11-07T20:13:54.499375Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "The average ubigeo is 107,668.64.",
+    "ts": "2025-11-07T20:13:54.499890Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show dropout rates by department",
+    "ts": "2025-11-07T20:14:02.800220Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:14:02.806976Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Show dropout rates by department?",
+    "ts": "2025-11-07T20:14:13.343668Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:14:13.349144Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "average dropout rate by region in 2015",
+    "ts": "2025-11-07T20:14:21.145255Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "I couldn't find data for year 2015 in this dataset.",
+    "ts": "2025-11-07T20:14:21.163411Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "chart enrollment trends\" or \"show me a map",
+    "ts": "2025-11-07T20:14:27.411907Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map for you! Click the link below to explore it.\n\nThe map shows geographic data points from the dataset. You can zoom and pan to explore different regions.",
+    "ts": "2025-11-07T20:14:27.780089Z",
+    "attachments": [
+      "/files/jgm_map_20251107_151427.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "How many applicants by faculty",
+    "ts": "2025-11-07T20:14:43.652542Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "After applying the filters, no data was found. Try adjusting your year range or criteria.",
+    "ts": "2025-11-07T20:14:43.658525Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data:\n  • Undergraduate applicant statistics (2025)\n  • Primary school dropout rates by location\n  • Secondary school dropout rates by location\n  • Interactive maps and charts\n\nTo get started, click 'Set Profile' or ask me a question!\n\n💡 Try asking:\n  • 'What's the average secondary dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Chart dropout rates by department'",
+    "ts": "2025-11-07T20:15:32.098085Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the dropout rate in 2025?",
+    "ts": "2025-11-07T20:15:43.846867Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-07T20:15:43.849390Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "How many applicants by faculty?",
+    "ts": "2025-11-07T20:15:52.867124Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Faculty:\n\n  • ENGINEERING: 307\n  • HEALTH SCIENCES: 281\n  • HUMAN MEDICINE: 281\n  • ECONOMIC, ACCOUNTING AND ADMINISTRATIVE SCIENCES: 165\n  • EDUCACION: 158\n  • LAW AND POLITICAL SCIENCE: 149\n  • AGRICULTURAL SCIENCES: 83\n  • CIENCIAS SOCIALES: 37\n  • CIENCIAS VETERINARIAS: 28\n  • ZOOTECNIA: 11.",
+    "ts": "2025-11-07T20:15:53.102830Z",
+    "attachments": [
+      "/files/chart_20251107_151552.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "average dropout rate by region in 2015",
+    "ts": "2025-11-07T20:16:02.260932Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • UCAYALI: 4.92\n  • TUMBES: 4.12\n  • CALLAO: 3.70\n  • LA LIBERTAD: 3.47\n  • LORETO: 3.44\n  • LAMBAYEQUE: 3.13\n  • PIURA: 3.12\n  • CAJAMARCA: 2.92\n  • MADRE DE DIOS: 2.92\n  • SAN MARTIN: 2.69.",
+    "ts": "2025-11-07T20:16:02.466977Z",
+    "attachments": [
+      "/files/chart_20251107_151602.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "chart enrollment trends",
+    "ts": "2025-11-07T20:16:13.716302Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Total count: 1,500.",
+    "ts": "2025-11-07T20:16:13.718597Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map of regions color-coded by average dropout rate",
+    "ts": "2025-11-07T20:16:36.854043Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map! Click below to explore.",
+    "ts": "2025-11-07T20:16:37.593798Z",
+    "attachments": [
+      "/files/map_20251107_151637.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "For the region with the highest dropout rate, display its trend over the last five years",
+    "ts": "2025-11-07T20:16:47.384136Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • UCAYALI: 4.92\n  • TUMBES: 4.12\n  • CALLAO: 3.70\n  • LA LIBERTAD: 3.47\n  • LORETO: 3.44\n  • LAMBAYEQUE: 3.13\n  • PIURA: 3.12\n  • CAJAMARCA: 2.92\n  • MADRE DE DIOS: 2.92\n  • SAN MARTIN: 2.69.",
+    "ts": "2025-11-07T20:16:47.631299Z",
+    "attachments": [
+      "/files/chart_20251107_151647.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Compare the average dropout rate in urban vs rural areas",
+    "ts": "2025-11-07T20:17:23.266189Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-07T20:17:23.268216Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant.\n\nI can help you explore Peru education data:\n  • Undergraduate applicant statistics (2025)\n  • Primary school dropout rates by location\n  • Secondary school dropout rates by location\n  • Interactive maps and charts\n\nTo get started, click 'Set Profile' or ask me a question!\n\n💡 Try asking:\n  • 'What's the average secondary dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Chart dropout rates by department'",
+    "ts": "2025-11-07T20:29:22.798625Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the dropout rate in 2025?",
+    "ts": "2025-11-07T20:31:05.126184Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-07T20:31:05.128701Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare the average dropout rate in urban vs rural areas",
+    "ts": "2025-11-07T20:31:25.610902Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-07T20:31:25.616899Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "What was the maximum dropout rate recorded in Peru in 2020",
+    "ts": "2025-11-07T20:31:33.094224Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Average Tasa: 2.05.",
+    "ts": "2025-11-07T20:31:33.096205Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Plot the applicants vs enrollment by department",
+    "ts": "2025-11-07T20:31:37.763537Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the count by Region:\n\n  • CAJAMARCA: 1,366\n  • LA LIBERTAD: 38\n  • LAMBAYEQUE: 28\n  • LIMA: 24\n  • AMAZONAS: 17\n  • ANCASH: 7\n  • LORETO: 4\n  • SAN MARTIN: 3\n  • PIURA: 3\n  • JUNIN: 2.",
+    "ts": "2025-11-07T20:31:38.011529Z",
+    "attachments": [
+      "/files/chart_20251107_153137.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "For the region with the highest dropout rate, display its trend over the last five years",
+    "ts": "2025-11-07T20:32:06.471907Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • UCAYALI: 4.92\n  • TUMBES: 4.12\n  • CALLAO: 3.70\n  • LA LIBERTAD: 3.47\n  • LORETO: 3.44\n  • LAMBAYEQUE: 3.13\n  • PIURA: 3.12\n  • CAJAMARCA: 2.92\n  • MADRE DE DIOS: 2.92\n  • SAN MARTIN: 2.69.",
+    "ts": "2025-11-07T20:32:06.674683Z",
+    "attachments": [
+      "/files/chart_20251107_153206.png"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "Create a map of regions color-coded by average dropout rate",
+    "ts": "2025-11-07T20:32:21.181783Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map! Click below to explore.",
+    "ts": "2025-11-07T20:32:21.712349Z",
+    "attachments": [
+      "/files/map_20251107_153221.html"
+    ]
+  },
+  {
+    "role": "user",
+    "text": "average dropout rate by region in 2015",
+    "ts": "2025-11-07T20:32:59.726848Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Here's the Tasa by Departamento:\n\n  • UCAYALI: 4.92\n  • TUMBES: 4.12\n  • CALLAO: 3.70\n  • LA LIBERTAD: 3.47\n  • LORETO: 3.44\n  • LAMBAYEQUE: 3.13\n  • PIURA: 3.12\n  • CAJAMARCA: 2.92\n  • MADRE DE DIOS: 2.92\n  • SAN MARTIN: 2.69.",
+    "ts": "2025-11-07T20:32:59.953297Z",
+    "attachments": [
+      "/files/chart_20251107_153259.png"
+    ]
+  }
+]
