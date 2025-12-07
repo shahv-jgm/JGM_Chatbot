@@ -1,0 +1,58 @@
+[
+  {
+    "role": "bot",
+    "text": "👋 Hello! I'm the JGM Insights Assistant\n\nI can help you explore Peru education data for 2025:\n  • Undergraduate applicant statistics\n  • Primary/secondary school dropout rates\n  • Interactive maps and charts\n  • 🔮 **What-If Simulator** - Predict policy impacts!\n\n\nBefore we start, please click '👤 Profile' to share:\n  • Your name\n  • Your role (parent/student/teacher/NGO/donor/investor)\n  • Contact information\n\n💡 Quick commands:\n  • 'summary' - Get full conversation overview\n  • 'help' - See what I can do\n  • 'map' - Generate geographic visualization\n  • 🔮 'simulate menu' - See What-If scenarios\n  • Ask any question about the data!",
+    "ts": "2025-12-05T18:40:00.026279Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Hello",
+    "ts": "2025-12-05T18:40:04.555754Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Hello! 👋 Welcome to JGM Insights Assistant!\n\nI'm here to help you explore Peru's 2025 education data.\n\nBefore we start, would you like to set up your profile? Click '👤 Profile' button.\n\nOr jump right in and ask me anything about:\n  • Dropout rates\n  • Applicant statistics\n  • Regional comparisons\n  • Interactive maps\n  • 🔮 **What-If Simulations** (try 'simulate menu').",
+    "ts": "2025-12-05T18:40:04.555754Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "(set_profile)",
+    "ts": "2025-12-05T18:40:20.588871Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "Thanks, Vrajesh! 🎉 Profile saved.\n\n💡 Want to see how interventions could help? Try 'simulate menu'!\n\nNow you're all set! Ask me anything about Peru's 2025 education data.\n\n💡 Try:\n  • 'What's the average dropout rate?'\n  • 'Show applicants by faculty'\n  • 'Compare Lima and Cusco'\n  • 'Create a map'\n  • 🔮 'What if we implement meal programs?'.",
+    "ts": "2025-12-05T18:40:20.590346Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Compare Lima and Cusco",
+    "ts": "2025-12-05T18:40:26.557330Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "📊 Comparison for 2025:\n\n  • **LIMA**: 24 records\n  • **CUSCO**: 1 records\n  • **LIMA**: 23 records\n  • **LIMA**: 4 records.",
+    "ts": "2025-12-05T18:40:26.577299Z",
+    "attachments": []
+  },
+  {
+    "role": "user",
+    "text": "Create a map",
+    "ts": "2025-12-05T18:40:30.584732Z",
+    "attachments": []
+  },
+  {
+    "role": "bot",
+    "text": "🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+    "ts": "2025-12-05T18:40:30.945707Z",
+    "attachments": [
+      "/files/map_20251205_134030.html"
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 """
-JGM Insights Assistant - Google ADK Integration (PRODUCTION READY)
-Gemini as primary AI with Ollama fallback
+JGM Insights Assistant - Google Gemini Integration (FIXED)
+Direct google.generativeai integration with proper model selection
 """
 
 import os
@@ -11,33 +11,35 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# ===== GOOGLE ADK SETUP =====
-GOOGLE_ADK_AVAILABLE = False
-root_agent = None
+# Get API key
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+
+# ===== GOOGLE GEMINI SETUP =====
+GOOGLE_AVAILABLE = False
 
 try:
-    # Try primary import method
-    from google.genai import Client
-    from google.genai.types import Tool, FunctionDeclaration
-    GOOGLE_ADK_AVAILABLE = True
-    print("✅ Google ADK imported successfully (Method 1: genai.Client)")
-except ImportError:
-    try:
-        # Try alternative import
-        from google.adk.agents import Agent
-        from google.adk.tools import tool
-        GOOGLE_ADK_AVAILABLE = True
-        print("✅ Google ADK imported successfully (Method 2: adk.agents)")
-    except ImportError as e:
-        print(f"⚠️  Google ADK not available: {e}")
-        print("   Falling back to Ollama/LlamaIndex")
-        GOOGLE_ADK_AVAILABLE = False
+    import google.generativeai as genai
+    
+    if GOOGLE_API_KEY:
+        genai.configure(api_key=GOOGLE_API_KEY)
+        GOOGLE_AVAILABLE = True
+        print("✅ Google Gemini configured successfully")
+        print(f"   API Key: {GOOGLE_API_KEY[:20]}...")
+    else:
+        print("⚠️  No GOOGLE_API_KEY found in environment")
+        
+except ImportError as e:
+    print(f"⚠️  google-generativeai not installed: {e}")
+    print("   Install with: pip install google-generativeai")
+    GOOGLE_AVAILABLE = False
+except Exception as e:
+    print(f"⚠️  Error configuring Google Gemini: {e}")
+    GOOGLE_AVAILABLE = False
 
 # Import chatbot
 from jgm_rag_chatbot import JGMRAG
 
 # Configuration
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
 WORKSPACE_PATH = Path(os.getenv("JGM_WORKSPACE", "./jgm_workspace"))
 
 # Initialize chatbot (always available as fallback)
@@ -48,244 +50,162 @@ try:
     print(f"✅ JGM Chatbot initialized: {WORKSPACE_PATH}")
 except Exception as e:
     print(f"❌ Error initializing chatbot: {e}")
-    # Create empty bot for safety
     BOT = JGMRAG(WORKSPACE_PATH)
+
+# ===== GEMINI MODEL SELECTION =====
+
+def get_best_model():
+    """Try models in order of preference"""
+    if not GOOGLE_AVAILABLE:
+        return None
+    
+    models_to_try = [
+        'gemini-pro',
+        'gemini-1.5-pro', 
+        'models/gemini-pro',
+        'gemini-1.0-pro'
+    ]
+    
+    import google.generativeai as genai
+    
+    for model_name in models_to_try:
+        try:
+            model = genai.GenerativeModel(model_name)
+            print(f"✅ Using Gemini model: {model_name}")
+            return model
+        except Exception:
+            continue
+    
+    # If none work, list available models
+    print("⚠️  Could not find compatible model. Available models:")
+    try:
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                print(f"   - {m.name}")
+    except Exception as e:
+        print(f"   Could not list models: {e}")
+    
+    return None
+
+# ===== GEMINI HELPER =====
+
+GEMINI_MODEL = None
+
+def call_gemini(prompt: str) -> Optional[str]:
+    """
+    Call Google Gemini with error handling
+    Returns None if fails
+    """
+    global GEMINI_MODEL
+    
+    if not GOOGLE_AVAILABLE or not GOOGLE_API_KEY:
+        return None
+    
+    try:
+        import google.generativeai as genai
+        
+        # Initialize model if not already done
+        if GEMINI_MODEL is None:
+            GEMINI_MODEL = get_best_model()
+        
+        if GEMINI_MODEL is None:
+            print("⚠️  No Gemini model available")
+            return None
+        
+        response = GEMINI_MODEL.generate_content(prompt)
+        return response.text
+        
+    except Exception as e:
+        error_msg = str(e)
+        print(f"Gemini error: {error_msg[:200]}")
+        
+        # Log specific error types
+        if "expired" in error_msg.lower():
+            print("❌ API KEY EXPIRED - Get new key at: https://aistudio.google.com/app/apikey")
+        elif "invalid" in error_msg.lower():
+            print("❌ API KEY INVALID - Check your .env file")
+        elif "quota" in error_msg.lower():
+            print("⚠️  API QUOTA EXCEEDED - Wait or upgrade plan")
+        elif "not found" in error_msg.lower():
+            print("⚠️  MODEL NOT FOUND - Trying to reinitialize...")
+            GEMINI_MODEL = get_best_model()
+        
+        return None
 
 # ===== INITIALIZE AGENT =====
 
 def initialize_agent() -> bool:
-    """Initialize Google ADK agent with tools"""
-    global root_agent, GOOGLE_ADK_AVAILABLE
+    """Initialize Google agent"""
+    global GOOGLE_AVAILABLE, GEMINI_MODEL
     
     if not GOOGLE_API_KEY:
-        print("⚠️  No GOOGLE_API_KEY found in environment")
-        GOOGLE_ADK_AVAILABLE = False
+        print("⚠️  No GOOGLE_API_KEY - running in fallback mode")
         return False
     
-    if not GOOGLE_ADK_AVAILABLE:
+    if not GOOGLE_AVAILABLE:
+        print("⚠️  Google Gemini not available")
         return False
     
     try:
-        # Method 1: Using google.genai (newer SDK)
-        try:
-            client = Client(api_key=GOOGLE_API_KEY)
-            
-            # Define tools as function declarations
-            tools = [
-                Tool(
-                    function_declarations=[
-                        FunctionDeclaration(
-                            name="answer_question",
-                            description="Answer questions about Peru 2025 education data including dropout rates, applicants, regions, and statistics",
-                            parameters={
-                                "type": "object",
-                                "properties": {
-                                    "question": {
-                                        "type": "string",
-                                        "description": "The user's question about education data"
-                                    }
-                                },
-                                "required": ["question"]
-                            }
-                        ),
-                        FunctionDeclaration(
-                            name="create_visualization",
-                            description="Create charts, graphs, or maps to visualize education data",
-                            parameters={
-                                "type": "object",
-                                "properties": {
-                                    "request": {
-                                        "type": "string",
-                                        "description": "What visualization to create (chart, map, graph)"
-                                    }
-                                },
-                                "required": ["request"]
-                            }
-                        ),
-                        FunctionDeclaration(
-                            name="run_simulation",
-                            description="Run What-If policy simulations to predict impact of education interventions",
-                            parameters={
-                                "type": "object",
-                                "properties": {
-                                    "scenario": {
-                                        "type": "string",
-                                        "description": "Scenario name: meal_program, scholarship, mentorship, reduce_class_size, teacher_training, infrastructure, or 'menu' to list all"
-                                    },
-                                    "region": {
-                                        "type": "string",
-                                        "description": "Optional: specific region/department to analyze"
-                                    }
-                                },
-                                "required": ["scenario"]
-                            }
-                        ),
-                        FunctionDeclaration(
-                            name="set_profile",
-                            description="Save user profile information for personalization",
-                            parameters={
-                                "type": "object",
-                                "properties": {
-                                    "first_name": {"type": "string"},
-                                    "last_name": {"type": "string"},
-                                    "role": {"type": "string", "description": "parent/student/teacher/NGO/donor/investor"},
-                                    "contact": {"type": "string"}
-                                }
-                            }
-                        )
-                    ]
-                )
-            ]
-            
-            # Create agent wrapper
-            class GeminiAgent:
-                def __init__(self, client, tools):
-                    self.client = client
-                    self.tools = tools
-                    self.model_name = "gemini-2.0-flash-exp"
-                
-                def send_message(self, message: str) -> str:
-                    """Send message to Gemini and handle function calls"""
-                    try:
-                        # Generate response with tools
-                        response = self.client.models.generate_content(
-                            model=self.model_name,
-                            contents=message,
-                            config={
-                                "tools": self.tools,
-                                "temperature": 0.7,
-                            }
-                        )
-                        
-                        # Handle function calls if present
-                        if hasattr(response, 'candidates') and response.candidates:
-                            candidate = response.candidates[0]
-                            
-                            # Check for function calls
-                            if hasattr(candidate.content, 'parts'):
-                                for part in candidate.content.parts:
-                                    if hasattr(part, 'function_call'):
-                                        func_call = part.function_call
-                                        func_name = func_call.name
-                                        func_args = dict(func_call.args)
-                                        
-                                        # Execute function
-                                        result = self._execute_function(func_name, func_args)
-                                        
-                                        # Get final response with function result
-                                        final_response = self.client.models.generate_content(
-                                            model=self.model_name,
-                                            contents=[
-                                                {"role": "user", "parts": [{"text": message}]},
-                                                {"role": "model", "parts": [{"function_call": func_call}]},
-                                                {"role": "function", "parts": [{"function_response": {
-                                                    "name": func_name,
-                                                    "response": result
-                                                }}]}
-                                            ]
-                                        )
-                                        return final_response.text
-                            
-                            # No function call, return text
-                            return response.text
-                        
-                        return "I couldn't process that request."
-                    
-                    except Exception as e:
-                        print(f"Gemini error: {e}")
-                        # Fallback to direct chatbot
-                        return str(BOT.chat(message).get("reply", "Error processing request"))
-                
-                def _execute_function(self, func_name: str, args: dict) -> dict:
-                    """Execute the appropriate function based on name"""
-                    try:
-                        if func_name == "answer_question":
-                            res = BOT.chat(args.get("question", ""))
-                            return {"reply": res.get("reply", ""), "refs": res.get("refs", [])}
-                        
-                        elif func_name == "create_visualization":
-                            res = BOT.chat(args.get("request", ""))
-                            return {
-                                "message": res.get("reply", ""),
-                                "image_path": res.get("image_path"),
-                                "map_path": res.get("map_path")
-                            }
-                        
-                        elif func_name == "run_simulation":
-                            query = f"simulate {args.get('scenario', 'menu')}"
-                            if args.get('region'):
-                                query += f" for {args['region']}"
-                            res = BOT.chat(query)
-                            return {"simulation": res.get("reply", "")}
-                        
-                        elif func_name == "set_profile":
-                            msg = BOT.set_profile(
-                                first_name=args.get("first_name"),
-                                last_name=args.get("last_name"),
-                                role=args.get("role"),
-                                contact=args.get("contact")
-                            )
-                            return {"status": "ok", "message": msg}
-                        
-                        else:
-                            return {"error": f"Unknown function: {func_name}"}
-                    
-                    except Exception as e:
-                        return {"error": str(e)}
-            
-            root_agent = GeminiAgent(client, tools)
-            print("✅ Google Gemini Agent initialized (genai.Client)")
-            print(f"   Model: gemini-2.0-flash-exp")
-            print(f"   Tools: 4 available")
-            return True
+        GEMINI_MODEL = get_best_model()
         
-        except Exception as e1:
-            print(f"Method 1 failed: {e1}")
-            
-            # Method 2: Try older ADK method
-            try:
-                from google.adk.agents import Agent
-                
-                # This is a placeholder - adjust based on actual ADK API
-                root_agent = Agent(
-                    model="gemini-2.0-flash-exp",
-                    name="JGM Insights Assistant",
-                    api_key=GOOGLE_API_KEY
-                )
-                print("✅ Google ADK Agent initialized (legacy method)")
+        if GEMINI_MODEL:
+            # Test the connection
+            test_response = call_gemini("Say 'ready'")
+            if test_response:
+                print("✅ Google Gemini initialized and tested")
                 return True
-            
-            except Exception as e2:
-                print(f"Method 2 failed: {e2}")
-                GOOGLE_ADK_AVAILABLE = False
+            else:
+                print("⚠️  Gemini test failed - using fallback mode")
                 return False
-    
+        else:
+            print("⚠️  No compatible Gemini model found")
+            return False
+            
     except Exception as e:
-        print(f"❌ Failed to initialize agent: {e}")
-        GOOGLE_ADK_AVAILABLE = False
+        print(f"❌ Failed to initialize Gemini: {e}")
+        GOOGLE_AVAILABLE = False
         return False
 
 # ===== PUBLIC INTERFACE =====
 
 def enhanced_chat(message: str) -> Dict[str, Any]:
     """
-    Process message through Gemini agent (primary) or fallback to direct chatbot
+    Process message through Gemini (primary) or fallback to chatbot
     """
-    # Try Gemini agent first
-    if root_agent and GOOGLE_ADK_AVAILABLE:
+    # Try Gemini first if available
+    if GOOGLE_AVAILABLE and GOOGLE_API_KEY and GEMINI_MODEL:
         try:
-            response = root_agent.send_message(message)
-            return {
-                "reply": str(response),
-                "source": "gemini"
-            }
+            # For data queries, always use chatbot (it has the actual data)
+            data_keywords = ['dropout', 'rate', 'data', 'applicant', 'region', 
+                           'map', 'chart', 'simulate', 'faculty', 'department',
+                           'province', 'statistics', 'compare', 'show']
+            
+            if any(kw in message.lower() for kw in data_keywords):
+                # Use chatbot for data queries
+                result = BOT.chat(message)
+                result["source"] = "chatbot"
+                return result
+            
+            # For casual conversation, use Gemini
+            response = call_gemini(f"""You are a helpful Peru education data assistant.
+User said: {message}
+
+Give a brief, friendly response. If they're asking about data, acknowledge it and suggest they ask specific questions.""")
+            
+            if response:
+                return {
+                    "reply": response,
+                    "source": "gemini"
+                }
+        
         except Exception as e:
-            print(f"⚠️  Gemini error: {e}, using fallback")
+            print(f"⚠️  Gemini error, using fallback: {e}")
     
     # Fallback to direct chatbot
     try:
         result = BOT.chat(message)
-        result["source"] = "ollama" if BOT.llm_available else "direct"
+        result["source"] = "chatbot"
         return result
     except Exception as e:
         return {
@@ -295,13 +215,18 @@ def enhanced_chat(message: str) -> Dict[str, Any]:
 
 def greet_user() -> str:
     """Get greeting message"""
-    if root_agent and GOOGLE_ADK_AVAILABLE:
+    greeting = BOT.greet_and_collect()
+    
+    # Try to enhance with Gemini if available
+    if GOOGLE_AVAILABLE and GEMINI_MODEL:
         try:
-            return root_agent.send_message("hello")
+            enhanced = call_gemini("Give a very brief, friendly greeting for a Peru education data assistant. One sentence only.")
+            if enhanced:
+                return enhanced + "\n\n" + greeting
         except Exception:
             pass
     
-    return BOT.greet_and_collect()
+    return greeting
 
 def set_user_profile(first_name="", last_name="", role="", contact="") -> str:
     """Set user profile"""
@@ -315,18 +240,20 @@ def set_user_profile(first_name="", last_name="", role="", contact="") -> str:
 def get_agent_status() -> Dict[str, Any]:
     """Get current agent status for monitoring"""
     return {
-        "google_adk_available": GOOGLE_ADK_AVAILABLE,
-        "agent_initialized": root_agent is not None,
+        "google_api_key_set": bool(GOOGLE_API_KEY),
+        "google_available": GOOGLE_AVAILABLE,
+        "gemini_model_ready": GEMINI_MODEL is not None,
+        "agent_initialized": GOOGLE_AVAILABLE and GEMINI_MODEL is not None,
         "ollama_available": BOT.llm_available if BOT else False,
         "chatbot_ready": BOT is not None,
-        "primary_engine": "gemini" if (root_agent and GOOGLE_ADK_AVAILABLE) else ("ollama" if (BOT and BOT.llm_available) else "direct")
+        "primary_engine": "gemini" if (GOOGLE_AVAILABLE and GEMINI_MODEL) else ("ollama" if (BOT and BOT.llm_available) else "direct")
     }
 
 # ===== STARTUP TEST =====
 
 if __name__ == "__main__":
     print("\n" + "=" * 70)
-    print("🤖 JGM INSIGHTS ASSISTANT - GOOGLE ADK INTEGRATION TEST")
+    print("🤖 JGM INSIGHTS ASSISTANT - GOOGLE GEMINI TEST")
     print("=" * 70)
     
     # Test initialization
@@ -334,7 +261,9 @@ if __name__ == "__main__":
     
     status = get_agent_status()
     print("\n📊 STATUS:")
-    print(f"   Google ADK Available: {'✅' if status['google_adk_available'] else '❌'}")
+    print(f"   Google API Key Set: {'✅' if status['google_api_key_set'] else '❌'}")
+    print(f"   Google Available: {'✅' if status['google_available'] else '❌'}")
+    print(f"   Gemini Model Ready: {'✅' if status['gemini_model_ready'] else '❌'}")
     print(f"   Agent Initialized: {'✅' if status['agent_initialized'] else '❌'}")
     print(f"   Ollama Available: {'✅' if status['ollama_available'] else '❌'}")
     print(f"   Chatbot Ready: {'✅' if status['chatbot_ready'] else '❌'}")
@@ -349,6 +278,8 @@ if __name__ == "__main__":
             print(f"   Source: {test_response.get('source', 'unknown')}")
         except Exception as e:
             print(f"⚠️  Test failed: {e}")
+    else:
+        print("\n⚠️  Agent initialization failed - will use fallback mode")
     
     print("\n" + "=" * 70)
     print("✅ Ready for Flask integration!")
