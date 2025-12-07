@@ -1,0 +1,11 @@
+
+# Environment variables - DO NOT COMMIT
+.env
+.env.*
+*.env
+
+# Environment variables - DO NOT COMMIT
+.env
+.env.*
+*.env
+.env.backup
