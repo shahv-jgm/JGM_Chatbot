@@ -1,6 +1,7 @@
 """
-JGM Insights Assistant - Flask App (MAP FIX)
+JGM Insights Assistant - Flask App (MAP FIX + CORS)
 Fixed map link display issue
+Added CORS support for Vercel frontend
 """
 
 import os
@@ -12,6 +13,7 @@ from flask import (
     Flask, request, jsonify, send_from_directory,
     render_template_string, make_response, Response
 )
+from flask_cors import CORS
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -54,6 +56,16 @@ for folder in [WORKSPACE, DATA_DIR, GRAPHS_DIR, CODE_DIR, TRANS_DIR, LOGS_DIR]:
 # ===== FLASK APP =====
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
+
+# ===== CORS CONFIGURATION =====
+# Allow requests from Vercel frontend and localhost for development
+CORS(app, origins=[
+    "https://jgm-ds-website.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:5173"
+], supports_credentials=True)
 
 # ===== INITIALIZE SYSTEM =====
 if AGENT_SYSTEM_AVAILABLE:
@@ -381,7 +393,7 @@ INDEX_HTML = """
 const log = document.getElementById("log");
 const loading = document.getElementById("loading");
 
-function append(who, text, attachments = []){
+function append(who, text, refs = []){
   const container = document.createElement("div");
   container.className = "message-container";
   
@@ -393,19 +405,18 @@ function append(who, text, attachments = []){
   
   container.appendChild(div);
   
-  // FIXED: Better attachment handling
-  if (attachments && attachments.length > 0) {
-    attachments.forEach(att => {
+  // Handle refs (maps, charts, images)
+  if (refs && refs.length > 0) {
+    refs.forEach(ref => {
       const attDiv = document.createElement("div");
       attDiv.className = "attachment";
       const link = document.createElement("a");
-      link.href = att;
+      link.href = ref;
       link.target = "_blank";
       
-      // Better link text based on file type
-      if (att.includes(".html") || att.includes("map")) {
+      if (ref.includes(".html") || ref.includes("map")) {
         link.textContent = "🗺️ Open Interactive Map";
-      } else if (att.includes(".png") || att.includes(".jpg") || att.includes("chart")) {
+      } else if (ref.includes(".png") || ref.includes(".jpg") || ref.includes("chart")) {
         link.textContent = "📊 View Chart";
       } else {
         link.textContent = "📎 View File";
@@ -413,8 +424,6 @@ function append(who, text, attachments = []){
       
       attDiv.appendChild(link);
       container.appendChild(attDiv);
-      
-      console.log("Added attachment:", att);  // Debug
     });
   }
   
@@ -477,42 +486,12 @@ async function send(){
     });
     const j = await res.json();
     
-    console.log("Response:", j);  // Debug
+    // Use refs array from response
+    const refs = j.refs || [];
     
-    // FIXED: Collect ALL attachments properly
-    const attachments = [];
-    
-    // Check for map_path (primary)
-    if (j.map_path) {
-      const mapFile = j.map_path.split('/').pop();
-      attachments.push(`/files/${mapFile}`);
-      console.log("Found map_path:", j.map_path);
-    }
-    
-    // Check for map (alternative)
-    if (j.map && !j.map_path) {
-      attachments.push(j.map);
-      console.log("Found map:", j.map);
-    }
-    
-    // Check for image_path
-    if (j.image_path) {
-      const imgFile = j.image_path.split('/').pop();
-      attachments.push(`/files/${imgFile}`);
-      console.log("Found image_path:", j.image_path);
-    }
-    
-    // Check for images array
-    if (j.images && j.images.length > 0) {
-      attachments.push(...j.images);
-      console.log("Found images:", j.images);
-    }
-    
-    console.log("Final attachments:", attachments);  // Debug
-    
-    append("bot", j.reply || "(no reply)", attachments);
+    append("bot", j.reply || "(no reply)", refs);
   } catch (e) {
-    console.error("Error:", e);  // Debug
+    console.error("Error:", e);
     append("sys", "Error sending message");
   } finally {
     loading.classList.remove("active");
@@ -656,12 +635,13 @@ def set_profile():
 
 @app.post("/api/chat")
 def chat():
+    """Main chat endpoint - handles messages from frontend"""
     sid = _get_sid()
     data = request.json or {}
     q = (data.get("message") or "").strip()
     
     if not q:
-        return jsonify({"reply": "Please ask a question!"})
+        return jsonify({"reply": "Please ask a question!", "refs": []})
     
     _record(sid, "user", q)
     
@@ -673,52 +653,49 @@ def chat():
         
         reply = _smooth(res.get("reply", ""))
         
-        # FIXED: Better attachment handling
-        attachments = []
+        # Collect all references (maps, charts, images)
+        refs = []
         
         # Handle map_path
         if res.get("map_path"):
             map_file = Path(res["map_path"]).name
-            attachments.append(f"/files/{map_file}")
-            print(f"✅ Map created: {res['map_path']}")  # Debug
+            refs.append(f"/files/{map_file}")
+            print(f"✅ Map created: {res['map_path']}")
         
         # Handle image_path
         if res.get("image_path"):
             img_file = Path(res["image_path"]).name
-            attachments.append(f"/files/{img_file}")
-            # Also add to images array for consistency
-            if "images" not in res:
-                res["images"] = []
-            res["images"].append(f"/files/{img_file}")
+            refs.append(f"/files/{img_file}")
         
-        # Handle existing images array
+        # Handle images array
         if res.get("images"):
             for img in res["images"]:
-                if img not in attachments:
-                    attachments.append(img)
+                if img not in refs:
+                    refs.append(img)
         
-        _record(sid, "bot", reply, attachments=attachments)
-        res["reply"] = reply
+        _record(sid, "bot", reply, attachments=refs)
         
-        print(f"📊 Response keys: {res.keys()}")  # Debug
-        print(f"📎 Attachments: {attachments}")  # Debug
+        print(f"📊 Response: reply={reply[:50]}..., refs={refs}")
         
-        return jsonify(res)
+        return jsonify({
+            "reply": reply,
+            "refs": refs
+        })
         
     except Exception as e:
-        print(f"❌ Chat error: {e}")  # Debug
+        print(f"❌ Chat error: {e}")
         error_msg = f"Sorry, I encountered an error: {str(e)}"
         _record(sid, "bot", error_msg)
-        return jsonify({"reply": error_msg}), 500
+        return jsonify({"reply": error_msg, "refs": []}), 500
 
 @app.get("/files/<path:filename>")
 def files(filename):
     """Serve files from workspace"""
-    print(f"📁 Serving file: {filename}")  # Debug
+    print(f"📁 Serving file: {filename}")
     try:
         return send_from_directory(WORKSPACE, filename, as_attachment=False)
     except Exception as e:
-        print(f"❌ File serve error: {e}")  # Debug
+        print(f"❌ File serve error: {e}")
         return Response(f"File not found: {filename}", status=404)
 
 @app.get("/api/download")
@@ -856,7 +833,7 @@ def api_status():
 # ===== STARTUP =====
 if __name__ == "__main__":
     print("=" * 70)
-    print("🚀 JGM INSIGHTS ASSISTANT - MAP FIX VERSION")
+    print("🚀 JGM INSIGHTS ASSISTANT - CORS ENABLED")
     print("=" * 70)
     
     if AGENT_SYSTEM_AVAILABLE:
@@ -866,10 +843,14 @@ if __name__ == "__main__":
     else:
         print(f"\n⚠️  Agent System: FALLBACK MODE")
     
+    print(f"\n🌐 CORS Enabled for:")
+    print(f"   - https://jgm-ds-website.vercel.app")
+    print(f"   - http://localhost:3000")
+    print(f"   - http://localhost:5173")
+    
     print("=" * 70)
     print(f"📍 URL: http://localhost:{PORT}")
     print(f"🔮 Features: What-If, Maps, Charts, Conversations")
-    print(f"🐛 Debug: Console logging enabled for map issues")
     print("=" * 70)
     
     app.run(host=HOST, port=PORT, debug=DEBUG, threaded=True, use_reloader=False)
