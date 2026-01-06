@@ -83,10 +83,25 @@ else:
 SESS = {}
 
 def _get_sid():
-    """Get or create session ID"""
-    sid = request.cookies.get("session_id")
+    """Get session ID from header, body, or cookie"""
+    sid = None
+    
+    # 1. Check X-Session-ID header (frontend sends this)
+    sid = request.headers.get("X-Session-ID")
+    
+    # 2. Check request body
+    if not sid and request.is_json and request.json:
+        sid = request.json.get("session_id")
+    
+    # 3. Fallback to cookie
+    if not sid:
+        sid = request.cookies.get("session_id")
+    
+    # 4. Generate new if none found
     if not sid:
         sid = str(uuid.uuid4())
+    
+    # Initialize session storage
     if sid not in SESS:
         SESS[sid] = []
         tfile = TRANS_DIR / f"{sid}.json"
@@ -95,6 +110,7 @@ def _get_sid():
                 SESS[sid] = json.loads(tfile.read_text(encoding="utf-8"))
             except Exception:
                 SESS[sid] = []
+    
     return sid
 
 def _record(sid, role, text, attachments=None):
