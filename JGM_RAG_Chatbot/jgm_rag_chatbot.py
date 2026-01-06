@@ -138,12 +138,13 @@ class JGMRAG:
         self.vectorizer = None
         self.matrix = None
         self.loaded_tables: Dict[str, pd.DataFrame] = {}
+        # Profile is now handled per-session in app.py - this is just a fallback
         self.user_profile = {
             "first_name": None, 
             "last_name": None, 
             "role": None, 
             "contact": None,
-            "onboarded": False
+            "onboarded": True  # CHANGED: Default to True so queries work immediately
         }
         self.graph_catalog: List[Dict[str, str]] = []
         self.conversation_history = []
@@ -466,13 +467,13 @@ class JGMRAG:
                 return (
                     "Hello! 👋 Welcome to JGM Insights Assistant!\n\n"
                     f"I'm here to help you explore Peru's {self.VALID_YEAR} education data.\n\n"
-                    "Before we start, would you like to set up your profile? Click '👤 Profile' button.\n\n"
-                    "Or jump right in and ask me anything about:\n"
+                    "You can ask me about:\n"
                     "  • Dropout rates\n"
                     "  • Applicant statistics\n"
                     "  • Regional comparisons\n"
                     "  • Interactive maps\n"
-                    "  • 🔮 **What-If Simulations** (try 'simulate menu')"
+                    "  • 🔮 **What-If Simulations** (try 'simulate menu')\n\n"
+                    "What would you like to explore?"
                 )
         
         thanks = ["thank", "thanks", "thank you", "thx", "gracias", "appreciate"]
@@ -973,10 +974,6 @@ class JGMRAG:
             "  • Interactive maps and charts\n"
             "  • 🔮 **What-If Simulator** - Predict policy impacts!\n"
             f"{'  • 🧠 Natural language Q&A with AI' if self.llm_available else ''}\n\n"
-            "Before we start, please click '👤 Profile' to share:\n"
-            "  • Your name\n"
-            "  • Your role (parent/student/teacher/NGO/donor/investor)\n"
-            "  • Contact information\n\n"
             "💡 Quick commands:\n"
             "  • 'summary' - Get full conversation overview\n"
             "  • 'help' - See what I can do\n"
@@ -1019,7 +1016,7 @@ class JGMRAG:
             "  • 🔮 'What if we implement meal programs?'"
         )
 
-    # ========== NEW: OFF-TOPIC DETECTION ==========
+    # ========== OFF-TOPIC DETECTION ==========
     
     def _is_off_topic(self, query: str) -> bool:
         """Detect if question is off-topic or too vague"""
@@ -1110,7 +1107,10 @@ class JGMRAG:
     # ========== END OFF-TOPIC DETECTION ==========
 
     def chat(self, message: str) -> Dict[str, Any]:
-        """UPDATED - with off-topic detection"""
+        """
+        UPDATED - Removed profile check that was blocking queries
+        Maps, charts, and data queries now work without requiring a profile
+        """
         q = message.strip()
         qn = _norm(q)
 
@@ -1127,7 +1127,7 @@ class JGMRAG:
             summary = self.generate_summary()
             return {"reply": summary}
 
-        # PRIORITY 3: Off-topic detection (NEW!)
+        # PRIORITY 3: Off-topic detection
         if self._is_off_topic(q):
             return {"reply": self._get_off_topic_response()}
 
@@ -1137,24 +1137,15 @@ class JGMRAG:
             simulation_result = self.run_simulation(scenario_key)
             return {"reply": simulation_result}
 
-        # PRIORITY 5: Profile reminder
-        if not self.user_profile.get("onboarded"):
-            if any(kw in qn for kw in ["dropout", "rate", "applicant", "faculty", "region", "data", "chart", "map"]):
-                return {
-                    "reply": (
-                        "👋 I'd love to help with that!\n\n"
-                        "Quick question first: Would you like to set up your profile? "
-                        "It helps me personalize responses for you.\n\n"
-                        "Click '👤 Profile' button, or just ask your question again to skip!"
-                    )
-                }
+        # NOTE: REMOVED PRIORITY 5 (Profile reminder) - it was blocking map/data queries
+        # Profiles are now handled per-session in app.py
 
-        # PRIORITY 6: Year validation
+        # PRIORITY 5: Year validation
         year_error = self._validate_year(q)
         if year_error:
             return {"reply": year_error}
 
-        # PRIORITY 7: Map
+        # PRIORITY 6: Map
         if any(k in qn for k in ["map", "maps", "show map", "geographical", "geography"]):
             mp = self.build_map(query=q)
             if mp:
@@ -1165,13 +1156,13 @@ class JGMRAG:
             else:
                 return {"reply": "I couldn't create a map with the current data. The dataset needs location information (departments/regions)."}
 
-        # PRIORITY 8: Chart
+        # PRIORITY 7: Chart
         if any(k in qn for k in ["chart", "plot", "graph", "visualize"]):
             result = self._answer_from_tables(q)
             if result:
                 return result
 
-        # PRIORITY 9: Data queries
+        # PRIORITY 8: Data queries
         result = self._answer_from_tables(q)
         if result:
             # Enhance with LLM if available
@@ -1179,5 +1170,5 @@ class JGMRAG:
                 result["reply"] = self._llm_enhanced_response(q, result.get("reply", ""))
             return result
 
-        # PRIORITY 10: RAG fallback
+        # PRIORITY 9: RAG fallback
         return self._rag_synthesis(q)
