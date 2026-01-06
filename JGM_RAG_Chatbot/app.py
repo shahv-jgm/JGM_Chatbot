@@ -1,6 +1,6 @@
 """
 JGM Insights Assistant - Flask App
-Fixed session management for cross-origin frontend
+Fixed session management - profiles stored PER SESSION, not globally
 Each user gets their own session via X-Session-ID header
 """
 
@@ -22,8 +22,7 @@ load_dotenv()
 # Import agent system
 try:
     from agent import (
-        enhanced_chat, greet_user, set_user_profile, 
-        get_agent_status, initialize_agent,
+        enhanced_chat, get_agent_status, initialize_agent,
         BOT, GOOGLE_ADK_AVAILABLE
     )
     AGENT_SYSTEM_AVAILABLE = True
@@ -94,6 +93,7 @@ else:
 
 # ===== SESSION STORAGE =====
 # Each session: {"messages": [], "profile": {}}
+# Profile is stored PER SESSION - not globally!
 SESS = {}
 
 def _get_sid():
@@ -680,22 +680,44 @@ def reindex():
 
 @app.get("/api/greet")
 def greet():
+    """
+    Greet the user - uses SESSION-BASED profile only, not global state!
+    """
     sid = _get_sid()
     try:
-        # Check if user has a profile with name
+        # Get profile from THIS SESSION ONLY
         profile = _get_profile(sid)
         name = profile.get("first_name", "")
         
-        if AGENT_SYSTEM_AVAILABLE:
-            msg = greet_user()
-        elif bot:
-            msg = bot.greet_and_collect()
-        else:
-            msg = "Hello! Welcome to JGM Insights Assistant. How can I help you today?"
-        
-        # Personalize greeting if we have a name
+        # Generic greeting - DO NOT use agent's greet_user() which has global state
         if name:
-            msg = f"Welcome back, {name}! " + msg
+            # Returning user with profile set
+            msg = f"""Welcome back, {name}! 👋
+
+How can I help you with Peru's 2025 education data today?
+
+💡 Quick commands:
+  • 'summary' - Get conversation overview
+  • 'map' - Generate geographic visualization
+  • 🔮 'simulate menu' - See What-If scenarios
+  • Or just ask any question!"""
+        else:
+            # New user - no profile yet
+            msg = """👋 Hello! I'm the JGM Insights Assistant.
+
+I can help you explore Peru education data for 2025:
+  • Undergraduate applicant statistics
+  • Primary/secondary school dropout rates
+  • Interactive maps and charts
+  • 🔮 What-If Simulator - Predict policy impacts!
+
+Please click '👤 Profile' to share your name and role.
+
+💡 Quick commands:
+  • 'summary' - Get conversation overview
+  • 'map' - Generate geographic visualization
+  • 🔮 'simulate menu' - See What-If scenarios
+  • Or just ask any question!"""
         
         _record(sid, "bot", msg)
         return jsonify({"message": msg, "session_id": sid})
@@ -704,11 +726,14 @@ def greet():
 
 @app.post("/api/set_profile")
 def set_profile():
+    """
+    Set user profile - stores in SESSION ONLY, not globally!
+    """
     sid = _get_sid()
     data = request.json or {}
     
     try:
-        # Store profile in session
+        # Store profile ONLY in this session - not globally!
         profile_data = {
             "first_name": data.get("first_name", ""),
             "last_name": data.get("last_name", ""),
@@ -717,28 +742,36 @@ def set_profile():
         }
         _set_profile(sid, profile_data)
         
-        # Also call agent's set_profile if available
-        if AGENT_SYSTEM_AVAILABLE:
-            msg = set_user_profile(
-                first_name=profile_data["first_name"],
-                last_name=profile_data["last_name"],
-                role=profile_data["role"],
-                contact=profile_data["contact"]
-            )
-        elif bot:
-            msg = bot.set_profile(
-                first_name=profile_data["first_name"],
-                last_name=profile_data["last_name"],
-                role=profile_data["role"],
-                contact=profile_data["contact"],
-            )
-        else:
-            name = profile_data["first_name"] or "there"
-            msg = f"Nice to meet you, {name}! Your profile has been saved."
+        # Build personalized response - DO NOT use agent's set_user_profile()
+        name = profile_data["first_name"] or "there"
+        role = profile_data["role"] or "user"
+        
+        # Customize message based on role
+        role_tips = {
+            "parent": "I can help you understand your child's educational opportunities and regional school performance.",
+            "student": "I can help you explore undergraduate programs and admission statistics across Peru.",
+            "teacher": "I can provide insights on dropout rates, regional challenges, and educational metrics.",
+            "ngo": "I can help analyze regional disparities and identify areas needing intervention.",
+            "donor": "I can show you impact metrics and regional needs to help guide your contributions.",
+            "investor": "I can provide data on educational infrastructure and growth opportunities.",
+        }
+        
+        role_tip = role_tips.get(role.lower(), "I'm here to help you explore Peru's education data.")
+        
+        msg = f"""Nice to meet you, {name}! 👋
+
+I've noted that you're a {role}. {role_tip}
+
+How can I help you today? Try:
+  • Ask about dropout rates by region
+  • Request a map visualization
+  • 🔮 Type 'simulate menu' for What-If scenarios"""
         
         msg = _smooth(msg)
-        _record(sid, "user", "(set_profile)")
+        _record(sid, "user", f"(set_profile: {name}, {role})")
         _record(sid, "bot", msg)
+        
+        print(f"✅ Profile set for session {sid[:8]}...: {name} ({role})")
         
         return jsonify({"message": msg, "session_id": sid})
     except Exception as e:
@@ -755,6 +788,11 @@ def chat():
         return jsonify({"reply": "Please ask a question!", "refs": [], "session_id": sid})
     
     _record(sid, "user", q)
+    
+    # Get profile for this session to personalize responses
+    profile = _get_profile(sid)
+    user_name = profile.get("first_name", "")
+    user_role = profile.get("role", "")
     
     try:
         if AGENT_SYSTEM_AVAILABLE:
@@ -789,7 +827,7 @@ def chat():
         
         _record(sid, "bot", reply, attachments=refs)
         
-        print(f"📊 Session {sid[:8]}... | Reply: {reply[:50]}... | Refs: {refs}")
+        print(f"📊 Session {sid[:8]}... ({user_name or 'anonymous'}) | Q: {q[:30]}... | Refs: {refs}")
         
         return jsonify({
             "reply": reply,
@@ -824,6 +862,7 @@ def download_transcript():
         return jsonify({"error": "No conversation found", "session_id": sid}), 400
     
     convo = SESS.get(sid, {}).get("messages", [])
+    profile = _get_profile(sid)
     
     if not convo:
         return jsonify({"error": "No conversation", "session_id": sid}), 400
@@ -835,17 +874,21 @@ def download_transcript():
         resp.headers["Content-Disposition"] = "attachment; filename=JGM_Conversation.json"
         return resp
 
+    # Get user name for the transcript
+    user_name = profile.get("first_name", "User")
+    
     html = [
         "<!doctype html>",
         "<html>",
         "<head>",
         "<meta charset='utf-8'>",
-        "<title>JGM Conversation - Google Gemini Powered</title>",
+        f"<title>JGM Conversation - {user_name}</title>",
         "<style>",
         "body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 24px; background: #f5f5f5; }",
         ".container { max-width: 900px; margin: auto; background: white; padding: 32px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }",
         "h1 { color: #1a1a2e; }",
         ".badge { background: linear-gradient(135deg, #4285f4 0%, #34a853 100%); color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 700; }",
+        ".profile { background: #e3f2fd; padding: 12px; border-radius: 8px; margin-bottom: 20px; }",
         ".message { margin: 20px 0; padding: 16px; border-radius: 8px; }",
         ".user { background: #e3f2fd; border-left: 4px solid #2196f3; }",
         ".bot { background: #e8f5e9; border-left: 4px solid #4caf50; }",
@@ -857,10 +900,18 @@ def download_transcript():
         "<div class='container'>",
         "<h1>🤖 JGM Insights Assistant <span class='badge'>GOOGLE GEMINI</span></h1>",
     ]
+    
+    # Add profile info if available
+    if profile.get("first_name"):
+        html.append("<div class='profile'>")
+        html.append(f"<strong>User:</strong> {profile.get('first_name', '')} {profile.get('last_name', '')}<br>")
+        if profile.get('role'):
+            html.append(f"<strong>Role:</strong> {profile.get('role', '')}")
+        html.append("</div>")
 
     for m in convo:
         role = m.get("role", "user")
-        who = "You" if role == "user" else "Assistant"
+        who = user_name if role == "user" else "Assistant"
         css_class = role
         
         safe_text = (m.get("text", "")
@@ -878,7 +929,7 @@ def download_transcript():
     content = "\n".join(html).encode("utf-8")
     resp = make_response(content)
     resp.headers["Content-Type"] = "text/html; charset=utf-8"
-    resp.headers["Content-Disposition"] = "attachment; filename=JGM_Conversation.html"
+    resp.headers["Content-Disposition"] = f"attachment; filename=JGM_Conversation_{user_name}.html"
     return resp
 
 @app.post("/api/upload")
@@ -957,7 +1008,7 @@ def api_status():
 # ===== STARTUP =====
 if __name__ == "__main__":
     print("=" * 70)
-    print("🚀 JGM INSIGHTS ASSISTANT - SESSION MANAGEMENT UPDATE")
+    print("🚀 JGM INSIGHTS ASSISTANT - PER-SESSION PROFILES")
     print("=" * 70)
     
     if AGENT_SYSTEM_AVAILABLE:
@@ -976,7 +1027,7 @@ if __name__ == "__main__":
     
     print(f"\n🔑 Session Management:")
     print(f"   - X-Session-ID header support")
-    print(f"   - Per-session profile storage")
+    print(f"   - Per-session profile storage (NO GLOBAL STATE)")
     print(f"   - Session ID returned in all responses")
     
     print("=" * 70)
