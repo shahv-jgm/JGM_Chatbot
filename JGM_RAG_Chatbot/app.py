@@ -1,7 +1,7 @@
 """
-JGM Insights Assistant - Flask App (MAP FIX + CORS)
-Fixed map link display issue
-Added CORS support for Vercel frontend
+JGM Insights Assistant - Flask App
+Fixed session management for cross-origin frontend
+Each user gets their own session via X-Session-ID header
 """
 
 import os
@@ -32,7 +32,11 @@ except Exception as e:
     AGENT_SYSTEM_AVAILABLE = False
     print(f"❌ Agent system failed: {e}")
     print("   Using direct chatbot fallback")
-    from jgm_rag_chatbot import JGMRAG
+    try:
+        from jgm_rag_chatbot import JGMRAG
+    except Exception as e2:
+        print(f"❌ Fallback also failed: {e2}")
+        JGMRAG = None
 
 # ===== CONFIGURATION =====
 HOST = os.getenv("FLASK_HOST", "0.0.0.0")
@@ -59,15 +63,21 @@ app.secret_key = SECRET_KEY
 
 # ===== CORS CONFIGURATION =====
 # Allow requests from Vercel frontend and localhost for development
-CORS(app, origins=[
-    "https://jgm-ds-website.vercel.app",
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "http://127.0.0.1:3000",
-    "http://127.0.0.1:5173"
-], supports_credentials=True)
+CORS(app, 
+    origins=[
+        "https://jgm-ds-website.vercel.app",
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:5173"
+    ], 
+    supports_credentials=True,
+    allow_headers=["Content-Type", "X-Session-ID"],
+    expose_headers=["X-Session-ID"]
+)
 
 # ===== INITIALIZE SYSTEM =====
+bot = None
 if AGENT_SYSTEM_AVAILABLE:
     agent_ready = initialize_agent()
     if agent_ready:
@@ -75,23 +85,31 @@ if AGENT_SYSTEM_AVAILABLE:
     else:
         print("⚠️  Using fallback chatbot")
 else:
-    bot = JGMRAG(WORKSPACE)
-    bot.build_index()
-    print("✅ Direct chatbot initialized")
+    if JGMRAG:
+        bot = JGMRAG(WORKSPACE)
+        bot.build_index()
+        print("✅ Direct chatbot initialized")
+    else:
+        print("⚠️  No chatbot available - basic responses only")
 
 # ===== SESSION STORAGE =====
+# Each session: {"messages": [], "profile": {}}
 SESS = {}
 
 def _get_sid():
-    """Get session ID from header, body, or cookie"""
+    """Get session ID from header, body, cookie, or generate new"""
     sid = None
     
-    # 1. Check X-Session-ID header (frontend sends this)
+    # 1. Check X-Session-ID header first (frontend sends this)
     sid = request.headers.get("X-Session-ID")
     
     # 2. Check request body
-    if not sid and request.is_json and request.json:
-        sid = request.json.get("session_id")
+    if not sid:
+        try:
+            if request.is_json and request.json:
+                sid = request.json.get("session_id")
+        except Exception:
+            pass
     
     # 3. Fallback to cookie
     if not sid:
@@ -100,34 +118,55 @@ def _get_sid():
     # 4. Generate new if none found
     if not sid:
         sid = str(uuid.uuid4())
+        print(f"🆕 New session created: {sid[:8]}...")
     
     # Initialize session storage
     if sid not in SESS:
-        SESS[sid] = []
+        SESS[sid] = {"messages": [], "profile": {}}
         tfile = TRANS_DIR / f"{sid}.json"
         if tfile.exists():
             try:
-                SESS[sid] = json.loads(tfile.read_text(encoding="utf-8"))
+                data = json.loads(tfile.read_text(encoding="utf-8"))
+                # Handle old format (list) vs new format (dict)
+                if isinstance(data, list):
+                    SESS[sid] = {"messages": data, "profile": {}}
+                else:
+                    SESS[sid] = data
             except Exception:
-                SESS[sid] = []
+                SESS[sid] = {"messages": [], "profile": {}}
     
     return sid
 
-def _record(sid, role, text, attachments=None):
-    """Record conversation to session"""
-    SESS[sid].append({
-        "role": role,
-        "text": text,
-        "ts": datetime.datetime.utcnow().isoformat() + "Z",
-        "attachments": attachments or []
-    })
+def _save_session(sid):
+    """Save session to disk"""
     try:
         (TRANS_DIR / f"{sid}.json").write_text(
             json.dumps(SESS[sid], ensure_ascii=False, indent=2),
             encoding="utf-8"
         )
     except Exception as e:
-        print(f"Error saving transcript: {e}")
+        print(f"Error saving session: {e}")
+
+def _record(sid, role, text, attachments=None):
+    """Record conversation to session"""
+    SESS[sid]["messages"].append({
+        "role": role,
+        "text": text,
+        "ts": datetime.datetime.utcnow().isoformat() + "Z",
+        "attachments": attachments or []
+    })
+    _save_session(sid)
+
+def _get_profile(sid):
+    """Get profile for a session"""
+    return SESS.get(sid, {}).get("profile", {})
+
+def _set_profile(sid, profile_data):
+    """Set profile for a session"""
+    if sid not in SESS:
+        SESS[sid] = {"messages": [], "profile": {}}
+    SESS[sid]["profile"] = profile_data
+    _save_session(sid)
 
 def _smooth(text: str) -> str:
     """Add punctuation if missing"""
@@ -409,6 +448,26 @@ INDEX_HTML = """
 const log = document.getElementById("log");
 const loading = document.getElementById("loading");
 
+// Session management
+function getSessionId() {
+  return localStorage.getItem("jgm_session_id");
+}
+
+function setSessionId(sid) {
+  if (sid) {
+    localStorage.setItem("jgm_session_id", sid);
+  }
+}
+
+function getHeaders() {
+  const headers = { "Content-Type": "application/json" };
+  const sid = getSessionId();
+  if (sid) {
+    headers["X-Session-ID"] = sid;
+  }
+  return headers;
+}
+
 function append(who, text, refs = []){
   const container = document.createElement("div");
   container.className = "message-container";
@@ -421,7 +480,6 @@ function append(who, text, refs = []){
   
   container.appendChild(div);
   
-  // Handle refs (maps, charts, images)
   if (refs && refs.length > 0) {
     refs.forEach(ref => {
       const attDiv = document.createElement("div");
@@ -449,8 +507,9 @@ function append(who, text, refs = []){
 
 async function greet(){
   try {
-    const res = await fetch("/api/greet");
+    const res = await fetch("/api/greet", { headers: getHeaders() });
     const j = await res.json();
+    if (j.session_id) setSessionId(j.session_id);
     append("bot", j.message || "(no message)");
   } catch (e) {
     append("sys", "Error connecting");
@@ -467,10 +526,11 @@ async function profile(){
     loading.classList.add("active");
     const res = await fetch("/api/set_profile", {
       method: "POST",
-      headers: {"Content-Type": "application/json"},
+      headers: getHeaders(),
       body: JSON.stringify({first_name, last_name, role, contact})
     });
     const j = await res.json();
+    if (j.session_id) setSessionId(j.session_id);
     append("bot", j.message || "(ok)");
   } catch (e) {
     append("sys", "Error saving profile");
@@ -497,14 +557,15 @@ async function send(){
     loading.classList.add("active");
     const res = await fetch("/api/chat", {
       method: "POST",
-      headers: {"Content-Type": "application/json"},
+      headers: getHeaders(),
       body: JSON.stringify({message: text})
     });
     const j = await res.json();
     
-    // Use refs array from response
-    const refs = j.refs || [];
+    // Save session ID from response
+    if (j.session_id) setSessionId(j.session_id);
     
+    const refs = j.refs || [];
     append("bot", j.reply || "(no reply)", refs);
   } catch (e) {
     console.error("Error:", e);
@@ -517,8 +578,9 @@ async function send(){
 async function reindex(){
   try {
     loading.classList.add("active");
-    const res = await fetch("/api/reindex", {method: "POST"});
+    const res = await fetch("/api/reindex", { method: "POST", headers: getHeaders() });
     const j = await res.json();
+    if (j.session_id) setSessionId(j.session_id);
     append("bot", `✅ Reindexed! Found ${j.items} items.`);
   } catch (e) {
     append("sys", "Error reindexing");
@@ -532,10 +594,15 @@ async function uploadFile(ev){
   const form = document.getElementById("uploadForm");
   const fd = new FormData(form);
   
+  // Add session ID to form data
+  const sid = getSessionId();
+  if (sid) fd.append("session_id", sid);
+  
   try {
     loading.classList.add("active");
     const res = await fetch("/api/upload", { method: "POST", body: fd });
     const j = await res.json();
+    if (j.session_id) setSessionId(j.session_id);
     append("bot", j.message || "Uploaded.");
     setTimeout(reindex, 300);
   } catch (e) {
@@ -552,7 +619,9 @@ async function endAndDownload(){
   
   try {
     loading.classList.add("active");
-    const res = await fetch("/api/download?format=html");
+    const sid = getSessionId();
+    const url = "/api/download?format=html" + (sid ? "&session_id=" + sid : "");
+    const res = await fetch(url);
     
     if (res.ok) {
       const blob = await res.blob();
@@ -598,27 +667,40 @@ def reindex():
         if AGENT_SYSTEM_AVAILABLE and BOT:
             df = BOT.build_index()
             items = 0 if df is None else len(df)
+        elif bot:
+            df = bot.build_index()
+            items = 0 if df is None else len(df)
         else:
             items = 0
         
         _record(sid, "system", "Reindexed workspace")
-        return jsonify({"status":"ok", "items": items})
+        return jsonify({"status": "ok", "items": items, "session_id": sid})
     except Exception as e:
-        return jsonify({"status":"error", "message": str(e)}), 500
+        return jsonify({"status": "error", "message": str(e), "session_id": sid}), 500
 
 @app.get("/api/greet")
 def greet():
     sid = _get_sid()
     try:
+        # Check if user has a profile with name
+        profile = _get_profile(sid)
+        name = profile.get("first_name", "")
+        
         if AGENT_SYSTEM_AVAILABLE:
             msg = greet_user()
-        else:
+        elif bot:
             msg = bot.greet_and_collect()
+        else:
+            msg = "Hello! Welcome to JGM Insights Assistant. How can I help you today?"
+        
+        # Personalize greeting if we have a name
+        if name:
+            msg = f"Welcome back, {name}! " + msg
         
         _record(sid, "bot", msg)
-        return jsonify({"message": msg})
+        return jsonify({"message": msg, "session_id": sid})
     except Exception as e:
-        return jsonify({"message": f"Error: {str(e)}"}), 500
+        return jsonify({"message": f"Error: {str(e)}", "session_id": sid}), 500
 
 @app.post("/api/set_profile")
 def set_profile():
@@ -626,28 +708,41 @@ def set_profile():
     data = request.json or {}
     
     try:
+        # Store profile in session
+        profile_data = {
+            "first_name": data.get("first_name", ""),
+            "last_name": data.get("last_name", ""),
+            "role": data.get("role", ""),
+            "contact": data.get("contact", "")
+        }
+        _set_profile(sid, profile_data)
+        
+        # Also call agent's set_profile if available
         if AGENT_SYSTEM_AVAILABLE:
             msg = set_user_profile(
-                first_name=data.get("first_name", ""),
-                last_name=data.get("last_name", ""),
-                role=data.get("role", ""),
-                contact=data.get("contact", "")
+                first_name=profile_data["first_name"],
+                last_name=profile_data["last_name"],
+                role=profile_data["role"],
+                contact=profile_data["contact"]
+            )
+        elif bot:
+            msg = bot.set_profile(
+                first_name=profile_data["first_name"],
+                last_name=profile_data["last_name"],
+                role=profile_data["role"],
+                contact=profile_data["contact"],
             )
         else:
-            msg = bot.set_profile(
-                first_name=data.get("first_name"),
-                last_name=data.get("last_name"),
-                role=data.get("role"),
-                contact=data.get("contact"),
-            )
+            name = profile_data["first_name"] or "there"
+            msg = f"Nice to meet you, {name}! Your profile has been saved."
         
         msg = _smooth(msg)
         _record(sid, "user", "(set_profile)")
         _record(sid, "bot", msg)
         
-        return jsonify({"message": msg})
+        return jsonify({"message": msg, "session_id": sid})
     except Exception as e:
-        return jsonify({"message": f"Error: {str(e)}"}), 500
+        return jsonify({"message": f"Error: {str(e)}", "session_id": sid}), 500
 
 @app.post("/api/chat")
 def chat():
@@ -657,15 +752,18 @@ def chat():
     q = (data.get("message") or "").strip()
     
     if not q:
-        return jsonify({"reply": "Please ask a question!", "refs": []})
+        return jsonify({"reply": "Please ask a question!", "refs": [], "session_id": sid})
     
     _record(sid, "user", q)
     
     try:
         if AGENT_SYSTEM_AVAILABLE:
             res = enhanced_chat(q)
-        else:
+        elif bot:
             res = bot.chat(q)
+        else:
+            # Basic fallback response
+            res = {"reply": "I'm sorry, the AI system is not fully initialized. Please try again later."}
         
         reply = _smooth(res.get("reply", ""))
         
@@ -691,18 +789,19 @@ def chat():
         
         _record(sid, "bot", reply, attachments=refs)
         
-        print(f"📊 Response: reply={reply[:50]}..., refs={refs}")
+        print(f"📊 Session {sid[:8]}... | Reply: {reply[:50]}... | Refs: {refs}")
         
         return jsonify({
             "reply": reply,
-            "refs": refs
+            "refs": refs,
+            "session_id": sid
         })
         
     except Exception as e:
         print(f"❌ Chat error: {e}")
         error_msg = f"Sorry, I encountered an error: {str(e)}"
         _record(sid, "bot", error_msg)
-        return jsonify({"reply": error_msg, "refs": []}), 500
+        return jsonify({"reply": error_msg, "refs": [], "session_id": sid}), 500
 
 @app.get("/files/<path:filename>")
 def files(filename):
@@ -717,14 +816,20 @@ def files(filename):
 @app.get("/api/download")
 def download_transcript():
     fmt = (request.args.get("format") or "html").lower()
-    sid = _get_sid()
-    convo = SESS.get(sid, [])
+    
+    # Get session ID from query param, header, or cookie
+    sid = request.args.get("session_id") or request.headers.get("X-Session-ID") or request.cookies.get("session_id")
+    
+    if not sid or sid not in SESS:
+        return jsonify({"error": "No conversation found", "session_id": sid}), 400
+    
+    convo = SESS.get(sid, {}).get("messages", [])
     
     if not convo:
-        return jsonify({"error":"no conversation"}), 400
+        return jsonify({"error": "No conversation", "session_id": sid}), 400
 
     if fmt == "json":
-        content = (TRANS_DIR / f"{sid}.json").read_bytes()
+        content = json.dumps(SESS[sid], ensure_ascii=False, indent=2).encode("utf-8")
         resp = make_response(content)
         resp.headers["Content-Type"] = "application/json; charset=utf-8"
         resp.headers["Content-Disposition"] = "attachment; filename=JGM_Conversation.json"
@@ -783,9 +888,9 @@ def upload():
     target = (request.form.get("target") or "data").strip().lower()
     
     if not f:
-        return jsonify({"status":"error","message":"No file"}), 400
+        return jsonify({"status": "error", "message": "No file", "session_id": sid}), 400
     
-    if target not in ("data","graphs","code"):
+    if target not in ("data", "graphs", "code"):
         target = "data"
     
     dest_dir = {"data": DATA_DIR, "graphs": GRAPHS_DIR, "code": CODE_DIR}[target]
@@ -796,11 +901,13 @@ def upload():
         
         if AGENT_SYSTEM_AVAILABLE and BOT:
             BOT.build_index()
+        elif bot:
+            bot.build_index()
         
         _record(sid, "system", f"Uploaded {save_path.name}")
-        return jsonify({"status":"ok","message":f"✅ Uploaded: {save_path.name}"})
+        return jsonify({"status": "ok", "message": f"✅ Uploaded: {save_path.name}", "session_id": sid})
     except Exception as e:
-        return jsonify({"status":"error","message":str(e)}), 500
+        return jsonify({"status": "error", "message": str(e), "session_id": sid}), 500
 
 # ===== HEALTH CHECK =====
 @app.get("/health")
@@ -811,8 +918,8 @@ def health():
             "google_adk_available": False,
             "agent_initialized": False,
             "ollama_available": False,
-            "chatbot_ready": False,
-            "primary_engine": "none"
+            "chatbot_ready": bot is not None,
+            "primary_engine": "fallback" if bot else "none"
         }
         
         return jsonify({
@@ -821,6 +928,7 @@ def health():
             "workspace": str(WORKSPACE),
             "production": PRODUCTION_MODE,
             "agent_system": AGENT_SYSTEM_AVAILABLE,
+            "active_sessions": len(SESS),
             **status
         })
     except Exception as e:
@@ -849,20 +957,27 @@ def api_status():
 # ===== STARTUP =====
 if __name__ == "__main__":
     print("=" * 70)
-    print("🚀 JGM INSIGHTS ASSISTANT - CORS ENABLED")
+    print("🚀 JGM INSIGHTS ASSISTANT - SESSION MANAGEMENT UPDATE")
     print("=" * 70)
     
     if AGENT_SYSTEM_AVAILABLE:
         status = get_agent_status()
         print(f"\n✅ Agent System: ACTIVE")
         print(f"   Primary Engine: {status.get('primary_engine', 'unknown').upper()}")
+    elif bot:
+        print(f"\n⚠️  Agent System: FALLBACK MODE (Direct Chatbot)")
     else:
-        print(f"\n⚠️  Agent System: FALLBACK MODE")
+        print(f"\n❌ No AI system available")
     
     print(f"\n🌐 CORS Enabled for:")
     print(f"   - https://jgm-ds-website.vercel.app")
     print(f"   - http://localhost:3000")
     print(f"   - http://localhost:5173")
+    
+    print(f"\n🔑 Session Management:")
+    print(f"   - X-Session-ID header support")
+    print(f"   - Per-session profile storage")
+    print(f"   - Session ID returned in all responses")
     
     print("=" * 70)
     print(f"📍 URL: http://localhost:{PORT}")
