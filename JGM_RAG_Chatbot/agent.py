@@ -1,6 +1,7 @@
 """
-JGM Insights Assistant - Google Gemini Integration (FIXED)
-Direct google.generativeai integration with proper model selection
+JGM Insights Assistant - Google Gemini Integration
+UPDATED: Now allows general knowledge questions via Gemini
+Data queries still go through the chatbot for accurate Peru education data
 """
 
 import os
@@ -60,8 +61,9 @@ def get_best_model():
         return None
     
     models_to_try = [
+        'gemini-1.5-flash',
+        'gemini-1.5-pro',
         'gemini-pro',
-        'gemini-1.5-pro', 
         'models/gemini-pro',
         'gemini-1.0-pro'
     ]
@@ -167,66 +169,139 @@ def initialize_agent() -> bool:
         GOOGLE_AVAILABLE = False
         return False
 
+# ===== QUERY CLASSIFICATION =====
+
+def _is_peru_education_query(message: str) -> bool:
+    """
+    Determine if the query is about Peru education data
+    Returns True if it should be handled by the chatbot (BOT)
+    Returns False if it should go to Gemini for general knowledge
+    """
+    msg_lower = message.lower()
+    
+    # Peru education specific keywords
+    peru_education_keywords = [
+        # Data queries
+        'dropout', 'desercion', 'tasa', 'rate',
+        'applicant', 'aplicante', 'undergraduate', 'postulante',
+        'faculty', 'facultad', 'program', 'programa',
+        'department', 'departamento', 'region', 'province', 'provincia',
+        
+        # Peru locations (when combined with education context)
+        'lima dropout', 'cusco school', 'arequipa education',
+        
+        # Education terms
+        'primaria', 'primary school', 'secundaria', 'secondary school',
+        'escuela', 'colegio', 'universidad',
+        
+        # Visualization/analysis commands
+        'map', 'chart', 'graph', 'plot', 'visualize',
+        'compare dropout', 'comparison rate', 'statistics dropout',
+        
+        # What-If simulator
+        'simulate', 'simulation', 'what if', 'what-if', 'scenario',
+        'roi', 'intervention', 'policy impact',
+        'meal program', 'scholarship impact', 'mentorship program', 
+        'teacher training impact', 'infrastructure improvement', 'class size',
+        
+        # Data year combined with education
+        '2025 dropout', '2025 education', '2025 school'
+    ]
+    
+    # Check for education-specific keyword combinations
+    if any(kw in msg_lower for kw in peru_education_keywords):
+        return True
+    
+    # Check for commands that should go to chatbot
+    chatbot_commands = ['summary', 'summarize', 'simulate menu', 'show map', 'create map', 'build map']
+    if any(cmd in msg_lower for cmd in chatbot_commands):
+        return True
+    
+    # Check if asking about Peru AND education together
+    peru_terms = ['peru', 'peruvian', 'lima', 'cusco', 'arequipa', 'piura', 'puno']
+    education_terms = ['school', 'education', 'student', 'dropout', 'university', 'college']
+    
+    has_peru = any(p in msg_lower for p in peru_terms)
+    has_education = any(e in msg_lower for e in education_terms)
+    
+    if has_peru and has_education:
+        return True
+    
+    return False
+
 # ===== PUBLIC INTERFACE =====
 
 def enhanced_chat(message: str) -> Dict[str, Any]:
     """
-    Process message through Gemini (primary) or fallback to chatbot
+    Process message through appropriate system:
+    - Peru education queries → BOT (chatbot with actual data)
+    - General knowledge → Gemini AI
+    - Fallback → Basic response
     """
-    # Try Gemini first if available
-    if GOOGLE_AVAILABLE and GOOGLE_API_KEY and GEMINI_MODEL:
+    
+    # Check if this is a Peru education query
+    if _is_peru_education_query(message):
+        # Use chatbot for Peru education data (it has the actual data)
         try:
-            # For data queries, always use chatbot (it has the actual data)
-            data_keywords = ['dropout', 'rate', 'data', 'applicant', 'region', 
-                           'map', 'chart', 'simulate', 'faculty', 'department',
-                           'province', 'statistics', 'compare', 'show']
-            
-            if any(kw in message.lower() for kw in data_keywords):
-                # Use chatbot for data queries
-                result = BOT.chat(message)
+            result = BOT.chat(message)
+            if result:  # Chatbot returned a valid response
                 result["source"] = "chatbot"
                 return result
+        except Exception as e:
+            print(f"Chatbot error: {e}")
+    
+    # For general knowledge questions OR if chatbot returned None, use Gemini
+    if GOOGLE_AVAILABLE and GOOGLE_API_KEY:
+        try:
+            # Ensure model is initialized
+            global GEMINI_MODEL
+            if GEMINI_MODEL is None:
+                GEMINI_MODEL = get_best_model()
             
-            # For casual conversation, use Gemini
-            response = call_gemini(f"""You are a helpful Peru education data assistant.
-User said: {message}
+            if GEMINI_MODEL:
+                response = call_gemini(f"""You are a helpful AI assistant for JGM Organization's education analytics platform.
 
-Give a brief, friendly response. If they're asking about data, acknowledge it and suggest they ask specific questions.""")
-            
-            if response:
-                return {
-                    "reply": response,
-                    "source": "gemini"
-                }
+You can answer ANY question - general knowledge, history, science, technology, current events, people, companies, etc.
+
+You also specialize in Peru education data analysis. If someone asks about Peru education specifically, 
+you can mention they can try queries like:
+- "Show dropout rates by region"
+- "Create a map of education metrics"
+- "Simulate meal program impact"
+
+User's question: {message}
+
+Provide a helpful, accurate, and informative response. Be conversational and friendly.
+If asked about a person, company, or topic, give comprehensive information.""")
+                
+                if response:
+                    return {
+                        "reply": response,
+                        "source": "gemini"
+                    }
         
         except Exception as e:
-            print(f"⚠️  Gemini error, using fallback: {e}")
+            print(f"⚠️  Gemini error: {e}")
     
-    # Fallback to direct chatbot
-    try:
-        result = BOT.chat(message)
-        result["source"] = "chatbot"
-        return result
-    except Exception as e:
-        return {
-            "reply": f"Error processing request: {str(e)}",
-            "source": "error"
-        }
+    # Fallback response if nothing else works
+    return {
+        "reply": (
+            "I'm sorry, I couldn't process that request. I can help you with:\n\n"
+            "📊 **Peru Education Data:**\n"
+            "  • Dropout rates by region\n"
+            "  • Undergraduate applicant statistics\n"
+            "  • Interactive maps and charts\n"
+            "  • What-If policy simulations\n\n"
+            "🌍 **General Questions:**\n"
+            "  • Ask me about any topic!\n\n"
+            "Please try rephrasing your question."
+        ),
+        "source": "fallback"
+    }
 
 def greet_user() -> str:
     """Get greeting message"""
-    greeting = BOT.greet_and_collect()
-    
-    # Try to enhance with Gemini if available
-    if GOOGLE_AVAILABLE and GEMINI_MODEL:
-        try:
-            enhanced = call_gemini("Give a very brief, friendly greeting for a Peru education data assistant. One sentence only.")
-            if enhanced:
-                return enhanced + "\n\n" + greeting
-        except Exception:
-            pass
-    
-    return greeting
+    return BOT.greet_and_collect()
 
 def set_user_profile(first_name="", last_name="", role="", contact="") -> str:
     """Set user profile"""
@@ -246,7 +321,8 @@ def get_agent_status() -> Dict[str, Any]:
         "agent_initialized": GOOGLE_AVAILABLE and GEMINI_MODEL is not None,
         "ollama_available": BOT.llm_available if BOT else False,
         "chatbot_ready": BOT is not None,
-        "primary_engine": "gemini" if (GOOGLE_AVAILABLE and GEMINI_MODEL) else ("ollama" if (BOT and BOT.llm_available) else "direct")
+        "primary_engine": "gemini" if (GOOGLE_AVAILABLE and GEMINI_MODEL) else ("ollama" if (BOT and BOT.llm_available) else "direct"),
+        "general_knowledge_enabled": GOOGLE_AVAILABLE and GEMINI_MODEL is not None
     }
 
 # ===== STARTUP TEST =====
@@ -264,23 +340,31 @@ if __name__ == "__main__":
     print(f"   Google API Key Set: {'✅' if status['google_api_key_set'] else '❌'}")
     print(f"   Google Available: {'✅' if status['google_available'] else '❌'}")
     print(f"   Gemini Model Ready: {'✅' if status['gemini_model_ready'] else '❌'}")
-    print(f"   Agent Initialized: {'✅' if status['agent_initialized'] else '❌'}")
-    print(f"   Ollama Available: {'✅' if status['ollama_available'] else '❌'}")
+    print(f"   General Knowledge: {'✅ ENABLED' if status['general_knowledge_enabled'] else '❌ DISABLED'}")
     print(f"   Chatbot Ready: {'✅' if status['chatbot_ready'] else '❌'}")
     print(f"   Primary Engine: {status['primary_engine'].upper()}")
     
     if success:
-        print("\n🧪 TESTING AGENT...")
+        print("\n🧪 TESTING...")
+        
+        # Test general knowledge
+        print("\n🌍 Testing: 'Who is George Washington?'")
         try:
-            test_response = enhanced_chat("hello")
-            print(f"✅ Test passed!")
-            print(f"   Response: {test_response['reply'][:100]}...")
-            print(f"   Source: {test_response.get('source', 'unknown')}")
+            result = enhanced_chat("Who is George Washington?")
+            print(f"   Source: {result.get('source', 'unknown')}")
+            print(f"   Response: {result['reply'][:150]}...")
         except Exception as e:
-            print(f"⚠️  Test failed: {e}")
-    else:
-        print("\n⚠️  Agent initialization failed - will use fallback mode")
+            print(f"   Error: {e}")
+        
+        # Test education query
+        print("\n📚 Testing: 'What is the dropout rate?'")
+        try:
+            result = enhanced_chat("What is the dropout rate?")
+            print(f"   Source: {result.get('source', 'unknown')}")
+            print(f"   Response: {result['reply'][:150]}...")
+        except Exception as e:
+            print(f"   Error: {e}")
     
     print("\n" + "=" * 70)
-    print("✅ Ready for Flask integration!")
+    print("✅ Agent ready!")
     print("=" * 70)
