@@ -1,3 +1,8 @@
+"""
+JGM RAG Chatbot - Peru Education Data Analysis
+UPDATED: Removed off-topic blocking - general questions handled by Gemini in agent.py
+"""
+
 import os, re, io, json, glob, csv
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
@@ -138,13 +143,13 @@ class JGMRAG:
         self.vectorizer = None
         self.matrix = None
         self.loaded_tables: Dict[str, pd.DataFrame] = {}
-        # Profile is now handled per-session in app.py - this is just a fallback
+        # Profile is handled per-session in app.py
         self.user_profile = {
             "first_name": None, 
             "last_name": None, 
             "role": None, 
             "contact": None,
-            "onboarded": True  # CHANGED: Default to True so queries work immediately
+            "onboarded": True  # Default True so queries work immediately
         }
         self.graph_catalog: List[Dict[str, str]] = []
         self.conversation_history = []
@@ -179,13 +184,9 @@ class JGMRAG:
             
             self.llm_available = True
             print("✅ Ollama + LlamaIndex initialized successfully!")
-            print(f"   Model: llama3.1")
-            print(f"   Status: Ready for smart conversations!")
             
         except Exception as e:
             print(f"⚠️ Could not connect to Ollama: {e}")
-            print(f"   Make sure Ollama is running: ollama serve")
-            print(f"   And models are pulled: ollama pull llama3.1 && ollama pull nomic-embed-text")
             self.llm_available = False
 
     def _build_llamaindex(self):
@@ -280,7 +281,7 @@ class JGMRAG:
 
     # ========== WHAT-IF SIMULATOR ==========
     def _detect_simulation_query(self, query: str) -> Optional[str]:
-        """Detect if user wants to run a simulation - FIXED"""
+        """Detect if user wants to run a simulation"""
         qn = _norm(query)
         
         sim_triggers = [
@@ -290,7 +291,6 @@ class JGMRAG:
         ]
         
         if any(trigger in qn for trigger in sim_triggers):
-            # FIXED: Match specific keywords for each scenario
             if any(kw in qn for kw in ["meal", "food", "lunch", "breakfast", "nutrition"]):
                 return "meal_program"
             elif any(kw in qn for kw in ["mentor", "mentorship", "mentoring", "tutor"]):
@@ -445,120 +445,81 @@ class JGMRAG:
     # ========== END SIMULATOR ==========
 
     def _handle_casual_conversation(self, query: str) -> Optional[str]:
-        """Handle greetings, thanks, and casual conversation"""
+        """Handle greetings, thanks, and help commands ONLY"""
         qn = _norm(query)
         
-        greetings = ["hello", "hi", "hey", "hola", "good morning", "good afternoon", "good evening", 
-                     "greetings", "hi there", "hey there", "hello there", "sup", "what's up", "whats up"]
-        if any(qn.startswith(g) for g in greetings) or qn in greetings:
+        # Only handle basic greetings
+        greetings = ["hello", "hi", "hey", "hola", "good morning", "good afternoon", "good evening"]
+        if qn in greetings:
             name = self.user_profile.get("first_name")
             if name:
                 return (
-                    f"Hello {name}! 👋 Great to see you again!\n\n"
-                    f"How can I help you with Peru's {self.VALID_YEAR} education data today?\n\n"
-                    "💡 You can ask me about:\n"
-                    "  • Dropout rates by region\n"
-                    "  • Undergraduate applicant statistics\n"
-                    "  • Geographic visualizations\n"
-                    "  • 🔮 **What-If Simulations** (try 'simulate menu')\n"
-                    "  • Or type 'summary' to review our conversation"
+                    f"Hello {name}! 👋 Great to see you!\n\n"
+                    "How can I help you today? I can answer:\n"
+                    "  • Peru education data questions\n"
+                    "  • General knowledge questions\n"
+                    "  • Create maps and charts\n"
+                    "  • 🔮 Run What-If simulations"
                 )
             else:
                 return (
                     "Hello! 👋 Welcome to JGM Insights Assistant!\n\n"
-                    f"I'm here to help you explore Peru's {self.VALID_YEAR} education data.\n\n"
-                    "You can ask me about:\n"
-                    "  • Dropout rates\n"
-                    "  • Applicant statistics\n"
-                    "  • Regional comparisons\n"
-                    "  • Interactive maps\n"
-                    "  • 🔮 **What-If Simulations** (try 'simulate menu')\n\n"
-                    "What would you like to explore?"
+                    "I can help you with:\n"
+                    "  • Peru 2025 education data\n"
+                    "  • General knowledge questions\n"
+                    "  • Interactive maps and charts\n"
+                    "  • 🔮 What-If Simulations\n\n"
+                    "What would you like to know?"
                 )
         
-        thanks = ["thank", "thanks", "thank you", "thx", "gracias", "appreciate"]
-        if any(t in qn for t in thanks):
-            return (
-                "You're very welcome! 😊\n\n"
-                "I'm happy to help. Feel free to ask me anything else about the education data!"
-            )
+        # Thanks
+        if qn in ["thank", "thanks", "thank you", "thx", "gracias"]:
+            return "You're welcome! 😊 Feel free to ask anything else!"
         
-        if any(phrase in qn for phrase in ["how are you", "how r u", "how are u", "hows it going", "how's it going"]):
+        # Help command
+        if qn == "help":
             return (
-                "I'm doing great, thank you for asking! 🤖\n\n"
-                f"I'm ready to help you analyze Peru's {self.VALID_YEAR} education data.\n\n"
-                "What would you like to explore today?"
-            )
-        
-        help_keywords = ["help", "what can you do", "what do you do", "capabilities", "how to use", 
-                        "commands", "what can i ask"]
-        if any(kw in qn for kw in help_keywords):
-            llm_status = "🧠 AI-Powered (Ollama)" if self.llm_available else "📊 Data Analysis"
-            return (
-                f"🤖 **JGM Insights Assistant** ({llm_status})\n\n"
-                f"**Data Analysis ({self.VALID_YEAR}):**\n"
-                "  • Dropout rates (primary & secondary schools)\n"
+                f"🤖 **JGM Insights Assistant**\n\n"
+                f"**Peru Education Data ({self.VALID_YEAR}):**\n"
+                "  • Dropout rates by region\n"
                 "  • Undergraduate applicant statistics\n"
-                "  • Regional/provincial breakdowns\n"
-                "  • Faculty and program analysis\n\n"
+                "  • Regional comparisons\n\n"
                 "**Visualizations:**\n"
-                "  • Interactive charts (just ask for 'chart' or 'graph')\n"
-                "  • Geographic maps (type 'map' or 'show map')\n"
-                "  • Comparative analysis\n\n"
+                "  • Type 'map' for geographic visualization\n"
+                "  • Type 'chart' for data charts\n\n"
                 "**🔮 What-If Simulator:**\n"
-                "  • Predict policy impact\n"
-                "  • ROI calculations for investors\n"
-                "  • Cost-benefit analysis for NGOs\n"
-                "  • Try: 'simulate menu' to see options\n\n"
-                "**Commands:**\n"
-                "  • 'summary' - Get full conversation recap\n"
-                "  • 'Compare [X] and [Y]' - Compare regions\n"
-                "  • 'simulate [scenario]' - Run What-If analysis\n"
-                "  • Profile setup - Click '👤 Profile' button\n\n"
-                "**Example questions:**\n"
-                "  • What's the average dropout rate?\n"
-                "  • Show applicants by faculty\n"
-                "  • Compare Lima and Cusco dropout rates\n"
-                "  • What if we implement meal programs?\n"
-                "  • Simulate scholarship impact\n\n"
-                "What would you like to explore?"
+                "  • Type 'simulate menu' to see options\n\n"
+                "**🌍 General Knowledge:**\n"
+                "  • Ask me anything! History, science, people, companies, etc.\n\n"
+                "**Examples:**\n"
+                "  • 'What is the dropout rate in Lima?'\n"
+                "  • 'Who is George Washington?'\n"
+                "  • 'What is JGM Organization?'\n"
+                "  • 'Create a map'"
             )
         
-        if qn in ["bye", "goodbye", "good bye", "see you", "see ya", "exit", "quit"]:
-            return (
-                "Goodbye! 👋 It was great helping you today.\n\n"
-                "Feel free to come back anytime to explore more education data!\n\n"
-                "Don't forget to download your conversation if you need it. 📥"
-            )
-        
-        if any(phrase in qn for phrase in ["nice to meet", "pleasure to meet", "pleased to meet"]):
-            return (
-                "Nice to meet you too! 😊\n\n"
-                "I'm excited to help you explore the education data. What would you like to know?"
-            )
+        # Goodbye
+        if qn in ["bye", "goodbye", "exit", "quit"]:
+            return "Goodbye! 👋 Come back anytime!"
         
         return None
 
     def _validate_year(self, query: str) -> Optional[str]:
+        """Only validate year for Peru education queries"""
         qn = _norm(query)
         year_pattern = r'\b(19\d{2}|20\d{2})\b'
         years = re.findall(year_pattern, query)
         
-        if years:
+        # Only validate for Peru education queries
+        peru_keywords = ['dropout', 'desercion', 'tasa', 'applicant', 'primaria', 'secundaria']
+        is_peru_query = any(kw in qn for kw in peru_keywords)
+        
+        if is_peru_query and years:
             invalid_years = [y for y in years if int(y) != self.VALID_YEAR]
             if invalid_years:
                 return (
-                    f"⚠️ I only have data for {self.VALID_YEAR}. "
-                    f"Please search within {self.VALID_YEAR} data only. "
-                    f"Years mentioned: {', '.join(invalid_years)} are not available."
-                )
-        
-        time_terms = ["historical", "past decade", "trend over time", "since", "before"]
-        if any(term in qn for term in time_terms):
-            if any(kw in qn for kw in ["from", "to", "between"]) and years:
-                return (
-                    f"⚠️ I only have data for {self.VALID_YEAR}. "
-                    f"Historical trends are not available. Please ask about {self.VALID_YEAR} data."
+                    f"⚠️ For Peru education data, I only have {self.VALID_YEAR} data. "
+                    f"Years {', '.join(invalid_years)} are not available."
                 )
         
         return None
@@ -805,15 +766,14 @@ class JGMRAG:
             return None
 
     def _llm_enhanced_response(self, query: str, data_response: str) -> str:
-        """Use LLM to enhance the data response with natural language"""
+        """Use LLM to enhance the data response"""
         if not self.llm_available or not self.query_engine:
             return data_response
         
         try:
             context = f"Peru education data for {self.VALID_YEAR}. User asked: '{query}'\n\n"
             context += f"Data result: {data_response}\n\n"
-            context += "Provide a natural, conversational response that explains this data clearly. "
-            context += "Keep it concise (2-3 sentences) and highlight key insights."
+            context += "Provide a brief insight about this data."
             
             response = self.query_engine.query(context)
             
@@ -824,56 +784,6 @@ class JGMRAG:
             print(f"LLM enhancement error: {e}")
         
         return data_response
-
-    def _rag_synthesis(self, query: str) -> Dict[str, Any]:
-        """Enhanced RAG with LLM if available"""
-        
-        # Try LlamaIndex first if available
-        if self.llm_available and self.query_engine:
-            try:
-                context = f"Based on Peru {self.VALID_YEAR} education data, answer: {query}"
-                response = self.query_engine.query(context)
-                
-                if response and str(response).strip():
-                    return {
-                        "reply": f"🧠 **AI Analysis:**\n\n{str(response)}",
-                        "refs": ["LlamaIndex + Ollama"]
-                    }
-            except Exception as e:
-                print(f"LlamaIndex query error: {e}")
-        
-        # Fallback to traditional RAG
-        if not (self.vectorizer and self.matrix is not None):
-            return {
-                "reply": "I don't have any data indexed yet. Please upload files and click 'Rebuild Index'.",
-                "refs": []
-            }
-        
-        q = self.vectorizer.transform([query])
-        sims = cosine_similarity(q, self.matrix)[0]
-        idxs = sims.argsort()[::-1][:3]
-        
-        snippets = []
-        for i in idxs:
-            if sims[i] < 0.1:
-                continue
-            doc = self.docs[i]
-            meta = self.doc_meta[i]
-            snippet = doc[:300].replace("\n", " ")
-            snippets.append({"score": round(float(sims[i]), 4), "meta": meta, "snippet": snippet})
-        
-        if not snippets:
-            return {
-                "reply": "I couldn't find relevant information. Try being more specific or check that your data is uploaded.",
-                "refs": []
-            }
-        
-        synthesis = f"Based on {self.VALID_YEAR} data, here's what I found:\n\n"
-        for i, h in enumerate(snippets, 1):
-            file_name = Path(h['meta'].get('path', '')).name if h['meta'].get('path') else 'Unknown'
-            synthesis += f"{i}. {file_name}: {h['snippet'][:150]}...\n\n"
-        
-        return {"reply": synthesis, "refs": snippets}
 
     def build_map(self, query: str = "") -> Optional[Path]:
         """Build map using location names with geocoding"""
@@ -965,21 +875,19 @@ class JGMRAG:
             return None
 
     def greet_and_collect(self) -> str:
-        llm_badge = " 🧠 AI-Powered!" if self.llm_available else ""
         return (
-            f"👋 Hello! I'm the JGM Insights Assistant{llm_badge}\n\n"
-            f"I can help you explore Peru education data for {self.VALID_YEAR}:\n"
-            "  • Undergraduate applicant statistics\n"
-            "  • Primary/secondary school dropout rates\n"
+            f"👋 Hello! I'm the JGM Insights Assistant.\n\n"
+            f"I can help you with:\n"
+            f"  • Peru {self.VALID_YEAR} education data (dropout rates, applicants)\n"
+            "  • 🌍 **General knowledge questions** (history, science, people, etc.)\n"
             "  • Interactive maps and charts\n"
-            "  • 🔮 **What-If Simulator** - Predict policy impacts!\n"
-            f"{'  • 🧠 Natural language Q&A with AI' if self.llm_available else ''}\n\n"
-            "💡 Quick commands:\n"
-            "  • 'summary' - Get full conversation overview\n"
-            "  • 'help' - See what I can do\n"
-            "  • 'map' - Generate geographic visualization\n"
-            "  • 🔮 'simulate menu' - See What-If scenarios\n"
-            "  • Ask any question about the data!"
+            "  • 🔮 **What-If Simulator** - Predict policy impacts!\n\n"
+            "💡 Try asking:\n"
+            "  • 'What is the dropout rate in Lima?'\n"
+            "  • 'Who is George Washington?'\n"
+            "  • 'Create a map'\n"
+            "  • 'simulate menu'\n\n"
+            "What would you like to know?"
         )
 
     def set_profile(self, first_name: str = None, last_name: str = None, role: str = None, contact: str = None) -> str:
@@ -995,121 +903,22 @@ class JGMRAG:
         self.user_profile["onboarded"] = True
         
         fn = self.user_profile.get("first_name") or "there"
-        role_specific = ""
-        if role:
-            role_lower = role.lower()
-            if "ngo" in role_lower:
-                role_specific = "\n\n💡 As an NGO member, try our What-If Simulator to evaluate program impact!"
-            elif "investor" in role_lower or "donor" in role_lower or "business" in role_lower:
-                role_specific = "\n\n💡 As an investor, check out our What-If Simulator for ROI analysis!"
-            elif "parent" in role_lower or "student" in role_lower:
-                role_specific = "\n\n💡 Want to see how interventions could help? Try 'simulate menu'!"
         
         return (
-            f"Thanks, {fn}! 🎉 Profile saved.{role_specific}\n\n"
-            f"Now you're all set! Ask me anything about Peru's {self.VALID_YEAR} education data.\n\n"
+            f"Thanks, {fn}! 🎉 Profile saved.\n\n"
+            f"Ask me anything - Peru education data OR general knowledge!\n\n"
             "💡 Try:\n"
-            "  • 'What's the average dropout rate?'\n"
-            "  • 'Show applicants by faculty'\n"
-            "  • 'Compare Lima and Cusco'\n"
+            "  • 'What's the dropout rate?'\n"
+            "  • 'Who invented the telephone?'\n"
             "  • 'Create a map'\n"
-            "  • 🔮 'What if we implement meal programs?'"
+            "  • 🔮 'simulate menu'"
         )
 
-    # ========== OFF-TOPIC DETECTION ==========
-    
-    def _is_off_topic(self, query: str) -> bool:
-        """Detect if question is off-topic or too vague"""
-        qn = _norm(query)
-        
-        # CRITICAL: Always allow these commands
-        valid_commands = [
-            "hello", "hi", "help", "summary", "summarize", "profile",
-            "map", "maps", "show map", "create map", "build map", "generate map",
-            "chart", "graph", "plot", "visualize", "show chart", "create chart",
-            "simulate", "what if", "compare", "analysis"
-        ]
-        if any(cmd in qn for cmd in valid_commands):
-            return False
-        
-        # Education keywords (ON-TOPIC)
-        on_topic = [
-            "dropout", "desercion", "student", "estudiante", "education", "educacion",
-            "school", "escuela", "university", "universidad", "applicant", "aplicante",
-            "rate", "tasa", "data", "datos", "region", "department", "departamento",
-            "province", "provincia", "peru", "faculty", "program", "primary", "secondary",
-            "primaria", "secundaria", "lima", "cusco", "arequipa", "piura", "puno", "ica",
-            "average", "total", "show", "display", "2025", "roi", "impact", "policy",
-            "intervention", "scholarship", "meal", "teacher", "infrastructure", "mentorship"
-        ]
-        
-        # Off-topic keywords (clearly unrelated)
-        off_topic = [
-            "weather", "clima", "temperature", "rain", "sunny",
-            "movie", "film", "pelicula", "cinema", "netflix",
-            "recipe", "receta", "cooking", "restaurant", "restaurante",
-            "game", "juego", "video game", "gaming",
-            "sport", "deporte", "football", "soccer", "basketball",
-            "music", "musica", "song", "cancion", "singer", "band",
-            "celebrity", "celebridad", "famous", "actor", "actress",
-            "joke", "chiste", "funny", "humor",
-            "stock", "crypto", "bitcoin", "trading",
-            "hotel", "travel", "vacation", "tourist", "tourism"
-        ]
-        
-        # Check if clearly off-topic
-        if any(kw in qn for kw in off_topic):
-            return True
-        
-        # Check if has education keywords
-        has_on_topic = any(kw in qn for kw in on_topic)
-        
-        # If has education keywords, it's on-topic
-        if has_on_topic:
-            return False
-        
-        # If very short and no context (but already passed valid commands check)
-        if len(qn.split()) < 3:
-            return True
-        
-        # Check for vague patterns without education context
-        vague_patterns = [
-            "tell me about", "what about", "how about", 
-            "tell me something", "anything", "whatever", "random"
-        ]
-        is_vague = any(pattern in qn for pattern in vague_patterns)
-        
-        if is_vague:
-            return True
-        
-        return False
-    
-    def _get_off_topic_response(self) -> str:
-        """Return polite message for off-topic questions"""
-        return (
-            "I'm specifically designed to help with **Peru 2025 education data**. 📚\n\n"
-            "I can answer questions about:\n"
-            "  • Dropout rates (primary & secondary schools)\n"
-            "  • Undergraduate applicant statistics\n"
-            "  • Regional/provincial comparisons\n"
-            "  • Faculty and program analysis\n"
-            "  • What-If policy simulations\n"
-            "  • Interactive maps and charts\n\n"
-            "💡 **Try asking:**\n"
-            "  • 'What's the dropout rate in Lima?'\n"
-            "  • 'Show applicants by faculty'\n"
-            "  • 'Compare Lima and Cusco'\n"
-            "  • 'What if we implement meal programs?'\n"
-            "  • 'Create a map'\n\n"
-            "Please ask a question related to Peru's education data! 😊"
-        )
-    
-    # ========== END OFF-TOPIC DETECTION ==========
-
-    def chat(self, message: str) -> Dict[str, Any]:
+    def chat(self, message: str) -> Optional[Dict[str, Any]]:
         """
-        UPDATED - Removed profile check that was blocking queries
-        Maps, charts, and data queries now work without requiring a profile
+        Main chat function.
+        Returns None for queries that should go to Gemini (general knowledge).
+        Returns dict for Peru education queries.
         """
         q = message.strip()
         qn = _norm(q)
@@ -1117,58 +926,56 @@ class JGMRAG:
         if not q:
             return {"reply": "Please ask me a question! 😊"}
 
-        # PRIORITY 1: Casual conversation
+        # PRIORITY 1: Basic greetings/help only
         casual_response = self._handle_casual_conversation(q)
         if casual_response:
             return {"reply": casual_response}
 
-        # PRIORITY 2: Summary
-        if any(kw in qn for kw in ["summary", "summarize", "sum up", "recap"]):
-            summary = self.generate_summary()
-            return {"reply": summary}
+        # PRIORITY 2: Summary command
+        if any(kw in qn for kw in ["summary", "summarize"]):
+            return {"reply": self.generate_summary()}
 
-        # PRIORITY 3: Off-topic detection
-        if self._is_off_topic(q):
-            return {"reply": self._get_off_topic_response()}
-
-        # PRIORITY 4: What-If Simulator
+        # PRIORITY 3: What-If Simulator
         scenario_key = self._detect_simulation_query(q)
         if scenario_key:
-            simulation_result = self.run_simulation(scenario_key)
-            return {"reply": simulation_result}
+            return {"reply": self.run_simulation(scenario_key)}
 
-        # NOTE: REMOVED PRIORITY 5 (Profile reminder) - it was blocking map/data queries
-        # Profiles are now handled per-session in app.py
-
-        # PRIORITY 5: Year validation
+        # PRIORITY 4: Year validation for Peru education queries
         year_error = self._validate_year(q)
         if year_error:
             return {"reply": year_error}
 
-        # PRIORITY 6: Map
-        if any(k in qn for k in ["map", "maps", "show map", "geographical", "geography"]):
+        # PRIORITY 5: Map requests
+        if any(k in qn for k in ["map", "maps", "show map", "create map", "build map"]):
             mp = self.build_map(query=q)
             if mp:
                 return {
-                    "reply": f"🗺️ I've created an interactive map showing dropout rates by department! Click below to explore.",
+                    "reply": "🗺️ I've created an interactive map! Click below to explore.",
                     "map_path": str(mp)
                 }
             else:
-                return {"reply": "I couldn't create a map with the current data. The dataset needs location information (departments/regions)."}
+                return {"reply": "I couldn't create a map. The dataset needs location data."}
 
-        # PRIORITY 7: Chart
+        # PRIORITY 6: Chart requests
         if any(k in qn for k in ["chart", "plot", "graph", "visualize"]):
             result = self._answer_from_tables(q)
             if result:
                 return result
 
-        # PRIORITY 8: Data queries
-        result = self._answer_from_tables(q)
-        if result:
-            # Enhance with LLM if available
-            if self.llm_available:
-                result["reply"] = self._llm_enhanced_response(q, result.get("reply", ""))
-            return result
+        # PRIORITY 7: Peru education data queries
+        # Check if this looks like a Peru education query
+        peru_keywords = [
+            'dropout', 'desercion', 'tasa', 'rate', 'applicant', 'faculty',
+            'department', 'departamento', 'region', 'province', 'primaria',
+            'secundaria', 'school', 'student', 'education', 'peru'
+        ]
+        
+        if any(kw in qn for kw in peru_keywords):
+            result = self._answer_from_tables(q)
+            if result:
+                if self.llm_available:
+                    result["reply"] = self._llm_enhanced_response(q, result.get("reply", ""))
+                return result
 
-        # PRIORITY 9: RAG fallback
-        return self._rag_synthesis(q)
+        # Return None to signal agent.py to use Gemini for general knowledge
+        return None
